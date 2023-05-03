@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정규표현식</title>
+</head>
+<body>
+    <h1>
+        정규식(Regular Expression) : 문자열에서 특정 내용을 찾거나 대체,발췌하는데 사용
+    </h1>
+    <ul>
+        <li>
+            regex 단어로 많이 표현
+        </li>
+        <li>
+            특정 데이터를 탐색, 확인, 존재여부 등을 쉽게 확인하기 위한 규칙
+        </li>
+        <li>
+            데이터 분석과 관련된 분야에서는 반드시 알고 있어야함
+        </li>
+    </ul>
+    <ul>
+        <li>
+            /regexr/i : /가 시작,종료기호, (regexr) : pattern, (i) : flag
+        </li>
+        <li>
+            ("str").match(/regexr/flag) : str에서 매칭되는 항목들을 배열로 반환
+        </li>
+        <li>
+            ("str").replace(/regexr/, "바꿀 문자열") : 정규표현식에 매칭되는 항목을 바꿀 문자열로 변환
+        </li>
+        <li>
+            ("str").split(/regexr/) : 문자열을 정규표현식에 매칭되는 항목으로 쪼개어 배열로 반환
+        </li>
+        <li>
+            (정규표현식).test("str") : 문자열이 정규표현식 규칙에 맞으면 true, 아니면 false
+        </li>
+        <ul>
+            <li>
+                정규표현식 플래그
+            </li>
+            <li>
+                i : 대/소문자 구분x
+            </li>
+            <li>
+                g : 전체검색
+            </li>
+            <li>
+                m : 행 바꿈 포함
+            </li>
+        </ul>
+        <ul>
+            <li>
+                a-zA-Z : 영어 알파벳 / ㄱ-ㅎ가-힣 : 한글 / 0-9 : 숫자  (포함영역)
+            </li>
+            <li>
+                . : 모든 문자열(숫자, 한글, 영어, 특수기호, 공백, 문자) but 줄바꿈 빼고
+            </li>
+            <li>
+                \d : 숫자           \D : 숫자 아닌것
+                \s : 공백(space)    \S : 공백아닌것
+                \w : 영어숫자_      \W : \w아닌것
+                \특수기호 : \! \@ ...
+            </li>
+            <li>
+                검색 패턴 : | (or)  a|b
+            </li>
+            <li>
+                [] : 괄호안의 문자들 중 하나 or처리의 묶음
+                /abc/ => "abc"를 포함하는
+                /[abc]/ => "a" or "b" or "c"
+                /[다-바]/ => "다" or "라" or "마" or "바"
+            </li>
+            <li>
+                [^문자] : 괄호안의 문자를 제외한 것
+                [^abcd] : "a","b","c","d" 4개 문자를 제외
+            </li>
+            <li>
+                ^문자열$ : ^(시작) $(끝)
+            </li>
+        </ul>
+    </ul>
+    <script>
+        let testText = 'This is JavaScript Regular Expression';
+        console.log(testText.match(/is/g));
+        
+        const fileName = ['abc.jpg', 'main.gif', 'doc.pdf', 'movie.avi', 'code.js'];
+
+        for(const file of fileName){
+            if(file.match(/(jpg|jpeg|png|gif)/i)){
+                console.log(`이미지 파일 : ${file}`);
+            }else{
+                console.log(`그 외 파일 : ${file}`);
+            }
+        }
+    </script>
+</body>
+</html>

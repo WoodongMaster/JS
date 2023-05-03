@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        tedxt-indent : 들여쓰기
+        text-align : 정렬 left, right, center, justify(양쪽)
+        text-decoration : 줄긋기
+            -none : 없음
+            -underline : 밑줄
+            -overline : 윗줄
+            -line-through : 취소선
+
+        css 표준 단위
+        em : 배수, 부모값을 기준으로 배수
+        rem : 배수, 문서의값을 기준으로 배수
+        % : 퍼센트, 현개밧을 기준으로 %
+        px : 픽셀
+        cm : 센치미터
+        mm : 밀리미터
+        in : 인치 (1 inch = 96px)
+        pt : 포인터, 1pt=1/72in
+        pc : 피카소단위, 1pc=12pt
+        deg : 각도
+         */
+         p{
+            text-indent: 20px;
+            text-align: center;
+            /* text-decoration: line-through; */
+         }
+
+         .line{
+            /* text-overflow: ellipsis; 텍스트가 범위를 넘어가는 경우 넘어간 애들 ... 처리
+            
+            white - space 글자들이 범위를 넘어가면 넘어간 글자들을 어떻게 처리할지 지정 
+                -nowrap : 한줄로 처리
+
+            overflow : 요소가 넘어가면 어떻게 처리할 것인지를 정하는 속성
+                -hidden : 숨김
+                -scroll : 스크롤 생성
+                -auto : 스크롤 오토 생성
+            */
+            
+            text-overflow: ellipsis; 
+            white-space: nowrap;
+            overflow: hidden;
+         }
+    </style>
+</head>
+<body>
+    <p>
+        안녕하세요 저는 MR.홍
+        안녕하세요 저는 MR.홍
+        안녕하세요 저는 MR.홍
+        안녕하세요 저는 MR.홍
+        안녕하세요 저는 MR.홍
+        안녕하세요 저는 MR.홍
+        안녕하세요 저는 MR.홍
+        안녕하세요 저는 MR.홍
+        안녕하세요 저는 MR.홍
+        안녕하세요 저는 MR.홍
+        안녕하세요 저는 MR.홍
+        안녕하세요 저는 MR.홍
+        안녕하세요 저는 MR.홍
+        안녕하세요 저는 MR.홍
+        안녕하세요 저는 MR.홍
+        안녕하세요 저는 MR.홍
+    </p>
+    <p class="line">
+        안녕하세요 저는 MR.홍준표
+        안녕하세요 저는 MR.홍준표
+        안녕하세요 저는 MR.홍준표
+        안녕하세요 저는 MR.홍준표
+        안녕하세요 저는 MR.홍준표
+        안녕하세요 저는 MR.홍준표
+        안녕하세요 저는 MR.홍준표
+        안녕하세요 저는 MR.홍준표
+        안녕하세요 저는 MR.홍준표
+        안녕하세요 저는 MR.홍준표
+        안녕하세요 저는 MR.홍준표
+        안녕하세요 저는 MR.홍준표
+        안녕하세요 저는 MR.홍준표
+        안녕하세요 저는 MR.홍준표
+        안녕하세요 저는 MR.홍준표
+        안녕하세요 저는 MR.홍준표
+    </p>
+</body>
+</html>

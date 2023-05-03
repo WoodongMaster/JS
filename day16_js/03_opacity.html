@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url('/img/maxresdefault.jpg');
+            background-size: cover;
+            margin: 0;
+        }
+        #screen{
+            width: 100%;
+            height: 100vh;
+
+            animation-name: ani;
+            animation-duration: 5s;
+            background-color: navy;
+            opacity: 0;
+        }
+
+        @keyframes ani{
+            from{
+                
+                opacity: 0;
+            }
+            50%{
+                
+                opacity: 1;
+            }
+            to{
+                
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="screen">
+
+    </div>
+    <!-- <script>
+        let screen = document.getElementById('screen');
+        window.addEventListener("load", function(){
+            setTimeout(() => {
+                screen.style = "opacity:0.5"
+            }, 2000);
+        })
+    </script> -->
+</body>
+</html>

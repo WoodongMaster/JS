@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>어서오세요~!!</h1>
+    <h3 id="welcome">
+
+    </h3>
+    <script>
+       
+       let name= prompt('이름을 입력해주세요!!'); // 입력값 반환
+       document.getElementById('welcome').innerText = name;
+       
+       let conf = confirm(`12345`);  // 확인&취소 -> true / false 값 반환
+
+       alert(`12345`);  // 확인만
+
+       console.log(conf);
+    </script>
+</body>
+</html>

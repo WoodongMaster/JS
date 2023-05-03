@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font 속성</title>
+    <style>
+        .font{
+            font-family: '맑은 고딕','Malgun Gothic', serif;
+            font-size: xx-large;
+            font-style: italic;
+            font-weight: 700;
+            /* font:italic bold 20px "맑은 고딕","Malgun Gothic", serif; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        폰트 지정 : font-family
+        - 지정하려는 폰트를 ,로 나열
+        - 한글폰트의 경우 한글이름과 영문이름을 같이 사용
+        - 마지막 폰트는 기본형으로 지정
+        - "폰트명" -> "나눔 고딕" 굴림 : 띄어쓰기가 없는 폰트는 큰 따움표 없어도됨
+        폰트 크기 : font-size (em : 부모,조상 엘리먼트의 크기에 따라 조정되는 크기)
+        폰트 스타일 : font-style
+        폰트 굵기 : font weight, 100~900사이 100단위로 지정 가능 (일반적인 굵은 사이즈 : 700)
+        
+        font : 폰트 속성을 한번에 적용하는 속성
+        - font : (font-style font-weight) font-size font-family
+        - 스타일과 굵기는 생략 가능
+        - 
+     -->
+     <div class="font">
+        안녕하세요!!!
+     </div>
+</body>
+</html>

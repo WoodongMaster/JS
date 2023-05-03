@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        오늘은??
+    </h1>
+    <button type="button" onclick="today()">Today</button>
+    <h3 id="board">
+        <!-- 오늘 날짜와 요일을 출력
+            2023-04-13(목) -->
+    </h3>
+
+    <script>
+        function today(){
+            let now = new Date();
+            console.log(now);
+
+            let year = now.getFullYear();
+            console.log(year);
+            let month = now.getMonth()+1;
+            console.log(month); // 0부터 1월 ~ 11 : 12월
+            month = String(month);
+            month = month.padStart(2,'0');
+            let day = now.getDate();
+            console.log(day);
+            let yoil = now.getDay();
+            console.log(yoil); // 0부터 일요일 ~ 6 : 토요일
+
+            switch(yoil){
+                    case '0': yoil = '일요일';
+                    break;
+                    case '1': yoil = '월요일';
+                    break;
+                    case '2': yoil = '화요일';
+                    break;
+                    case '3': yoil = '수요일';
+                    break;
+                    case '4': yoil = '목요일';
+                    break;
+                    case '5': yoil = '금요일';
+                    break;
+                    default: yoil = '토요일';
+                    break;
+            }
+            
+            document.getElementById('board').innerText = `${year}-${month}-${day}(${yoil})`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        자바스크립트의 배열은 유동배열 : 크기와 데이터가 변경이 가능하다.
+    </h1>
+    <ul>
+        <li>
+            const myArray = [1,2,3, 'a', 'b', 'c'];
+        </li>
+        <li>
+            배열안 데이터들의 타입은 같게 만드는게 국룰이나 달라도 허용은 함
+        </li>
+        <li>
+            myArray = []; 초기값이 없는 빈 배열 생성후 데이터를 추가하여 사용
+        </li>
+        <li>
+            각 데이터들은 콤마(,)로 분리되고 각 데이터는 index 가짐, 0부터 시작
+        </li>
+        <li>
+            length : 배열 길이
+        </li>
+    </ul>
+    <script>
+        const myArray = ['a', "b", `c`,1,2,3]; // '' "" ``
+        console.log(myArray);
+        console.log(myArray.length);
+        console.log(myArray[2]);
+        console.log(myArray[myArray.length-1]);
+        myArray[6]=4;
+        console.log(myArray[6]);
+        console.log(myArray.length);
+
+        myArray[myArray.length]='add';
+        console.log(myArray[myArray.length-1]);
+        myArray[myArray.length+3]='new';
+        console.log(myArray);
+        console.log(myArray.length);
+        console.log(myArray[8]);
+        console.log(myArray[9]);
+        console.log(myArray[10]);
+
+        //const로 배열 선언시, 배열의 값 변경은 가능 but 배열을 객체로 바꾼다던가는 안됨
+        //배열의 초기화가 필요한 로직은 let으로 선언
+
+        for(let i=0; i<myArray.length; i++){
+            console.log(`${i}번째 ${myArray[i]}`);
+        }
+
+        let assocArrayType = [1, true, 'Moon', undefined, {k: 'value'}, ['k','g']] 
+        // 유사배열(연관배열) : associative Array -> 배열 관련 메서드에 제한이 생김
+        console.log(assocArrayType);
+        for(let i=0; i<assocArrayType.length; i++){
+            if(i==4){
+                console.log(assocArrayType[i].k);
+            }
+            console.log(`${i}번째 ${assocArrayType[i]}`);
+        }
+    </script>
+</body>
+</html>

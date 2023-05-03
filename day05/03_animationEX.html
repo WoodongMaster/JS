@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes jumpBox{
+            from{
+                
+                bottom:0px;
+            }
+            25%{
+                bottom:25px;
+            }
+
+            50%{
+                bottom:0;
+            }
+            75%{
+                bottom:50px;
+            }
+            to{
+                bottom:0px;
+            }
+        }
+
+        .box{
+            position:absolute;
+            bottom:0px;
+            left:10px;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            animation: jumpBox 0.5s 10;
+            border-radius: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location</title>
+</head>
+<body>
+    <h1>
+        location 객체는 브라우저의 주소표시줄 입력에 관련된 객체
+    </h1>
+    <ul>
+        <li>
+            location.href = 'url';  해당 url로 이동 (히스토리 있음)
+        </li>
+        <li>
+            location.replace('url'); 해당 url로 이동 (히스토리 없음)
+        </li>
+        <li>
+            location.assign('url'); 해당 url로 이동 (히스토리 있음)
+        </li>
+        <li>
+            location.reload() : 현재 페이지 새로고침
+        </li>
+    </ul>
+
+    <button type="button" id="href">href 사용</button>
+    <button type="button" id="replace">replace 사용</button>
+    <button type="button" id="assign" onclick="assign()">assign 사용</button>
+    <button type="button" id="refresh" onclick="refresh()">페이지 새로고침</button>
+
+    <script>
+        document.getElementById('href').addEventListener('click', href);
+        document.getElementById('replace').addEventListener('click', replace);
+
+        function href(){
+            location.href='http://naver.com';
+        }
+        function replace(){
+            location.replace('http://naver.com');
+        }
+        function assign(){
+            location.assign('http://naver.com');
+        }
+        function refresh(){
+            location.refresh();
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI추천 - 술 취향찾기</title>
+    <style>
+
+    @font-face {
+        font-family: 'NanumSquareNeo-Variable';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: #f1f6f9;
+    }
+    #main{
+        width: 500px;
+        height: 700px;
+        margin: 20px auto 0px ;
+
+        text-align: center;
+        background-color: white;
+        font-family: 'NanumSquareNeo-Variable';
+    }
+    #text>p{
+        padding-bottom: 15px;
+        font-weight: 700;
+    }
+    #img>img{
+        padding-top: 60px;
+        width: 320px;
+        height: 250px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="img"><img src="quiz_img/로딩.gif" alt=""></div>
+        <div id="text">
+            <p>여러분의 인생 술을 찾고있습니다.</p>
+            <p>잠시만 기다려주세요!</p>
+        </div>
+        
+    </div>
+    <script>
+    window.addEventListener('DOMContentLoaded', function(){
+        
+        //이전 페이지에서 받아온 변수
+        let getLink = window.location.search; 
+        let getChoice = getLink.substring(getLink.indexOf('=')+1); 
+
+
+        //변수와 함께 2초뒤에 이동
+        setTimeout(function(){
+            location.href="quiz_result.html?choice="+getChoice;
+        }, 4700);
+  
+    })
+    
+
+    </script>
+</body>
+</html>

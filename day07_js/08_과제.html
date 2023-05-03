@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="myForm">
+        <fieldset>
+            <legend>성적표</legend>
+            이름 : <input type="text" id="name"><br>
+            국어 : <input type="text" id="kor"><br>
+            영어 : <input type="text" id="eng"><br>
+            수학 : <input type="text" id="math"><br>
+            <button type="button" onclick="clickEvent_sum_avg();">계산</button>
+        </fieldset>
+    </form>
+    <h3 id="info">
+
+    </h3>
+    <script>
+        function clickEvent_sum_avg() {
+            let kor = parseInt(document.getElementById('kor').value);
+            let eng = parseInt(document.getElementById('eng').value);
+            let math = parseInt(document.getElementById('math').value);
+
+            let sum = kor + eng + math;
+            let avg = Math.round(sum / 3);
+
+            let grade = 'F';
+            if ((0 > kor || kor > 100) || (0 > eng || eng > 100) || (0 > math || math > 100)) {
+                alert('점수는 0점~100점 사이값만 입력 가능합니다!');
+                location.reload();
+            }
+            else {
+
+                if (avg > 80) {
+                    grade = 'A'
+                }
+                else if (avg > 70) {
+                    grade = 'B'
+                }
+                else if (avg > 60) {
+                    grade = 'C'
+                }
+                else {
+                    grade = 'D'
+                }
+                let result = document.getElementById('info');
+                result.innerText = `합계 : ${sum} 평균 : ${avg}`;
+                result.innerText += `등급 : ${grade}`;
+            }
+        }
+    </script>
+</body>
+
+</html>

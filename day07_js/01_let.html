@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수사용</title>
+    <!-- 
+        자바 스크립트에서 변수
+        = 값을 담고 있는 메모리 공간의 이름
+        자바스크립트에서 변수는 선언(배정, 할당, 정의)하는 역할만 함.
+        var, let (ES6부터 let 키워드를 사용하라고 권장), const
+        
+        var : 변수명이 같아도 사용가능(let은 불가능)
+
+        let : 변수의 값을 재할당 가능
+            - 유효하지 않은 범위에서는 재선언도 가능(조건문,반복문 안 지역변수)
+
+        const : 변수 재선언, 재할당이 불가능
+            - 고정된 값을 사용하는 의미, 규칙, 참조, 룰, 객체 등을 정의할 때 사용
+            - 선언한 이후 항상 고정값을 가지는 경우 사용
+
+        ㅇ typeof [변수명] -> [변수명]의 타입
+        ㅇ 변수 선언 없이 변수 사용 가능 but 전역변수로 취급되어 사용 안하는게 좋음  <-> 카멜표기법(변수타입 [변수명] = 값;)
+        ㅇ 숫자로 변수명 시작 불가능
+        ㅇ 큰따옴표와 작은따옴표 차이 X 
+        ㅇ 백틱(``) -> 백틱 내부에 코드 삽입 가능 `${변수 or 코드}`     ex) console.log(`주소 : ${hobby}`);
+     -->
+</head>
+<body>
+    <script>
+        // var name="hong";
+        // console.log(name);
+        // var name="kim";
+        // console.log(name);
+
+        age=20;
+        console.log(age);
+
+        let name="park";
+        console.log(name);
+        name="kim";
+        console.log(name);
+        console.log(typeof name);
+
+        const testname = "hong";
+        console.log(testname);
+        console.log(typeof testname);
+
+        let address = "seoul";
+        let hobby = "fishing";
+        console.log("주소 : "+ address+ ' 취미 : ' + hobby);
+
+        console.log(`주소 : `, address);
+        console.log(`주소 : ${hobby}`);
+        
+
+    </script>
+</body>
+</html>

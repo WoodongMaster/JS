@@ -1,0 +1,49 @@
+07_move
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        body{
+            background-color: black;
+        }
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .material-symbols-outlined{
+            color: rgb(241, 241, 141);
+            font-size: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="icon">
+        <span class="material-symbols-outlined">
+            partly_cloudy_night
+        </span>
+    </div>
+
+    <script>
+        let icon = document.getElementById('.icon');
+        document.body.addEventListener('mousemove', function(e){
+            document.querySelector('.icon').style.left = e.pageX + 'px';
+            document.querySelector('.icon').style.top = e.pageY + 'px';
+            // left top 값을 pageX, pageY값으로 바꿔라 
+            // e 객체가 가지고 있는 pageX, pageY좌표를 주고 px단위를 붙인다.
+        })
+    </script>
+</body>
+
+</html>

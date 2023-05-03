@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        배수 출력하기 1~100사이 아무거나
+    </h1>
+    <input type="text" id="num">
+    <button type="button" id="btn" onclick="mul()">배수 출력</button>
+    <h3 id="result">
+
+    </h3>
+    <script>
+        function mul(){
+            let num = document.getElementById('num').value;
+            let count=0;
+            num = parseInt(num);
+            let doc ='';
+            for(let i = 1; i<101; i++){
+
+                if(i%num==0){
+                    doc += `${i} `;
+                    count++;
+                }
+                
+            }
+            
+            document.getElementById('result').innerHTML = doc + `<br>배수의 갯수 : ${count}`;
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #containner {
+            text-align: center;
+            width: 80%;
+            background-color: aquamarine;
+        }
+
+        #background {
+            background-color: darkturquoise;
+            width: 600px;
+            height: 100px;
+            position: relative;
+            margin: auto;
+        }
+
+        #background>input{
+            width : 50%;
+            height: 50px;
+            position: absolute;
+            left : 10%;
+            top : 25px;
+
+        }
+
+        #background>button{
+            width : 10%;
+            height:50px;
+            position: absolute;
+            right : 10%;
+            top : 25px;
+        }
+        #background> li{
+            display: block;
+            width :100%;
+            height: 50px;
+        }
+        li{
+            list-style: none;
+            width: 600px;
+            height: 50px;
+            margin: auto;
+            line-height: 50px;
+            position: relative;
+            display: inline-block;
+        }
+        ul{
+            padding: 0;
+            position: relative;
+            margin-top: 0;
+            border: 4px solid black;
+        }
+        #list>li:nth-child(2n-1){
+            background-color:antiquewhite
+        }
+        #list>li:nth-child(2n){
+            background-color:skyblue
+        }
+        .btn{
+            position: absolute;
+            height: 50px;
+            border: none;
+            right: 0;        
+            background-color:transparent;    
+        }
+    </style>
+</head>
+
+<body>
+    <div id="containner">
+        <h1>
+            여행 준비물 점검 목록
+        </h1>
+        <div id="background">
+            <input type="text" id="insert">
+            <button type="button" onclick="additemList()">추가</button>
+        </div>
+        <ul id="list">
+
+        </ul>
+    </div>
+
+    <script>
+        let target = document.getElementById('insert');
+        let count=1;
+        let str = '';
+        function additemList(){
+            str = target.value
+            document.getElementById('list').innerHTML += `<li id="${count}">${str}<button type="button" class="btn" onclick="deleteList(${count})">X</button></li>`;
+            count++;
+        }
+
+        function deleteList(n){
+            document.getElementById(n).remove();
+        }
+    </script>
+</body>
+
+</html>

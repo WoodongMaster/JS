@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set type</title>
+</head>
+<body>
+    <h1>
+        자바스크립트의 데이터 타입의 확장 개념 집합데이터를 다룰 수 있는 객체
+    </h1>
+    <ul>
+        <li>
+            set은 중복데이터 허용 x : 중복데이터가 들어오면 체크 후 하나만 남김
+        </li>
+        <li>
+            set() : 파라미터는 주로 배열을 사용, 배열의 index와 value를 활용하여 집합데이터 생성
+        </li>
+        <li>
+            set 전용 메서드 존재 (찾아봐야함 ㅋㅋ)
+        </li>
+        <li>
+            new set() or new set(array) : set 객체의 생성 및 초기화
+        </li>
+        <li>
+            set => s : s.add(value) 데이터 추가
+        </li>
+        <li>
+            s.has(value) : value의 존재 여부를 true / false 로 리턴
+        </li>
+        <li>
+            s.forEach(callback function) : set 순환
+        </li>
+        <li>
+            s.entries(), s.keys(), s.values() : 리턴 타입은 SetIterator => 별도의 메서드 사용해야 함
+        </li>
+        <li>
+            s.size : set의 개수
+        </li>
+    </ul>
+    <script>
+        const testSet = new Set(["html", "css", "java", "js"]);
+        console.log(testSet);
+        testSet.add('react');
+        console.log(testSet.size);
+        console.log(testSet.has('html'));
+        console.log(testSet.has('c'));
+        testSet.forEach(function (value, index, self){
+            console.log(value, index, self);
+        });
+
+        // entries, keys, values 의 리턴타입은 setIterator : set의 상위 인터페이스 -> forEach로 안됨 -> for of / spread
+        // entries() : 내부 타입에 접근하여 pair 값을 가져온다.
+        console.log(testSet.entries());  // key + value
+        console.log(testSet.keys());    // key만
+        console.log(testSet.values());  // value만
+        
+        // for in : 객체의 모든 열거 가능한 속성에 대한 반복
+        // for of : [Symbol.iterator] 속성을 가지는 컬렉션에 사용 (배열, set, map ...)
+
+        for(const iter of testSet.entries()){   // iter의 속성은 배열
+            iter.forEach(function(v, i ,s){
+                console.log(i,v);
+            })
+        }
+
+        // keys() , values()를 for of를 사용하여 출력
+        for(const iter of testSet.keys()){   // iter의 속성은 배열
+                console.log(iter);
+        }
+
+        for(const iter of testSet.values()){   // iter의 속성은 배열
+                console.log(iter);
+        }
+
+        testSet.clear();
+        console.log(testSet);
+        console.log(testSet.size);
+    </script>
+</body>
+</html>

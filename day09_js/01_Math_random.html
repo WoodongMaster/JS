@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math & Random</title>
+</head>
+<body>
+    <h1>
+        수학관련 함수, 랜덤함수
+    </h1>
+    <ul>
+        <li>
+            수학관련 함수는 자바와 동일하게 사용됨.
+        </li>
+        <li>
+            Math.round(), Math.trunc(), Math.ceil(), Math.floor()
+            Math.random(), Math.abs(), Math.max(), Math.min()
+        </li>
+        <li>
+            Math.random(): 0(포함)~1(미포함)사이의 난수를 무작위로 리턴
+            Math.floor(Math,random()*45)+1;
+        </li>
+        <li>
+            범위에 대한 random수 구하는 공식 (min, max)
+            Math.floor(Math.random() * (max-min+1))+min;
+        </li>
+    </ul>
+
+    <script>
+        //Math
+        //0~9까지 랜덤수 생성
+        //범위 구하는 공식
+        let num = Math.floor(Math.random()*10)+1;
+        console.log(num);
+
+        function random(min, max) {
+            return Math.floor(Math.random() * (max-min+1))+min;
+        }
+        
+        let num1 = random(1, 10);
+        console.log(num1);
+
+        //형변환
+        //문자 -> 숫자(string to number): Number(), parseInt(), parseFloat()
+        //숫자 -> 문자(number to string): 123.toString(), (12.3).toString()
+        //문자 -> 불리언(string to boolean): string('true') -> Boolean('true')
+        //불리언 -> 문자(boolean to string): String(true)
+        //boolean : true = 1 / false = 0
+        //숫자 -> 불리언: boolean(1), boolean(2)
+        //불 -> 숫자: number(true), number(false)
+
+        console.log(String(true), typeof String(true));
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 Object</title>
+</head>
+<body>
+    <h1>
+        객체 : 식별할 수 있는것을 상세 특징으로 표현하려한 형식(코드 타입)
+    </h1>
+    <ul>
+        <li>
+            const 상수로 선언하는 것이 일반적 -> 객체의 지속성을 유지,확보하기 위함
+        </li>
+        <li>
+            { 속성명1 : 속성값1, 속성명2 :속성값2  ...} 으로 표현
+        </li>
+        <li>
+            속성명은 같은 객체 내에서는 중복되면 안됨(고유키)
+        </li>
+        <li>
+            객체 내부의 속성값으로 사용할 수 있는 데이터 타입은 제한이 없음
+        </li>
+        <li>
+            객체의 속성값으로 익명함수를 정의하면 그 함수를 메서드라고 부름 (속성명이 메서드명이 됨)
+        </li>
+        <li></li>
+    </ul>
+    <script>
+        const car = {name:'myCar', year:2023};
+        // myCar=100; 불가능 const라서
+        
+        let myCar = {name:'superCar',year:2023};
+        myCar=100; // let이라서 가능하지만 myCar의 객체는 사라짐
+    </script>
+
+    <script>
+        const me ={
+            lastName : 'jojo',
+            firstName : 'moon',
+            age:20,
+            addr:'incheon',
+            isDeveloper : true,
+            hobby:'sing a song',
+            Favor:'pizza',
+            avail:{
+                year : 2020,
+                title: 'javascript',
+                version:'ES6+',
+                project:'Back-end',
+                intro: function(){
+                    console.log(`${me.avail.title} : ${me.avail.version} : ${me.avail.project}`);
+                    return `re:${this.title} : ${this.version} : ${this.project}`;
+                }
+            },
+            year:2023
+        };
+        
+        console.log(me);
+        console.log(me.avail.intro);
+        console.log(me.avail.intro());
+
+        console.log(`--------------------`);
+        console.log(me["addr"]);
+        console.log(me['hobby']);
+        console.log(me["avail"]["title"]);
+        console.log(me["avail"]["intro"]());
+
+        console.log(`--------------------`);
+        let keyName='firstName';
+        console.log(me[keyName]); // = me["firstName"]
+
+        keyName="age";
+        console.log(me[keyName]); // = me["age"]
+
+        console.log(`--------------------`); 
+        console.log(me.avail["title"]); // me객체의 avail의 title 출력1
+        console.log(me["avail"].title); // me객체의 avail의 title 출력2
+    </script>
+
+    <script>
+        // 객체 생성 : 좋아하는 가수의 플레이리스트 3곡
+        // 기본 속성 : 이름, 나이, 플레이리스트(객체로), 함수(플레이리스트의 곡 3개를 콘솔로 출력)
+
+        const musician = {
+            name : 'IU',
+            age : 30,
+            playlist:{
+               first : '좋은날',
+               second : '분홍신',
+               third : '내 손을 잡아',
+        
+            print: function(){
+                console.log(`첫번째 : ${musician.playlist.first}, 두번째 : ${musician.playlist.second}, 세번째 : ${musician.playlist.third}`);
+            }
+        }
+    }
+        console.log(musician.name);
+        console.log(musician.age);
+        musician.playlist.print();    
+    
+    </script>
+</body>
+</html>

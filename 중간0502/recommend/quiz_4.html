@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI추천 - 술 취향찾기</title>
+    <link rel="stylesheet" href="quiz2_5.css">
+    <style>
+        /* 진행속도 */
+        #step1{
+            height: 4px;
+            position: relative;
+            background-color: rgb(237, 244, 254);
+            border-radius: 20px;
+            margin: 20px;
+        }
+        #step1>div{
+            position: absolute;
+            height: 4px;
+            width: 320px;
+            background-color: #394867;
+            animation: stepUp 1s linear;
+        }
+        /* 애니메이션 */
+        @keyframes stepUp {
+            0%{
+                width: 220px;
+            }
+            100%{
+                width: 320px
+            }
+        }
+        #popupBtn{
+            width: 120px;
+            height: 40px;
+            margin-left: 38%;
+            
+            color: black;
+            font-weight: 700;
+            font-family: 'KCCChassam';
+            text-decoration: none;
+
+            border: 0;
+            border-radius: 10px;
+            background-color: #9ba4b5;
+            cursor: pointer;
+        }
+     
+        /* 팝업창 뒷배경 (반투명) */
+        #popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        }
+        
+        /* 팝업창 내용 */
+        #show{
+            width: 400px;
+            height: 430px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            border-radius: 20px;
+            text-align: center;
+            background-color: white;
+        }
+        #show>p{
+            margin: 40px;
+        }
+        #show>p:first-child{
+            font-size: 20px;
+            font-weight: 700;
+        }
+        #show>p:nth-of-type(2){
+            /* type은 p만 카운트, child는 모든 show카운트 */
+            color: gray;
+            font-size: 16px;
+        }
+        #show>p:nth-child(3){
+            color: rgb(179, 179, 179);
+            font-size: 14px;
+        }
+        
+        /* 팝업창 확인버튼 */
+        #closeBtn{
+            width: 300px;
+            height: 40px;
+            border: 0;
+            border-radius: 20px;
+            background-color: #9ba4b5;
+
+            font-family: 'KCCChassam';
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <!-- 화면 상단(나가기 버튼 부분) -->
+        <div id="head">
+            <button type="button" id="backBtn">&#10094;</button>
+            추천 진행중<button type="button" id="outBtn">&#10006;</button>
+            <div id="popupX">
+                <div id="showX">
+                    <p>퀴즈를 나가시겠어요?</p>
+                    <p>퀴즈 도중에 중단할 경우 <b>내용이 저장되지 않습니다.</b></p>
+                    <button id="closeBtnX">취소</button>
+                    <button id="mainBtnX">확인</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 화면 중앙(테스트 진행 부분) -->
+        <div id="body">
+
+            <div id="step1">
+                <div></div>
+            </div>
+
+            <div id="text">
+                <div>3/4</div>
+                어떤 바디감의 술을 <br> 선호하시나요?
+            </div> 
+
+            <div class="list">
+              <button type="button" value="1">
+                <img src="quiz_img/걸쭉.png" alt="갈색잔이미지"> 
+                <span>걸쭉하고 강한 풍미가 느껴지는 술 </span></button>
+              <button type="button" value="2">
+                <img src="quiz_img/적당한.png" alt="흰색잔이미지"> 
+                <span>무게감이나 맛의 농도가 적당한 술</span></button>
+              <button type="button" value="3">
+                <img src="quiz_img/묽은.png" alt="노랑잔이미지"> 
+                <span>묽고 가벼운 풍미를 느낄 수 있는 술</span></button>
+            </div>
+
+            <button id="popupBtn"> '바디감' 이란? </button>
+                <div id="popup">
+                    <div id="show">
+                        <p>'바디감'이란?</p>
+                        <p>바디감은 맛의 크기(농도)나 무게감(질감)을 나타내는 단어입니다. <br> 
+                            바디감이 높으면 맛이 강하고 묵직한 농도를 갖고 있다고 할 수 있어요. <br>
+                            반대로 바디감이 낮으면 맛이 약하고 묽은 농도를 갖고 있다고 할 수 있습니다. 
+                        </p>
+                        <p> 예)우유는 바디감이 높고, <br> 물은 바디감이 낮은 편이에요</p>
+                        <button id="closeBtn">확인</button>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+    <script>
+        document.getElementById('backBtn').addEventListener('click',()=>{
+            history.back();
+        });
+
+         // x 버튼을 누르면 팝업 창 나타내기
+         document.getElementById("outBtn").addEventListener("click", function() {
+            document.getElementById("popupX").style.display = "block";
+        });
+
+        // x버튼 안의 취소 버튼 클릭 시 팝업 창 사라지기
+        document.getElementById("closeBtnX").addEventListener("click", function() {
+            document.getElementById("popupX").style.display = "none";
+        });
+
+        // x버튼 안의 확인 버튼 클릭 시 main화면으로 이동
+        // document.getElementById("mainBtn").addEventListener("click", function() {
+        //     // location.href=".main.html";
+        // });
+
+        document.querySelector('.list').addEventListener('click',function(e){
+            let choiceValue = e.target.value;
+            if (typeof e.target.value == 'undefined') {
+                choiceValue = e.target.parentNode.value;
+            }
+
+            //이전 페이지에서 받아온 변수
+            let getLink = window.location.search; //?choice=111
+            let getChoice = getLink.substring(getLink.indexOf('=')+1); //111 (변수 값만 추출)
+            console.log(getChoice);
+       
+             //이동
+            if(choiceValue == undefined){
+                //빈칸을 클릭하는 경우 안넘어가고
+                location.href="quiz_4.html?choice="+getChoice;
+
+            }else{
+                //고른 경우 넘어가도록 설정 = 변수명에 값을 넣어서
+                location.href="quiz_5.html?choice="+getChoice+choiceValue;
+            }
+            
+            
+        })
+        // 버튼 클릭 시 팝업 창 나타내기
+        document.getElementById("popupBtn").addEventListener("click", function() {
+            document.getElementById("popup").style.display = "block";
+
+            
+        });
+
+        // 팝업 창 닫기 버튼 클릭 시 팝업 창 사라지기
+        document.getElementById("closeBtn").addEventListener("click", function() {
+            document.getElementById("popup").style.display = "none";
+        });
+
+    </script>
+</body>
+</html>

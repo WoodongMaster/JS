@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width:100%;
+        }
+        .header{
+            height:60px;
+            background-color: grey;
+            padding-left: 20px;
+            padding-top: 15px;
+            
+        }
+        .header>p{
+            margin: 0;
+            color: white;
+            font-size: 30px;
+            font-weight: 700;
+
+        }
+        .main-img{
+            
+            background-image: url(/img/노트북.png);
+            background-size: 100% 100%;
+            width:50%;
+                float:left;
+                height: 800px;
+        }
+
+        .content{
+            width: 50%;
+                float: right;
+                height: 400px
+            
+        }
+
+        .content>p{
+            padding-left: 20px;
+        }
+        .content>p:first-child{
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        .content>p:nth-child(2){
+            font-size:50px;
+            font-weight: 700;
+        }
+
+        .content>p:last-child{
+            color: darkgray;
+        }
+        .sub{
+            
+            background-image: url(/img/모니터.png);
+            background-size: 100% 100%;
+            width: 50%;
+                float:left;
+                width: 25%;
+                height:400px;
+        }
+        .footer{
+            height:60px;
+            background-color: grey;
+            clear: both;
+            
+        }
+
+        .sub2{
+            
+            position:relative;
+            background-image: url(/img/키보드.png);
+            background-size: 100% 100%;
+            width: 25%;
+                float:right;
+                height:400px;
+        }
+
+        .sub2>a{
+            position:absolute;
+            border: 5px solid white;
+            color: white;
+            padding: 5px;
+            text-decoration-line: none;
+            margin-left: 50%;
+            margin-top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            font-weight: 500;
+            
+        }
+
+        
+        @media screen and (min-width:800px){
+            .header{
+                height:60px;
+            }
+            .main-img{
+                height: 320px;
+                width:100%;
+            }
+
+            .content{
+                width: 100%;
+                height: 160px
+            }
+            .sub{
+                width: 50%;
+                float:left;
+                height:320px;
+            }
+            .sub2{
+                width: 50%;
+                float:right;
+                height:320px;
+            }
+            .footer{
+                clear:both;
+                height: 60px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header"><p>IN'O</p></div>
+    <div class="main-img"></div>
+    <div class="subject"></div>
+    <div class="content">
+        <p>Portfolio</p>
+        <p>Make Hardware Soft</p>
+        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+            Sections 1.10.32 and 1.10.33 from "de Finibus BOnorum et Malorum" by Cicero are also
+        </p>
+    </div>
+    <div class="sub"></div>
+    <div class="sub2">
+        <a href="">VIEW MORE</a>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>

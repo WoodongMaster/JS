@@ -1,0 +1,45 @@
+01_querySelector
+
+querySelector(), querySelectorAll() : HTML 노드(관리객체)로 리턴하는 메서드
+
+getElementBy** : HTMLCollection으로 리턴
+name, id 속성으로 접근이 가능하다.
+
+querySelector    : NodeList 형태로 리턴 
+[0] index 번호로만 접근이 가능하다.
+
+더 구체적인 엘리먼트를 선택하고 싶다면 querySelector, querySelectorAll()
+더 빠르고, 더 많은 지원을 받고싶다면 getElementBy**
+
+getElementBy**을 더 많이 쓰는 추세임
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector</title>
+</head>
+<body>
+    
+    <h1>
+        우우우 난 h1이다.
+    </h1>
+
+    <ul>
+        <li>아무거나씀</li>
+        <li>아무거나씀</li>
+    </ul>
+
+    <script>
+        const h1 = document.querySelector('h1'); // 단일 노드 리턴
+        console.log(h1);
+        console.log(typeof h1);
+
+        const li = document.querySelectorAll('li');
+        console.log(li);
+    </script>
+</body>
+</html>

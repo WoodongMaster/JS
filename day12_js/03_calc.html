@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 50px;
+            height: 50px;
+            margin: 2px 2px 2px 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <button type="button" value="7">7</button>
+        <button type="button" value="8">8</button>
+        <button type="button" value="9">9</button>
+        <button type="button" value="*">*</button>
+        <button type="button" value="C">C</button><br>
+        <button type="button" value="4">4</button>
+        <button type="button" value="5">5</button>
+        <button type="button" value="6">6</button>
+        <button type="button" value="/">/</button><br>
+        <button type="button" value="1">1</button>
+        <button type="button" value="2">2</button>
+        <button type="button" value="3">3</button>
+        <button type="button" value="+">+</button><br>
+        <button type="button" value=".">.</button>
+        <button type="button" value="0">0</button>
+        <button type="button" value="=">=</button>
+    </div>
+    <h2 id="result">
+    </h2>
+
+    <script>
+        const arr = [];
+        let str =[];
+        let Snum = '';
+        document.getElementById('container').addEventListener("click", function (a) {
+            if (typeof a.target.value != 'undefined') {
+                fill_arr(a.target.value);
+            }
+        });
+
+        function fill_arr(t) {
+            switch(t){
+                case '+':
+                    calc(t);
+                    break;
+                case '-':
+                    calc(t);
+                    break;
+                case '/':
+                    calc(t);
+                    break;
+                case '*':
+                    calc(t);
+                    break;
+                case '=':
+                    calc(t);
+                    while(str.length>0){
+                        Snum += Number(str.shift());
+                    }
+                    console.log(Snum);
+
+                    break;
+                default:
+                    arr.push(t);
+                    break;
+            }
+            console.log(arr);
+        }
+        function calc(symbol) {
+            let tmp ='';
+            while(arr.length>0){
+                tmp += arr.shift();
+            }
+            str.push(tmp);
+            str.push(symbol);
+            console.log(str);
+        }
+    </script>
+</body>
+
+</html>

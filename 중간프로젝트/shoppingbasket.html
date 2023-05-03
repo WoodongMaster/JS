@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoppingbasket</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .containner {
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+
+        }
+
+        ul {
+            width: 100%;
+            padding: 0;
+        }
+
+        .items {
+            width: 100%;
+        }
+
+        .items::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        .items li {
+            display: inline-block;
+            position: relative;
+            margin: auto;
+            margin-bottom: 20px;
+            border: 3px solid black;
+            padding: 10px;
+            width: 80%;
+            height: 220px;
+
+        }
+
+        .items img {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            left: 20px;
+            top: 20px;
+        }
+
+        .item_detail {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            width: 300px;
+            height: 150px;
+            background-color: white;
+            border: 3px solid grey;
+        }
+
+        .pay_div {
+            border: none;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+        }
+
+
+        #pay_total {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .pay_Btn {
+            position: absolute;
+            right: 20%;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            width: 150px;
+            height: 80px;
+            font-size: 30px;
+        }
+
+        .close {
+            position: absolute;
+            top: -10px;
+            right: 2px;
+            margin: 0;
+            font-size: 40px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containner">
+        <h1>
+            장바구니
+        </h1>
+
+        <!--연결시 item name 통일 , value(=price) 통일 , 이미지명 통일-->
+        <div class="items">
+            <ul>
+                <li id="p0" name="서울의 밤" value="7100"style="display: none">
+                    <div class="item_detail">
+                        <p class="product_name"></p>
+                        <h2>서울의 밤</h2>
+                        <p class="product_price"></p>
+                        <h3>7,100원</h3>
+                        <p class="product_amount"></p>
+                        
+                    </div>
+                    <img src="img/서울의밤.jpg" alt="">
+                    <p class="close" onclick="deleteList(0)">X</p>
+                </li>
+                <li id="p1" name="붉은원숭이" value="8500"style="display: none">
+                    <div class="item_detail">
+                        <p class="product_name"></p>
+                        <h2>붉은원숭이</h2>
+                        <p class="product_price"></p>
+                        <h3>8,500원</h3>
+                        <p class="product_amount"></p>
+                        
+                    </div>
+                    <img src="img/붉은원숭이.jpg" alt="">
+                    <p class="close" onclick="deleteList(1)">X</p>
+                </li>
+                <li id="p2" name="단상지교" value="20000"style="display: none">
+                    <div class="item_detail">
+                        <p class="product_name"></p>
+                        <h2>단상지교</h2>
+                        <p class="product_price"></p>
+                        <h3>20,000원</h3>
+                        <p class="product_amount"></p>
+                        
+                    </div>
+                    <img src="img/단상지교.jpg" alt="">
+                    <p class="close" onclick="deleteList(2)">X</p>
+                </li>
+                <li id="p3" name="고도리 샤인머스캣 와인" value="38000"style="display: none">
+                    <div class="item_detail">
+                        <p class="product_name"></p>
+                        <h2>고도리 샤인머스캣 와인</h2>
+                        <p class="product_price"></p>
+                        <h3>38,000원</h3>
+                        <p class="product_amount"></p>
+                        
+                    </div>
+                    <img src="img/고도리샤인머스캣와인.jpg" alt="">
+                    <p class="close" onclick="deleteList(3)">X</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="pay_div">
+            <div id="pay_total">총 가격 : 0원</div>
+            <button type="button" class="pay_Btn" onclick="payment()">결제하기</button>
+        </div>
+    </div>
+
+    <script>
+        let total = 0;
+        let str = '';
+        let url = window.location.href;
+        const objList = [];
+        const urlobj = new URL(url);
+        const urlpara = new URLSearchParams(urlobj.search);
+
+        let product_name = urlpara.getAll('product_name');
+        let product_amount = urlpara.getAll('product_amount');
+        let product_price = urlpara.getAll('product_price');
+
+        for (let i = 0; i < product_name.length; i++) {
+            const obj = {
+                name: `${product_name[i]}`,
+                amount: `${product_amount[i]}`,
+                price: `${product_price[i]}`
+            };
+
+            objList.push(obj);
+        }
+
+
+        for (let i of objList) {    // 배열돌기
+            for (let j = 0; j < 4; j++) {
+
+                if (i.name == document.getElementById(`p${j}`).getAttribute(`name`)) {
+                    document.getElementById(`p${j}`).style.display = `block`;
+                    document.querySelector(`#p${j} .product_amount`).innerHTML = `<h3>${i.amount}개</h3>`;
+                    total += (parseInt(document.getElementById(`p${j}`).value) * parseInt(i.amount));
+                }
+            }
+        }
+
+    
+        const st_total = total.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+        document.getElementById("pay_total").innerHTML = `총 가격 : ${st_total}원`;
+
+        function deleteList(n) {
+            document.getElementById(`p${n}`).style.display = 'none';
+            for (let i of objList) {    // 배열돌기
+                if (i.name == document.getElementById(`p${n}`).getAttribute(`name`)) {
+                    total -= parseInt(i.amount) * parseInt(document.getElementById(`p${n}`).value);
+                }
+            }
+            const sub_total = total.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+            document.getElementById("pay_total").innerHTML = `총 가격 : ${sub_total}원`;
+        }
+
+
+        function payment() {
+            location.href = `payment.html`;
+        }
+    </script>
+</body>
+
+</html>

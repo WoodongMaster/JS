@@ -1,0 +1,244 @@
+/* 폰트 CSS */
+
+@font-face {
+  font-family: "OTWelcomeRA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Default CSS */
+
+body {
+  padding: 16px 68px;
+  font-family: "OTWelcomeRA";
+}
+
+p {
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(32, 32, 32);
+}
+
+/* search bar CSS */
+
+#search-form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+#search-form div {
+  height: 40px;
+  line-height: 40px;
+  width: 90%;
+  background-color: rgb(242, 242, 242);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#search-form div i {
+  color: rgb(193, 193, 193);
+  font-size: 20px;
+}
+
+#search-form div input {
+  background-color: rgb(242, 242, 242);
+  border-style: none;
+  outline-style: none;
+  font-size: 18px;
+  height: 100%;
+  width: 90%;
+}
+
+#search-form button {
+  border-style: none;
+  background-color: white;
+  color: rgb(33, 151, 243);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* recommend CSS */
+
+header > h3 {
+  margin-top: 52px;
+  text-align: center;
+}
+
+#recommend-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 26px;
+  margin-top: 60px;
+}
+
+.recommend {
+  background-color: rgb(247, 247, 247);
+  border-radius: 24px;
+  padding: 36px 12px 12px 12px;
+  position: relative;
+}
+
+.recommend img {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+}
+
+.recommend p:nth-child(2) {
+  color: rgb(84, 84, 84);
+}
+
+.recommend p:nth-child(3) {
+  color: rgb(191, 191, 191);
+}
+
+#first-rec img,
+#second-rec img,
+#third-rec img {
+  position: absolute;
+  top: -36px;
+  left: 18px;
+  border: 8px solid white;
+}
+
+#first-rec img {
+  background-color: rgb(250, 227, 224);
+}
+
+#second-rec img {
+  background-color: rgb(247, 235, 187);
+}
+
+#third-rec img {
+  background-color: rgb(255, 92, 68);
+}
+
+/* main list container CSS */
+
+#h3-for-margin {
+  font-size: 24px;
+  margin: 52px 0 52px 0;
+  text-align: center;
+}
+
+.main-list {
+  display: flex;
+  justify-content: center;
+}
+
+.main-list li {
+  margin: 10px;
+}
+
+.main-list-container {
+  position: relative;
+  max-width: 1530px;
+  margin: auto;
+  margin-bottom: 200px;
+}
+
+.main-list img {
+  border-radius: 16px;
+  width: 260px;
+  height: 330px;
+  transition: transform 0.3s ease-in;
+}
+
+.main-list img:hover {
+  transform: scale(1.05);
+}
+
+.main-next-button {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  right: 48px;
+  width: 64px;
+  height: 64px;
+  background-color: white;
+  color: rgb(244, 187, 95);
+  border: 2px solid rgb(244, 187, 95);
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+.main-next-button i {
+  font-size: 32px;
+}
+
+/* footer CSS  */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgb(224, 224, 224);
+  padding: 36px 92px;
+}
+
+#social-link ul {
+  display: flex;
+}
+
+#social-link ul li {
+  margin-right: 12px;
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  background-color: rgb(242, 242, 242);
+  text-align: center;
+}
+
+#social-link ul li i {
+  font-size: 32px;
+  color: rgb(112, 112, 112);
+  line-height: 48px;
+}
+
+/* empty list */
+
+.product1,
+.product2,
+.product3,
+.product4 {
+  display: none;
+}
+
+#search-value {
+  display: none;
+  justify-content: center;
+  max-width: 1530px;
+  margin: 120px auto;
+  text-align: center;
+}
+
+#search-value a {
+  margin: 10px;
+}
+
+#search-value img {
+  border-radius: 16px;
+  width: 260px;
+  height: 330px;
+  transition: transform 0.3s ease-in;
+}
+
+#search-value img:hover {
+  transform: scale(1.05);
+}
+
+#tmp-para {
+  font-size: 28px;
+  text-align: center;
+  margin-top: 120px;
+}

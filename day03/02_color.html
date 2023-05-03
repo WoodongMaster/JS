@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color 속성</title>
+    <style>
+        .color{
+            color: navy;
+            
+        }
+
+        .bg-color{
+            /* background-color: rgba(0, 255, 34, 0.5); */
+            background:linear-gradient(to left,red,blue);
+        }
+
+        .b-color{
+            /* border-style: solid;
+            border-color: red; */
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        색상 관련 속성
+        - color : 글자색
+        - background-color : 배경색
+        - border-color : 테두리색
+
+        색상 지정 방법
+        - 이미 지정된 이름을 사용하는 방법 : red, yello, blue 등
+        - 색상 코드를 이용하는 방법 : 16진수 색상 코드 #RRGGBB
+        - rgb함수를 이용하는 방법 : rgb(255,0,0)
+        - rgba함수를 이용하는 ㄴ방법 : rgba(255,0,0,1) rgb+투명도(a) 0~1사이의 값으로 조정
+
+        그라디언트
+        - 기본방향 : 위에서 아래로 진행(방향 생략시)
+        - backgroun: linear-gradient(to 방향, 색상1, 색상2);
+     -->
+     <div class="color">글자색</div>
+     <div class="bg-color">배경색</div>
+     <div class="b-color">테두리색</div>
+</body>
+</html>

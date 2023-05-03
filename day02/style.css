@@ -1,0 +1,47 @@
+#input1{
+    font-size: 100px;
+    height: 300px;
+}
+
+#ptag{
+    font-size: 100px;
+    height: 300px;
+}
+
+h1{
+            
+    font-size: 50px;
+    font-weight: 700;
+    width: 18%;
+    border: solid;
+    border-width: 10px;
+    margin: auto;
+    padding: 20px;
+    
+    
+    
+}
+#home{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    margin: auto;
+}
+
+li{
+    margin:0px 10px; /*상하 좌우  (먼저 나오는게 상하, 뒤에 나오는게 좌우)
+                         마진 적용시 순서 12시 3시 6시 9시(시계방향)
+                         3개가 나오면 상 (좌=우) 하
+                         */
+}
+
+body{
+    text-align: center;
+    
+}

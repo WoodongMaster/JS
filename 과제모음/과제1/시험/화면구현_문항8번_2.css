@@ -1,0 +1,73 @@
+@font-face{
+    font-family:Yeon_Sung;
+    src: url(/Font/Yeon_Sung/YeonSung-Regular.ttf);
+}
+body{
+    font-family: Yeon_Sung;
+    background-color:  bisque;
+}
+div{
+    text-align: center;
+    color: rgb(7, 109, 58);;
+}
+.header{
+    margin-top:100px;
+}
+.header>h1{
+    font-size:100px;
+    
+    border-radius: 50px;
+    color: rgb(7, 109, 58);
+    
+    padding: 10px;
+    display: inline;
+}
+
+.header>h3{
+    font-size:30px
+}
+.menu{
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+#sushi{
+    width:300px;
+    height: 200px;
+    background-image: url(https://t1.daumcdn.net/cfile/tistory/1908EE4C4FD97EA71C);
+    background-size: 300px 200px;
+    border-radius: 10px 10px 0 0;
+}
+.menu>div>:last-child{
+    padding: 10px;
+    font-weight: 700;
+    color: blue;
+}
+
+#doshirak{
+    width:300px;
+    height: 200px;
+    background-image: url(https://cdn-pro-web-241-46.cdn-nhncommerce.com/dandorak_godomall_com/data/goods/18/05/20/1000000051/1000000051_detail_090.png);
+    background-size: 300px 200px;
+    border-radius: 10px 10px 0 0;
+}
+
+#hamberger{
+    width:300px;
+    height: 200px;
+    background-image: url(https://cdn.straightnews.co.kr/news/photo/201912/61715_33324_441.jpg);
+    background-size: 300px 200px;
+    border-radius: 10px 10px 0 0;
+}
+
+#noodle{
+    width:300px;
+    height: 200px;
+    background-image: url(https://recipe.gabia.io/pds/upfile/2020-08-20_620177542[4].jpg);
+    background-size: 300px 200px;
+    border-radius: 10px 10px 0 0;
+}
+

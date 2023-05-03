@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(0,105,85);
+        }
+        .box{
+            background-color: rgba(255, 255, 255, 0.842);
+            width: 400px;
+            height: 300px;
+            text-align: center;
+            margin: auto;
+            border-radius: 10px;
+            margin-top:10%;
+        }
+        .id{
+            width: 350px;
+            height: 50px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            font-size: 20px;
+            padding: 0;
+            padding-left: 10px;
+        }
+        .password{
+            width: 350px;
+            height: 50px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            font-size: 20px;
+            padding: 0;
+            padding-left: 10px;
+            
+        }
+        .loginbutton{
+            width: 360px;
+            height: 50px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            font-size: 20px;
+            color: white;
+            padding: 0;
+            background-color: rgb(0,105,85);
+        }
+
+        .box>div>p{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="">
+        <div class="id_box">
+            <input type="text" class="id" value="" placeholder="아이디">
+        </div>
+
+        <div class="password_box">
+            <input type="password" class="password" value="" placeholder="비밀번호">
+        </div>
+        
+        <div class="loginbutton_box">
+            <input type="button" class="loginbutton" value="로그인">
+        </div>
+         </form>
+
+        <div>
+            <p><ins>비밀번호를 잊어버리셨나요</ins></p>
+        </div>
+
+    </div>
+</body>
+</html>

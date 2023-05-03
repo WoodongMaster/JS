@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memberjoin</title>
+</head>
+<style>
+    .body {
+        position: relative;
+    }
+
+    .container {
+        width: 500px;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .container input {
+        width: 97%;
+        height: 50px;
+        display: inline-block;
+        border-radius: 5px;
+        padding-left: 10px;
+        font-size: 16px;
+        border: 1px solid black;
+        outline: none;
+    }
+
+    .container p {
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        
+    }
+
+    #p1{
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    #p2{
+        font-size: 15px;
+        
+    }
+
+    #submit {
+        width: 100%;
+        display: block;
+        
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 5px;
+        color: black;
+        font-size: 20px;
+        
+        background-color : rgba(107, 182, 252, 0.8);
+        padding: 0;
+        margin: 0;
+    }
+
+    .rep_check{
+        margin-top: 5px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p id="p1">회원가입</p>
+        <p id="p2">항상 최선을 다하겠습니다!</p>
+        <input type="text" id="id" class="text-field" placeholder="아이디는 문자와 숫자를 포함한 4자 이상, 20자 이하입니다">           
+        <p id="id_text"></p>
+        <input type="text" id="nickname" class="text-field" placeholder="닉네임 2자 이상, 10자 이하입니다">           
+        <p id="nickname_text"></p>
+        <input type="password" id="password" class="text-field" placeholder="비밀번호는 문자와 숫자를 포함한 4자 이상, 20자 이하입니다">
+        <p id="pw_text"></p>
+        <input type="password" id="password_re" class="text-field" placeholder="비밀번호를 한번 더 입력해주세요">
+        <p id="pw_re_text"></p>
+        <button type="button" id="submit" class="btn-input" onclick="toHome()">회원가입 신청</button>
+    </div>
+
+    <script>
+        let id = document.getElementById('id');
+        let pw = document.getElementById('password');
+        let pw_re = document.getElementById('password_re');
+        let nickname = document.getElementById('nickname');
+
+        const btn = document.querySelector(`.btn-input`);
+        const inputs = document.querySelectorAll(`.text-field`);
+        let trg0 = false;
+        let trg1 = false;
+        let trg2 = false;
+        let trg3 = false;
+
+        inputs[0].addEventListener('input', () => {     //아이디 영역
+            let id_reg = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,20}$/.test(id.value);
+            if (id_reg) {
+                id.style.borderColor='green';
+                document.getElementById('id_text').innerHTML=`사용 가능한 아이디입니다`;
+                document.getElementById('id_text').style.color='green';
+                trg0=true;
+            }
+            else {
+                id.style.borderColor='red';
+                document.getElementById('id_text').innerHTML=`아이디 조건에 맞지않습니다`;
+                document.getElementById('id_text').style.color='red';
+                trg0=false;
+                }
+        })
+
+        inputs[1].addEventListener('input', () => { // 닉네임 영역
+            let nickname_reg = /^[ㄱ-ㅎ가-힣a-zA-Z0-9]{2,20}$/.test(nickname.value);
+            if (nickname_reg) {
+                nickname.style.borderColor='green';
+                document.getElementById('nickname_text').innerHTML=`사용 가능한 닉네임입니다`;
+                document.getElementById('nickname_text').style.color='green';
+                trg1=true;
+            }
+            else {
+                nickname.style.borderColor='red';
+                document.getElementById('nickname_text').innerHTML=`닉네임 조건에 맞지않습니다`;
+                document.getElementById('nickname_text').style.color='red';
+                trg1=false;
+                }
+        })
+
+        inputs[2].addEventListener('input', () => {     // 비밀번호 영역
+            let pw_reg = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,20}$/.test(pw.value);
+            if(pw_reg){
+                pw.style.borderColor='green';
+                document.getElementById('pw_text').innerHTML=`사용 가능한 비밀번호입니다`;
+                document.getElementById('pw_text').style.color='green';
+                trg2=true;
+            }
+            else{
+                pw.style.borderColor='red';
+                document.getElementById('pw_text').innerHTML=`비밀번호 조건에 맞지않습니다`;
+                document.getElementById('pw_text').style.color='red';
+                trg2=false;
+            }
+        })
+
+        inputs[3].addEventListener('input', () => {     // 비밀번호 재입력 영역
+            let pw_re_reg = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,20}$/.test(pw_re.value);
+            if(pw_re_reg && (pw_re.value==pw.value)){
+                pw_re.style.borderColor='green';
+                document.getElementById('pw_re_text').innerHTML=`비밀번호 일치 확인`;
+                document.getElementById('pw_re_text').style.color='green';
+                trg3=true;
+            }
+            else{
+                pw_re.style.borderColor='red';
+                document.getElementById('pw_re_text').innerHTML=`비밀번호와 다릅니다`;
+                document.getElementById('pw_re_text').style.color='red';
+                trg3=false;
+            }
+
+            if(trg0 && trg1 && trg2 && trg3){
+                btn.style.backgroundColor='rgb(0, 132, 255)';
+                btn.style.color='white';
+            }
+            else{
+                btn.style.backgroundColor='rgba(107, 182, 252, 0.8)';
+                btn.style.color='black';
+            }
+        })
+
+        function toHome(){
+            if(trg0 && trg1 && trg2){
+                alert('회원가입이 완료되었습니다.');
+                location.href=`main.html?id=${id.value}&password=${password.value}`;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

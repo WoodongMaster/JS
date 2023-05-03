@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>담화</title>
+  <link rel="stylesheet" href="product.css">
+  <script src="product.js" defer></script>
+  <script src="https://kit.fontawesome.com/55381cd0ef.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <nav id="nav">
+        <ul>
+            <a href="main.html" id="logo">술담화</a>
+            <a href="search.html">
+                <button id="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i> 무엇을 찾고 계신가요?
+                </button></a>
+        </ul>
+        <ul>
+            <a href="login.html" id="log-in" value="logout">로그인/회원가입</a>
+            <a href="" id="shoppingbasket">
+                <i class="fa-solid fa-basket-shopping"></i>
+            </a>
+        </ul>
+    </nav>
+</header>
+  <main>
+    <!-- 상단 왼쪽 -->
+    <section id="main-pic">
+      <img src="img/서울의밤.jpg" alt="">
+    </section>
+
+    <!-- 상단 오른쪽 -->
+    
+    <section id="main-info">
+
+      <h1 id="titleName" >서울의 밤</h1>
+      <h3 id="originalPrice">7,100원</h3>
+      <hr>
+      <span>늦은 밤, 어느 안주와도 어울리는 술</span><br>
+      <span>매실로 만든 한국의 진(GIN), 부드럽고 깔끔하게</span>
+      <p>
+        주종 : 리큐르<br>
+        도수 : 25%<br>
+        용량 375ml
+      </p>
+      <p>
+        유통기한 : 유통기한 없음<br>
+        보관방법 : 상온 보관 가능
+      </p>
+      <div class="amount">
+        <p>수량</p>
+        <hr>
+        <div class="amountBtn">
+          <input class="minus" id="minus" type="button" value="-">
+          <input class="inputText" id="inputText" type="text" value="1">
+          <input class="plus" id="plus" type="button" value="+">
+          <span id="totalPrice">총 구매 가격</span>
+          <span id="price">7,100원</span>
+        </div>
+      </div>
+      <div class="itemCart">
+        <a class="buy" id="buy" href="">구매하기</a>
+        <a class="cart" id="cart" href="">장바구니</a>
+      </div>
+    </section>
+
+    <section id="content">
+      <!-- 핵심포인트 시작 -->
+      <div id="contentKeyPoint">
+        <div class="point">핵심 포인트</div>
+        <div class="pointMainBox">
+          <div class="pointBox">
+            <div class="imgPoint">
+              <img class="contentPic" src="img/mainPointImg.png" alt="mainPointImg_png">
+            </div>
+            <div class="textPoint">
+              맛
+            </div>
+            <span></span>
+          </div>
+          <div class="explain"><span>‘깔끔하다’라는 표현이 이보다 더 잘 어울리는 술이 있을까요?</span></div>
+        </div>
+        <div class="pointMainBox">
+          <div class="pointBox">
+            <div class="imgPoint">
+              <img class="contentPic" src="img/point_anju.png" alt="point_anju_png">
+            </div>
+            <div class="textPoint">
+              안주
+            </div>
+            <span></span>
+          </div>
+          <div class="explain"><span>생선회와 함께하여 극강의 깔끔함을 느껴보세요</span></div>
+        </div>
+        <!-- 핵심 포인트 끝 -->
+
+        <!-- 안주 추천 시작 -->
+        <div class="contentMainFood">
+          <div class="anju">어울리는 안주</div>
+          <div class="foodBox">
+            <div class="foodStyle">
+              <div class="foodPic_1">
+                <img src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/origin/aKk9-1622512847205-%EC%83%A4%EB%B8%8C%EC%83%A4%EB%B8%8C.png"
+                alt="">
+              </div>
+              <div class="foodText">샤브샤브</div>
+
+            </div>
+            <div class="foodStyle">
+              <div class="foodPic_2">
+                <img src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/origin/UhG1-1653985071284-%E1%84%80%E1%85%AA%E1%86%BC%E1%84%8B%E1%85%A5%E1%84%92%E1%85%AC.png"
+                alt="">
+              </div>
+              <div class="foodText">광어회</div>
+
+            </div>
+            <div class="foodStyle">
+              <div class="foodPic_3">
+                <img src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/origin/tAb3-1622525480967-%EC%AD%88%EA%BE%B8%EB%AF%B8.png"
+                alt="">
+              </div>
+              <div class="foodText">쭈꾸미 볶음</div>
+
+            </div>
+            <div class="foodStyle">
+            </div>
+          </div>
+        </div>
+        <!-- 안주 추천 끝 -->
+
+        <!-- 디테일 시작 -->
+        <div class="contentDetail">
+          <div class="detailBox">
+            <img src="img/서울의밤2.jpg" alt="">
+            <strong>[서울의 밤], 어떤 맛을 갖고 있나요?</strong>
+            <p>‘서울의 밤’은 25도라는 높은 도수를 가지고 있지만</p>
+            <p><strong>씁쓸한 맛보단 매실의 달콤한 풍미가 돋보이는 술</strong>향을 맡아보면</p>
+            <p> 목을 넘기는 동시에 코와 입, 목으로 상쾌하게 퍼지는</p>
+            <p>매실의 풍미 또한 가히 예술이라 할 수 있는데요.</p>
+            <p>마시고 나면 언제 마셨는지 모를 만큼 <strong>깔끔함</strong>까지 느낄 수 있을 거예요</p>
+          </div>
+
+
+          <div class="detailBox">
+            <img src="img/서울의밤3.jpg" alt="">
+            <strong>[서울의 밤], 알고 마시면 더 맛있어요!</strong>
+            <p>풍부한 매실향을 지닌 ‘서울의 밤’은</p>
+            <p><strong>온더락</strong>으로 즐겨도 충분히 맛과 향을 느낄 수 있으며</p>
+            <p>한층 더 부드러운 목 넘김을 자랑합니다.</p>
+            <p>서울의 밤은 매실로 만든 소주에다 노간주 나무 열매를</p>
+            <p>침출 시키는 <strong>한국형 '진'</strong>이랍니다.</p>
+        </div>
+        <hr>
+        <div class="ai_slide">
+            <img src="img/icon_AI.png" alt="img/icon_AI_png">
+            <div>보고계신 상품과 비슷한 상품이에요</div>
+        </div>
+        
+        <div class="slide_wrapper">
+            <ul class="slides">
+                <li>
+                    <img class="rePic" src="img/고도리사과와인.jpg" alt="">
+                    <p>고도리 사과 와인</p>
+                    <p>23,000원</p>
+                </li>
+                <li>
+                    
+                    <img class="rePic" src="img/로제와인.jpg" alt="">
+                    <p>로제와인</p>
+                    <p>20,000원</p>
+                </li>
+                <li>
+                    
+                    <img class="rePic" src="img/부안해풍오디주.jpg" alt="">
+                    <p>부안 해풍 오디주</p>
+                    <p>10,800원</p>
+                </li>
+                <li>
+                    <img class="rePic" src="img/샤토미소웨딩자두와인.jpg" alt="">
+                    <p>샤토미소 웨딩 자두와인</p>
+                    <p>22,000원</p>
+                </li>
+                <li>
+                    <img class="rePic" src="img/세인트하우스모과와인.jpg" alt="">
+                    <p>세인트하우스 모과 와인</p>
+                    <p>23,000원</p>
+                </li>
+                <li>
+                <img class="rePic" src="img/시나브로켐벨스위트.jpg" alt="">
+                <p>시나브로 캠벨 스위트</p>
+                <p>30,000원</p>
+            </li>
+            <li>
+                <img class="rePic" src="img/오미로제투게더.jpg" alt="">
+                <p>오미로제 투게더 </p>
+                <p>14,400원</p>
+            </li>
+            <li>
+                <img class="rePic" src="img/허니비와인.jpg" alt="">
+                <p>허니비 와인</p>
+                <p>23,000원</p>
+            </li>
+        </ul>
+        <span class="prev"><img src="img/prev.png" alt=""></span>
+        <span class="next"><img src="img/next.png" alt=""></span>
+    </div>
+
+
+        </div>
+        <!-- 디테일 끝 -->
+
+      </div>
+      <!-- content 끝 -->
+    </section>
+  </main>
+  <hr>
+  <footer>
+    <div class="footerMain">
+      <div class="footerName">
+        <div id="company">
+          담화컴퍼니 주식회사
+          <p>고객센터: 070-5014-1282</p>
+          <p>평일 10:00 - 18:00</p>
+        </div>
+        <div class="div1"></div>
+        <div id="social-link">
+          <ul>
+            <li>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-apple"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-vimeo"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <span>이용약관</span><span>개인정보처리방침</span><span>입점문의</span>
+      <p>
+        대표:이재욱 사업자등록번호:720-12-1234
+        통신판매 신고번호:2021-인천부평-1234
+      </p>
+      <p>
+        주소: 인천광역시 영영구 떙떙대로 123, 12층(엔타스빌딩, 이젠) <br>
+        정보보호책임자: 김이젠 대표전화: 032-000-1234 이메일: ezen@zene.com
+      </p>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

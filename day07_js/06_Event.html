@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <h1>
+        이벤트 객체는 전역객체로써 모든 태그에 객체를 참조시킬 수 있다.
+    </h1>
+    <ul>
+        <li>
+            a태그와 button 태그에 이벤트를 주로 참조시켜, <br>
+            클릭에 대한 반응을 만들때 사용
+        </li>
+        <li>
+            a태그는 href 속성에 의해 자체 이동이 구현되어 있어서 이동을 막는 코드 필요
+        </li>
+        <li>
+            이벤트 객체를 부여하는 방식3가지. 각자 목적과 방식이 다름
+        </li>
+    </ul>
+    <ul>
+        <li>
+            화면 출력 영역 = document 영역(객체) 라고 함
+        </li>
+        <li>
+            태그 = html element, 속성 = attribute, 일반텍스트 = textNode 라고 함
+        </li>
+        <li>
+            html 태그로 출력 : innerHTML이라는 property 사용
+        </li>
+        <li>
+            text로 출력 : innerText라는 property 사용
+        </li>
+        <li>
+            EventListener로 출력 : .addEventListener를 사용
+        </li>
+        <li>
+            객체의 값을 가져올 때 (id) : getElementByid('[id명]')
+        </li>
+        <li>
+            객체의 값을 가져올때 (class) : querySelector('selector')
+        </li>
+    </ul>
+    <button type="button" onclick="javascript:eventFunc();">클릭1</button>
+    <button type="button" onclick="javascript:eventFunc2(100);">클릭2</button>
+    <button onclick="alert('경고창 띄우기')">alert</button>
+    <button id="testBtn">testButton</button>
+    <button type="button" id="test" onclick="">클릭3</button>
+    <h1 id="printResult">
+
+    </h1>
+    
+    <script>
+        let sum=10;
+        function eventFunc(){
+            let printResult = document.getElementById('printResult');
+            printResult.innerText = '커피가 필요해';
+        }
+        function eventFunc2(num){
+            let printResult = document.getElementById('printResult');
+            printResult.innerHTML = `<span style="color:navy">span태그 사용했습니다. ${num}</span>`;
+        }
+
+        document.getElementById('testBtn').addEventListener('click',() =>{
+            alert('testButton을 눌러서 띄운 alert입니다');
+        })
+
+        document.getElementById('test').addEventListener('click',() =>{ // 파라미터 어떻게 넣는지 확인해야함
+       
+            
+       
+        })
+
+        
+    </script>
+</body>
+</html>

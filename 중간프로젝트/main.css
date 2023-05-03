@@ -1,0 +1,385 @@
+/* 폰트 CSS */
+
+@font-face {
+  font-family: "HS-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OTWelcomeRA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Default  CSS */
+
+body {
+  font-family: "OTWelcomeRA";
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(32, 32, 32);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+i {
+  display: inline-block;
+}
+
+.fa-star {
+  color: rgb(254, 185, 74);
+}
+
+/* Nav CSS */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgb(68, 68, 68);
+  height: 76px;
+  padding: 0 60px;
+}
+
+#logo {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "HS-Regular";
+  font-weight: bold;
+  font-size: 2.2rem;
+  color: rgb(32, 32, 32);
+}
+
+#search-bar {
+  background-color: rgb(240, 239, 239);
+  border-style: none;
+  border-radius: 8px;
+  width: 260px;
+  height: 40px;
+  padding: 12px 32px;
+  cursor: pointer;
+}
+
+#log-in {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.fa-basket-shopping {
+  font-size: 2rem;
+}
+
+/* 상단 컨테이너 CSS */
+
+.list-container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+}
+
+#next-button {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  right: 20px;
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(197, 194, 194, 0.5);
+  border-style: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.list {
+  width: 100%;
+  margin: 0;
+}
+
+.list img {
+  width: 100%;
+  height: 450px;
+}
+
+/* AI Link CSS */
+
+#ai-link {
+  height: 68px;
+  background-color: rgb(0, 151, 243);
+  color: white;
+  text-align: center;
+  line-height: 68px;
+}
+
+#ai-link p {
+  margin: 0;
+}
+
+/* 더보기 배너 */
+
+.more {
+  max-width: 1176px;
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem auto 1rem;
+}
+
+.more div:nth-child(1) {
+  display: flex;
+}
+
+.more a {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  color: rgb(24, 144, 255);
+  font-weight: bold;
+  padding: 32px 0;
+}
+
+.more-img {
+  width: 80px;
+  height: 80px;
+}
+
+.more-first-para,
+.more-second-para {
+  font-weight: bold;
+  margin: 10px 0px;
+}
+
+.more-first-para {
+  font-size: 1.8rem;
+  color: rgb(89, 89, 89);
+}
+
+.more-second-para {
+  font-size: 1.5rem;
+  color: rgb(255, 185, 128);
+}
+
+/* main list container CSS */
+
+.main-list {
+  display: flex;
+  justify-content: center;
+}
+
+.hide {
+  display: none;
+}
+
+.main-list li {
+  margin: 10px;
+}
+
+.main-list-container {
+  position: relative;
+  max-width: 1530px;
+  margin: auto;
+  margin-bottom: 200px;
+}
+
+.main-list img {
+  border-radius: 16px;
+  width: 260px;
+  height: 330px;
+  transition: transform 0.3s ease-in;
+}
+
+.main-list img:hover {
+  transform: scale(1.05);
+}
+
+.main-next-button {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  right: 48px;
+  width: 64px;
+  height: 64px;
+  background-color: white;
+  color: rgb(244, 187, 95);
+  border: 2px solid rgb(244, 187, 95);
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+.main-next-button i {
+  font-size: 32px;
+}
+
+/* 타임특가 CSS */
+
+#sale-price {
+  margin: 160px auto;
+  max-width: 1144px;
+}
+
+.fa-clock {
+  color: red;
+  font-size: 32px;
+}
+
+#remain-times-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+#first-remain-span {
+  display: inline-block;
+  padding-right: 12px;
+  margin-right: 12px;
+  height: 24px;
+  font-size: 28px;
+  font-weight: bold;
+  border-right: 1px solid;
+}
+
+#remain-time {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#second-remain-span {
+  font-size: 18px;
+}
+
+#remain-times-div2 {
+  background-color: rgb(211, 57, 57);
+  padding: 16px 16px;
+  border-radius: 12px 12px 0 12px;
+}
+
+#remain-times-div2 p {
+  color: white;
+  margin: 0;
+}
+
+/* 타임특가 Img CSS */
+
+#sale-item {
+  width: 100%;
+  height: 360px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: rgb(62, 62, 62);
+  display: flex;
+}
+
+#sale-item-img {
+  width: 40%;
+  max-width: 560px;
+  height: 100%;
+  background-size: cover;
+}
+
+#sale-item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  color: white;
+}
+
+#sale-item-info p:first-child {
+  display: inline-block;
+  background-color: red;
+  width: 56px;
+  height: 24px;
+  text-align: center;
+  line-height: 32px;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-bottom: 0;
+}
+
+#sale-item-info p:nth-child(2) {
+  color: rgb(192, 192, 192);
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+#sale-item-info h3 {
+  padding-bottom: 12px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid rgb(112, 112, 112);
+}
+
+#sale-item-info-review {
+  display: flex;
+  justify-content: space-between;
+  height: 32px;
+}
+
+#sale-item-info-review div {
+  display: flex;
+  align-items: center;
+  line-height: 32px;
+}
+
+#sale-item-info-review p,
+#sale-item-info-review h2,
+del {
+  margin: 0 8px 0 0;
+}
+
+/* footer CSS */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgb(224, 224, 224);
+  padding: 36px 160px;
+}
+
+#social-link ul {
+  display: flex;
+}
+
+#social-link ul li {
+  margin-right: 12px;
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  background-color: rgb(242, 242, 242);
+  text-align: center;
+}
+
+#social-link ul li i {
+  font-size: 32px;
+  color: rgb(112, 112, 112);
+  line-height: 48px;
+}
+
+/* JS를 통한 Sold out CSS */
+
+.newDiv {
+  background-color: rgba(197, 194, 194, 0.5);
+  position: absolute;
+  top: 10px;
+  border-radius: 16px;
+  width: 260px;
+  height: 330px;
+  transition: transform 0.3s ease-in;
+  text-align: center;
+}
+
+.newDiv p {
+  font-size: 2rem;
+  line-height: 220px;
+  color: rgb(243, 228, 208);
+} 

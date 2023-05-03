@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드뒤집기</title>
+    <style>
+        table,
+        td {
+            border: 2px solid rgb(186, 186, 186);
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin: 100px auto;
+        }
+
+        .pic {
+            width: 120px;
+            height: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" id="btn">시작하기</button>
+    <table id="table">
+    </table>
+
+    <script>
+        let btn = document.getElementById('btn');
+
+        let model = ["0.png", "0.png",
+            "1.png", "1.png",
+            "2.png", "2.png",
+            "3.png", "3.png",
+            "4.png", "4.png",
+            "5.png", "5.png"];
+
+        // window.addEventListener("load", function){}  // 윈도우를 새로고침 할 때마다 밑에가 실행되게..
+
+        // 버튼을 누를때마다 카드를 섞고 뿌려주기
+        btn.addEventListener('click', function () {
+
+            // 카드 섞기
+            for (let a = 0; a < 10000; a++) {
+                let ran = Math.floor(Math.random() * 12); // 카드 갯수만큼 곱한다.
+                // 자리 바꿔주기
+                let tmp = model[0];
+                model[0] = model[ran];
+                model[ran] = tmp;
+            }
+
+            let board = '';
+            for (let i = 0; i < 12; i++) {
+                board += `<td><input class="pic" type="image" src="/img/${model[i]}" value="${model[i]}"></td>`;
+            }
+            document.getElementById('table').innerHTML = board;
+
+
+            let pic = document.querySelectorAll('.pic');
+            // 이미지의 투명도가 1초후에 0이 된다.
+            setTimeout(function () {
+                for (let c = 0; c < pic.length; c++) {
+                    pic[c].style = "opacity:0.3"
+                }
+            }, 1000);
+
+            let count = 0; // 첫번째 찍은거 두번째 찍은거 체크 
+            let success = 0; // 다 열었는지 확인? success == model.length/2
+
+            // 이미지 클릭에 반응하도록 
+            let onePic = null;
+            let twoPic = null;
+
+            // 모든 값을 다 선택할동안
+            for (let d = 0; d < pic.length; d++) {
+                pic[d].addEventListener('click', function () { // 하나의 객체에 여러개 이벤트 쓸 때
+                    console.log(this.value);
+                    this.style = "opacity:1";
+                    //첫번째 이미지인지, 두번째 이미지인지 확인..?
+                    count++;
+                    console.log(count);
+
+                    if (count == 1) {
+                        onePic = this;
+                        console.log(onePic);
+                    } else if (count == 2) {
+                        // 두개가 선택이 되어야 게임이 진행된다.
+                        twoPic = this;
+                        console.log(onePic, twoPic);
+                        if (onePic.value == twoPic.value) {
+                            // 맞으면 success 1 증가
+                            {success++;}
+
+                            // 다 맞췄다면
+                            if (success == model.length / 2) {
+                                alert('성공');
+                            
+                            event.stopPropagation(); // 해당하는 이벤트 종료,   상위 엘리먼트의 이벤트 전파하는것을 중단 (부모한테 걸려있는 이벤트 다 없애줘)
+                            event.preventDefault(); // 해당하는 이벤트 종료, 내 이벤트만 없애줘
+                            }
+                        } else {
+                            //오답일 경우 0.3초 뒤에 사진 투명해짐
+                            setTimeout(function () {
+                                onePic.style = "opacity:0.3"
+                                twoPic.style = "opacity:0.3"
+                            }, 300)
+                        }
+                        count = 0;
+                    }
+
+
+                })
+
+            }
+
+        })
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

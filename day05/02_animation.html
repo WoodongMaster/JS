@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        1. 애니메이션 등록(@keyframes)
+            -시간비율은 0~100%, 0% = from, 100% = to로 대체가능
+
+        @keyframes [애니메이션명]{
+            시간비율{
+                스타일;
+            }
+            시간비율{
+                스타일;
+            }
+        }
+
+        2. 애니메이션 적용
+            -animation-name : 동작할 애니메이션 이름
+            -animation-duration : 애니메이션 동작 시간
+            -animation-iteration-count : 애니메이션 반복 횟수, 숫자 or infinite(무한)
+            
+     -->
+     <style>
+        @keyframes scaleFont{
+            from{
+                font-size:20px;
+            }
+            50%{
+                font-size:50px;
+            }
+            to{
+                font-size:20px;
+            }
+        }
+
+        @keyframes moveFont {
+            from{
+                font-size:50px;
+                margin-left:0%;
+                
+            }
+            50%{
+                font-size:50px;
+                margin-left:90%;
+                background-color: brown;
+            }
+            to{
+                font-size:50px;
+                margin-left:0%;
+            }
+        }
+
+        .ani{
+            animation-name: scaleFont;
+            animation-duration: 5s;
+            animation-iteration-count: 2;
+        }
+
+        .box_ani{
+            animation: moveFont 5s 2;
+            border: 1px solid black;
+            background-color: aquamarine;
+            width: 650px;
+        }
+     </style>
+</head>
+<body>
+    <span class="ani">애니메이션</span>
+    
+    <div class="box_ani">
+        움직이는 글자다ㅏㅏㅏㅏㅏ
+    </div>
+</body>
+</html>

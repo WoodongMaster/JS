@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            /* border: 1px solid black; */
+            border-collapse: collapse;
+            font-size: 50px;
+            background-color: aqua;
+            text-align: center;
+            
+            
+        }
+
+        th,td{
+            /* border: 1px solid black; */
+            width: 150px;
+            height: 30px;
+            border : 1px dotted black;
+            border-right: none;
+            border-left: none;
+        }
+
+        thead{
+            background-color: chartreuse;
+            border-top:5px solid black;
+            border-bottom:5px solid black;
+        }
+
+        tfoot{
+            background-color: chartreuse;
+            border-top:5px solid black;
+            border-bottom:5px solid black;
+        }
+
+        tbody>tr:nth-child(even){
+            background-color: antiquewhite;
+        }
+
+        tbody>tr:nth-child(odd){
+            background-color:darkkhaki;
+        }
+
+        tr:hover{
+            background-color: dodgerblue;
+        }
+        
+        tbody>tr:hover{
+            
+            background-color: dodgerblue;
+        
+        }
+    
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>홍길동</td>
+                <td>80</td>
+                <td>90</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>이순신</td>
+                <td>70</td>
+                <td>60</td>
+                <td>55</td>
+            </tr>
+            <tr>
+                <td>임꺽정</td>
+                <td>60</td>
+                <td>100</td>
+                <td>75</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>합계</th>
+                <th>210</th>
+                <th>250</th>
+                <th>215</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

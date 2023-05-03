@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: inherit;
+  }
+  
+  *::after::before {
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  @font-face {
+    font-family: 'HANAMDAUM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/HANAMDAUM.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+  header {
+    height: 80px;
+  }
+  
+  
+  nav {
+  text-align: center;
+  border-bottom: 2px solid rgb(225, 225, 225);
+  height: 76px;
+  padding: 20px 60px 10px;
+
+}
+
+#logo {
+  display: inline-block;
+  vertical-align: middle;
+
+  font-family: 'HANAMDAUM';
+  font-weight: bold;
+  font-size: 2.2rem;
+  color: rgb(32, 32, 32);
+  text-decoration: none;
+}
+
+
+
+  .main {
+    width: 700px;
+    margin: 0px auto;
+    height: 1000px;
+  }
+  
+  .mainText {
+    font-size: 20px;
+    color: rgb(82, 82, 82);
+  }
+.mainP{
+  font-family: 'NanumSquareNeo-Variable';
+  margin: 30px auto 0px;
+  font-weight: bold;
+  font-size: 28px;
+  color: #394867;
+}
+
+  p {
+    font-family: 'NanumSquareNeo-Variable';
+    padding-left: 40px;
+    font-size: 20px;
+  }
+  
+  .order>hr {
+    margin: 10px 40px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  
+  .order {
+    width: 500px;
+    margin: 0px auto;
+    border: 1px solid rgb(225, 225, 225);
+  }
+
+  .order > p{
+    font-weight: bold;
+  }
+  
+  .ordeItem {
+    display: flex;
+    /* flexbox 레이아웃 적용 */
+    margin: 10px auto;
+  }
+  
+  .orderImg {
+    width: 150px;
+    height: 150px;
+    margin: 0px 0px 0px 40px;
+  }
+  
+  .orderImg>img {
+    width: 150px;
+    height: 150px;
+  
+  }
+  
+  .orderInfo {
+  
+    width: 300px;
+    height: 150px;
+    margin: 0px 40px 0px 20px;
+    display: block;
+    padding: 30px 0px 30px 0px;
+  }
+
+  .orderPrice > p {
+    font-weight: bold;
+  }
+
+  .orderPrice>p>span {
+    float: right;
+    margin-right: 50px;
+    font-family: 'NanumSquareNeo-Variable';
+
+  }
+  .orderTotal {
+    width: 500px;
+    border: 1px solid rgb(225, 225, 225);
+    margin: 10px auto;
+  }
+  
+  .payment {
+    width: 500px;
+    border: 1px solid rgb(225, 225, 225);
+    margin: 10px auto;
+  }
+
+  .payment > p{
+    font-weight: bold;
+  }
+  
+  .paymentBtn {
+    width: 420px;
+    margin: 10px 40px 10px 40px;
+  }
+  .paymentBtn div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 5px;
+    border-radius: 20px;
+  }
+  
+  
+  .pay1 {
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid rgb(221, 221, 221);
+  }
+
+  .pay1:hover{
+    background-color: #F1F6F9;
+  }
+  
+  .pay1>span {
+    font-size: 15px;
+  }
+
+  .pay2 {
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid rgb(221, 221, 221);
+  }
+  .pay2:hover{
+    background-color: #F1F6F9;
+  }
+  
+  
+  .pay2>span {
+    font-size: 15px;
+  }
+  
+  .pay3 {
+    width: 120px;
+    height: 50px;
+    border: 1px solid rgb(221, 221, 221);
+    text-align: center;
+  }
+
+  .pay3:hover{
+    background-color: #F1F6F9;
+  }
+  
+  .pay3>span>img {
+    width: 50px;
+    height: 20px;
+    margin: 10px auto 6px;
+  }
+  
+  .pay4 {
+    width: 120px;
+    height: 50px;
+    border: 1px solid rgb(221, 221, 221);
+    text-align: center;
+  }
+
+  .pay4:hover{
+    background-color: #F1F6F9;
+  }
+  
+  .pay4>span>img {
+    width: 50px;
+    height: 20px;
+    margin: 10px auto 6px;
+  }
+  
+  .pay5 {
+    width: 120px;
+    height: 50px;
+    border: 1px solid rgb(221, 221, 221);
+    text-align: center;
+  }
+
+  .pay5:hover{
+    background-color: #F1F6F9;
+  }
+
+  .pay5>span>img {
+    width: 50px;
+    height: 30px;
+    margin: 10px auto 6px;
+  }
+  
+  .bill{
+    width: 420px;
+    margin: 30px 40px 10px 40px;
+  }
+
+  .bill > span{
+    font-weight: bold;
+    font-family: 'NanumSquareNeo-Variable';
+  }
+  
+  .total {
+    width: 420px;
+    margin: 10px 40px 30px 40px;
+  }
+  
+  .total > div{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .totalAmountPayment > div{
+    font-family: 'NanumSquareNeo-Variable';
+    font-weight: bold;
+    color: #2554b3;
+  }

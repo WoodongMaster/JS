@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nested_while</title>
+</head>
+<body>
+    <!-- 
+        for문 : 객체, 배열 탐색용
+        while문 : 반복문
+    -->
+    <h1>
+        이중반복문 : outer while, inner while <br>
+        (구구단 2단~9단 출력)
+    </h1>
+    
+    <button type="button" onclick="gugu_list()">구구단 출력</button>
+    <div>
+        <table width="50%" border="1px" id="table">
+        </table>
+    </div>
+
+    <script>
+        function gugu_list(){
+            let outter_count=2;
+            let inner_count=1;
+            let str="";
+            while(outter_count<=9){
+
+                while(inner_count<=9){
+                    
+                    str += `<td>${outter_count} x ${inner_count} = ${outter_count*inner_count}</td>`;
+                    inner_count++;
+                }
+
+                document.getElementById(`table`).innerHTML += `<tr>`;
+                document.getElementById(`table`).innerHTML += str;
+                document.getElementById(`table`).innerHTML += `</tr>`;
+                
+                str="";
+                inner_count=1;
+                outter_count++;
+            }
+        }
+    </script>
+</body>
+</html>

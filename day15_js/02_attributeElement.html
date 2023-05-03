@@ -1,0 +1,58 @@
+02_attribute Element의 속성
+
+Element의 속성에는 크게 두가지로 구분한다.
+
+1. 태그의 속성
+2. css(style)의 속성
+
+태그의 속성은 태그가 갖는 속성이기 때문에 속성명을 그대로 사용
+tagName.id, tagName.src
+
+class처럼 여러개의 값을 갖는 속성들은 별도의 속성명을 사용한다.
+tagName.classList
+
+css관련 속성은 style이라는 속성을 통해 css 프로퍼티에 접근 가능
+tagName.style.color
+
+
+[imgTag의 속성들 id, src, alt, classList 콘솔에 찍어보기]
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- class를 쓸 때 띄어쓰기를 하면 여러개의 이름이 들어간다. -->
+    <img class="A B C" id="imgTag" src="/image/서울.jpg" alt="이미지가 나타나지 않습니다.">
+
+
+    <script>
+
+        //imgTag의 속성들 id, src, alt, classList 콘솔에 찍어보기 
+        const imgTag = document.getElementById('imgTag');
+        console.log(imgTag);
+
+        const src = document.getElementsByTagName('scr');
+        console.log(imgTag.src); // 이미지파일 이름이 한글이면 깨짐 
+
+       const className = document.getElementById('imgTag').classList;
+       console.log(imgTag.classList);
+       console.log(imgTag.classList[0]);
+       console.log(imgTag.classList[1]);
+       console.log(imgTag.classList[2]);
+
+       const alt1 = document.getElementsByTagName('alt');
+       console.log(imgTag.alt); // alt 내용 나옴.
+       
+       console.log('----------------------');
+        // imgTag에 어떤 속성이 있는지 한번 보자 (전체 속성 확인)
+       for(const key in imgTag){
+        console.log(key, ":", imgTag[key]);
+       }
+    </script>
+</body>
+</html>

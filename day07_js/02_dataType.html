@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dataType</title>
+</head>
+<body>
+    <h1>변수나 상수에 할당할 수 있는 값의 종류</h1>
+    <ul>
+        <li>
+            숫자 : Number => 정수, 실수, NaN(Not a Number : 숫자가 아님이라는 값)
+        </li>
+        <li>
+            문자 : String => "", '', `` 으로 감싼 값들
+        </li>
+        <li>
+            불리언 : Boolean => true/false
+        </li>
+        <li>
+            객체 : Object => 1개 이상의 데이터가 특정한 구조를 가지고 있는 형태
+            (내용에 아무것도 없어도 1개로 취급)
+        </li>
+        <li>
+            배열 : Array => [1,2,3, ...] 형태로 이루어진 데이터 집합 (순서, 길이 있음)
+        </li>
+        <li>
+            알 수 없는 값 : null => 뭔가 있지만 파악이 안됨
+        </li>
+        <li>
+            미정된 값 : undefined => 값이 할당되지 않음
+        </li>
+        <li>
+            데이터 타입 확인 명령어 : typeof [변수명] or 변수 or 값
+        </li>
+    </ul>
+
+    <script>
+        let num =1234;
+        let str = "문자";
+        let bool = true;
+        let obj = new Object(); // Object : 자바 스크립트에서 제공하는 내장 객체
+        let arr = [1,2,3];
+        let arr2 = new Array(); // Array : 자바 스크립트에서 제공하는 내장 객체
+        let undi = undefined;
+        let nul = null;
+        let undi2;
+
+        console.log(`num : ${typeof num}`);
+        console.log(`Nan : ${typeof NaN}`);
+        console.log(`str : ${typeof str}`);
+        console.log(`bool : ${typeof bool}`);
+        console.log(`obj : ${typeof obj}`);
+        console.log(`arr : ${typeof arr}`);
+        console.log(`arr2 : ${typeof arr2}`);
+        console.log(`undi : ${typeof undi}`);
+        console.log(`nul : ${typeof nul}`);
+        console.log(`undi2 : ${typeof undi2}`);
+    </script>
+
+    <h1>변수의 관리</h1>
+    <ol>
+        <li>
+            기본자료형(Primary Type) : 값을 메모리의 주소값이 가르키는 곳에 직접 할당<br>
+            number, boolean, string(원래는 참조자료형이지만 사용편의성을 위해 같이 사용가능)
+        </li>
+        <li>
+            참조자료형(Reference Type) : 값이 저장되어 있는 메모리 주소값을 참조하고 있는 할당<br>
+            string, object, array, function, null, undefined
+        </li>
+    </ol>
+
+    <script>
+        // 일반적으로 == 같다, != 같지않다
+        // JS의 경우 == (값만 비교), === (값과 타입 모두 비교)
+        // != (값만 비교), !== (값과 타입도 모두 같지않은지 비교)
+
+        let num1= 10;
+        let num2= `10`;
+        console.log("num1==num2 : "+ (num1==num2));
+        console.log(`num1===num2 : ${num1===num2}`);
+    </script>
+</body>
+</html>

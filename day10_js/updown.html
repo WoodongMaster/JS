@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        숫자가 생성되면 컴퓨터가 "랜덤으로 숫자를 생성하였습니다." 안내문구 출력
+        input 란에 1~99(포함) 숫자를 입력하고 맞추기라는 버튼을 클릭하면
+        컴퓨터의 숫자보다 높은 숫자면 "Down", 낮은 숫자면 "Up" 출력
+        컴퓨터의 숫자를 맞추면 "정답입니다~ 컴퓨터 숫자는 ? 이였습니다." 문구 출력
+     -->
+    <h1>
+        <button type="button" id="ranBtn" onclick="num_create()">랜덤 숫자 생성 버튼</button>
+    </h1>
+    <h3 id="printMsg">
+    </h3>
+    <h1>
+        <input type="number" id="myGuess" max="50" min="0">
+        <button type="button" id="guessBtn" onclick="Num_check()">맞추기</button>
+    </h1>
+    <h3 id="result"></h3>
+
+    <script>
+        let cpu_num = -1;
+        let str = '';
+        let count = 0;
+
+        function num_create() {
+            cpu_num = Math.floor((Math.random() * 50) + 1);
+            document.getElementById('printMsg').innerText = '1~50사이 숫자가 생성되었습니다';
+            document.getElementById('result').innerHTML = '';
+            count = 0;
+            console.log(cpu_num);
+        }
+
+        function Num_check() {
+            if (count == 5) {
+                str = `5회 초과로 아웃입니다!`;
+            }
+            else {
+                if (cpu_num == -1) {
+                    str = `랜덤 숫자가 생성되지 않았습니다.`
+                }
+                else {
+
+                    let p_num = document.getElementById('myGuess').value;
+
+                    if (p_num == cpu_num) {
+                        str = `정답입니다~ 컴퓨터의 숫자는 ${cpu_num} 이었습니다.`;
+                    }
+                    else if (p_num > cpu_num) {
+                        str = `DOWN : 플레이어의 숫자가 컴퓨터의 숫자보다 높습니다`;
+                    }
+                    else {
+                        str = `UP : 플레이어의 숫자가 컴퓨터의 숫자보다 낮습니다`;
+                    }
+                    count++;
+
+                }
+            }
+            document.getElementById('result').innerHTML = str + `<br> 횟수 : ${count}`;
+        }
+    </script>
+</body>
+
+</html>

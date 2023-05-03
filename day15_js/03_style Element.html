@@ -1,0 +1,88 @@
+03_style Element의 CSS속성
+CSS 적용은 element.style.property 형식으로 접근 및 변경이 가능
+
+property는 자바스크립트의 코드 : -(하이픈) 적용안됨, 띄어쓰기도 적용안됨 
+css의 속성의 -(하이픈)를 제거하고, 카멜표기법(뒤에 오는 글자를 대문자로 변경)으로 변경한다.
+
+setAttribute()
+Element.setAttribute(name, value) : Element에 속성 부여
+이미 있는 속성이면 업데이트, 없는 속성이면 새속성으로 추가
+
+CSSStyleDeclaration.setProperty(propertyName, value) : css 스타일을 부여할 대상에게 css프로퍼티 부여함
+propertyName : Css 속성 이름, value 속성 값
+
+
+[색상명을 입력하고, 색상변경 버튼을 클릭하면 현재 h1태그의 배경색이 입력한 색상이 되게 변경하기.]
+[사진을 넣고 속성 변경해보기]
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yellow{
+            background-color: rgb(240, 240, 87);
+        }
+        .black{
+            background-color: black;
+        }
+        .red{
+            background-color: rgb(248, 86, 86);
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 class="h1" id="text">
+        색상명을 입력하고, 색상변경 버튼을 클릭하면
+        현재 h1태그의 배경색이 입력한 색상이 되게 변경하기.
+        style.backgroundColor 쓰지말고
+    </h1>
+    <input type="text" id="box">
+    <button type="button" id="btn">색상변경</button>
+
+    <hr>
+    <img src="/image/파리.jpg" alt="" id="img">
+    <br>
+    <input type="text" id="attrName">
+    <input type="text" id="attrValue">
+    <button type="button" id="btn3">속성 변경 test</button>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function () {
+            let box = document.getElementById('box').value;
+            let text = document.getElementById('text');
+
+            // 색상 이름이나 , rgb를 넣으면 그 색으로 바꿔줌
+            // text.setAttribute('style', `background-color: ${box}`);
+            
+            // css의 변경 대상과 분량이 많을 경우
+            text.className = box;
+
+            // css의 변경 대상, 분량도 적을 경우
+            // 대상과 style 내용을 직접 지정
+            text.style.backgoundColor = box;
+        })
+
+
+        // 이벤트리스너 씌우는 이유? 요즘 많이 쓰니까 
+        document.getElementById('btn3').addEventListener('click', function(){
+            let img = document.getElementById('img');
+            let attrName = document.getElementById('attrName').value;
+            let attrValue = document.getElementById('attrValue').value;
+
+            // img.setAttribute(attrName, attrValue);
+
+            // 다른방법
+            img[attrName] = attrValue;
+        })
+
+    </script>
+</body>
+
+</html>

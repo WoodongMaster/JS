@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #naver:hover{
+        color: darkgreen;
+        background-color: gold;
+        font-size: 50px;
+    }
+    
+    .google{
+        color: brown;
+        background-color: darkturquoise;
+        font-size: 70px;
+    }
+
+    a{
+        color:coral;
+        background-color: black;
+        font-weight: 700;
+        font-size: 100px;
+    }
+
+    input:focus{
+        color:deeppink;
+        background-color: black;
+    }
+
+    ul > li:nth-child(even){
+        color: darkred;
+    }
+
+    ul > li:nth-child(3n){
+        color: darkgreen;
+    }
+
+    ul> li:first-child, li:last-child{
+        font-weight: 700;
+        background-color: aqua;
+    }
+
+    li::after{
+        content:"번째";
+    }
+
+    li::before{
+        content:"이건";
+    }
+
+</style>
+</head>
+<body>
+    <div ><a href="http://naver.com" target="_blank" id="naver">  이건 id 선택자 네이버 </a></div>
+    <br><br>
+    <div><a href="http://google.com" target="_blank" class="google">  이건 클래스 선택자 구글</a></div>
+    <br><br>
+    <div><a href="http://daum.net" target="_blank" > 이건 태그 선택자 다음</a></div>
+    <input type="text">
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+
+    </ul>
+</body>
+</html>

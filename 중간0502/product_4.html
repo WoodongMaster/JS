@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>술담아</title>
+  <link rel="stylesheet" href="product.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="product.js" defer></script>
+  <script src="https://kit.fontawesome.com/55381cd0ef.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <nav id="nav">
+      <ul>
+        <a href="main.html" id="logo">술담아</a>
+        <a href="search.html">
+          <button id="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i> 무엇을 찾고 계신가요?
+          </button></a>
+      </ul>
+      <ul>
+        <a href="login.html" id="log-in">로그인</a>
+        <a href="memberjoin.html" id="log-in">회원가입</a>
+
+        <a href="shoppingbasket.html">
+          <i class="fa-solid fa-basket-shopping"></i>
+        </a>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- 상단 왼쪽 -->
+    <section id="main-pic">
+      <img src="img/고도리샤인머스캣와인.jpg" alt="">
+    </section>
+
+    <!-- 상단 오른쪽 -->
+
+    <section id="main-info">
+      <h1 id="titleName">고도리 샤인머스캣 와인</h1>
+      <h3 id="originalPrice">38,000원</h3>
+      <hr>
+      <span>달콤한 망고포도로 만든 화이트 와인</span><br>
+      <span>집 나간 입맛도 돌아오게 하는 새콤달콤한 맛</span>
+      <p>
+        주종 : 과실주<br>
+        도수 : 10.5%<br>
+        용량 750ml
+      </p>
+      <p>
+        유통기한 : 유통기한 없음<br>
+        보관방법 : 직사광선을 피하고 서늘한 곳에 세워서 보관
+      </p>
+      <div class="amount">
+        <p>수량</p>
+        <hr>
+        <div class="amountBtn">
+          <input class="minus" id="minus" type="button" value="-">
+          <input class="inputText" id="inputText" type="text" value="1">
+          <input class="plus" id="plus" type="button" value="+">
+          <span id="totalPrice">총 구매 가격</span>
+          <span id="price">38,000원</span>
+        </div>
+      </div>
+      <div class="itemCart">
+        <a class="buy" id="buy" href="order.html">구매하기</a>
+        <a class="cart" id="cart" href="shoppingbasket.html">장바구니</a>
+      </div>
+    </section>
+
+    <section id="content">
+      <!-- 핵심포인트 시작 -->
+      <div id="contentKeyPoint">
+        <div class="point">핵심 포인트</div>
+        <div class="pointMainBox">
+          <div class="pointBox">
+            <div class="imgPoint">
+              <img class="contentPic" src="img/mainPointImg.png" alt="mainPointImg_png">
+            </div>
+            <div class="textPoint">
+              맛
+            </div>
+            <span></span>
+          </div>
+          <div class="explain"><span>식욕을 자극하는 새콤달콤한 와인</span></div>
+        </div>
+        <div class="pointMainBox">
+          <div class="pointBox">
+            <div class="imgPoint">
+              <img class="contentPic" src="img/point_anju.png" alt="point_anju_png">
+            </div>
+            <div class="textPoint">
+              안주
+            </div>
+            <span></span>
+          </div>
+          <div class="explain"><span>브런치와 함께 식욕과, 분위기, 맛 모두 잡아보세요</span></div>
+        </div>
+        <!-- 핵심 포인트 끝 -->
+
+        <!-- 안주 추천 시작 -->
+        <div class="contentMainFood">
+          <div class="anju">어울리는 안주</div>
+          <div class="foodBox">
+            <div class="foodStyle">
+              <div class="foodPic_1">
+                <img
+                  src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/origin/5mQ6-1626861294583-%EB%B0%94%EC%A7%88%ED%8C%8C%EC%8A%A4%ED%83%80.png"
+                  alt="">
+              </div>
+              <div class="foodText">바질파스타</div>
+
+            </div>
+            <div class="foodStyle">
+              <div class="foodPic_2">
+                <img
+                  src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/origin/a6L7-1630566715068-%EC%9E%BC%EB%B0%9C%EB%A6%B0%ED%86%A0%EC%8A%A4%ED%8A%B8.png"
+                  alt="">
+              </div>
+              <div class="foodText">토스트</div>
+
+            </div>
+            <div class="foodStyle">
+              <div class="foodPic_3">
+                <img
+                  src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/origin/QwkR-1630566697611-%EB%A3%A8%EA%BC%B4%EB%9D%BC-%ED%94%BC%EC%9E%90.png"
+                  alt="">
+              </div>
+              <div class="foodText">루꼴라피자</div>
+
+            </div>
+            <div class="foodStyle">
+            </div>
+          </div>
+        </div>
+        <!-- 안주 추천 끝 -->
+
+        <!-- 디테일 시작 -->
+        <div class="contentDetail">
+          <div class="detailBox">
+            <img src="img/고도리샤인머스캣와인2.jpg" alt="">
+            <strong>[고도리 샤인머스캣 와인], 어떤 맛을 갖고 있나요?</strong>
+            <p>‘고도리 샤인머스캣 와인’은</p>
+            <p><strong>싱그러운 청포도향</strong>이 솔~솔~ 풍기는 와인입니다.</p>
+            <p>한 모금 입에 들이키면 향과 맛에서</p>
+            <p><strong>포도의 새콤달콤함</strong>이 조화롭게 어우러져요.</p>
+          </div>
+
+
+          <div class="detailBox">
+            <img src="img/고도리샤인머스캣와인3.jpg" alt="">
+            <strong>[고도리 샤인머스캣 와인], 알고 마시면 더 맛있어요!</strong>
+            <p><strong>샤인머스캣은 씹을수록 망고 맛이 난다 하여 ‘망고 포도’</strong>라고도 불리는데요.</p>
+            <p>산미는 적고 단맛은 높은 것이 특징이에요</p>
+            <p><strong>식사 하기 전 식전주</strong>로 마시기 좋고,</p>
+            <p><strong>브런치</strong>와 맛있고 분위기 있게 즐기기 좋은 술입니다.</p>
+          </div>
+          <hr>
+          <div class="ai_slide">
+            <img src="img/icon_AI.png" alt="img/icon_AI_png">
+            <div>보고계신 상품과 비슷한 상품이에요</div>
+          </div>
+
+          <div class="slide_wrapper">
+            <ul class="slides">
+              <li>
+                <img class="rePic" src="img/고도리사과와인.jpg" alt="">
+                <p>고도리 사과 와인</p>
+                <p>23,000원</p>
+              </li>
+              <li>
+
+                <img class="rePic" src="img/로제와인.jpg" alt="">
+                <p>로제와인</p>
+                <p>20,000원</p>
+              </li>
+              <li>
+
+                <img class="rePic" src="img/부안해풍오디주.jpg" alt="">
+                <p>부안 해풍 오디주</p>
+                <p>10,800원</p>
+              </li>
+              <li>
+                <img class="rePic" src="img/샤토미소웨딩자두와인.jpg" alt="">
+                <p>샤토미소 웨딩 자두와인</p>
+                <p>22,000원</p>
+              </li>
+              <li>
+                <img class="rePic" src="img/세인트하우스모과와인.jpg" alt="">
+                <p>세인트하우스 모과 와인</p>
+                <p>23,000원</p>
+              </li>
+              <li>
+                <img class="rePic" src="img/시나브로켐벨스위트.jpg" alt="">
+                <p>시나브로 캠벨 스위트</p>
+                <p>30,000원</p>
+              </li>
+              <li>
+                <img class="rePic" src="img/오미로제투게더.jpg" alt="">
+                <p>오미로제 투게더 </p>
+                <p>14,400원</p>
+              </li>
+              <li>
+                <img class="rePic" src="img/허니비와인.jpg" alt="">
+                <p>허니비 와인</p>
+                <p>23,000원</p>
+              </li>
+            </ul>
+            <span class="prev"><i class='bx bx-chevron-up-circle bx-rotate-270' ></i></span>
+            <span class="next"><i class='bx bx-chevron-up-circle bx-rotate-90' ></i></span>
+
+            <!-- top position -->
+            <div class="fixed">
+              <a href="#logo">
+                <i class="bx bxs-chevron-up-circle" ></i>
+              </a>
+            </div>
+          </div>
+
+
+        </div>
+        <!-- 디테일 끝 -->
+
+      </div>
+      <!-- content 끝 -->
+    </section>
+  </main>
+  <hr>
+  <footer>
+    <div class="footerMain">
+      <div class="footerName">
+        <div id="company">
+          담아컴퍼니 주식회사
+          <p>고객센터: 070-5014-1282</p>
+          <p>평일 10:00 - 18:00</p>
+        </div>
+        <div class="div1"></div>
+        <div id="social-link">
+          <ul>
+            <li>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-apple"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-vimeo"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <span>이용약관</span><span>개인정보처리방침</span><span>입점문의</span>
+      <p>
+        대표:이재욱 사업자등록번호:720-12-1234
+        통신판매 신고번호:2021-인천부평-1234
+      </p>
+      <p>
+        주소: 인천광역시 영영구 떙떙대로 123, 12층(엔타스빌딩, 이젠) <br>
+        정보보호책임자: 김이젠 대표전화: 032-000-1234 이메일: ezen@zene.com
+      </p>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

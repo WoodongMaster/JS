@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+    이름 : <input type="text" id="name"><br>
+    거주지 : <input type="text" id="addr"><br>
+    좋아하는 것1 : <input type="text" id="favor1"><br>
+    좋아하는 것2 : <input type="text" id="favor2"><br>
+    좋아하는 것3 : <input type="text" id="favor3"><br>
+    이메일 : <input type="email" id="mail"><br>
+    반려동물 : <input type="text" id="pet"><br>
+    원하는 것 : <input type="text" id="wanna">
+    <button type="button" onclick="create_table()">표로 만들기</button>
+    </form>
+
+    <table border="1" width="25%" style="text-align: center;">
+        <tr>
+            <td>
+                이름
+            </td>
+            <td id="name_val">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                거주지
+            </td>
+            <td id="addr_val">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                좋아하는 것
+            </td>
+            <td>
+            <ul>
+               <li id="favor1_val"></li>
+               <li id="favor2_val"></li>
+               <li id="favor3_val"></li> 
+            </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                이메일
+            </td>
+            <td id="mail_val"> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                반려동물
+            </td>
+            <td id="pet_val"> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                원하는 것
+            </td>
+            <td id="wanna_val">
+            </td>
+        </tr>
+    </table>
+
+    <script>
+            const obj ={
+            name : '',
+            addr : '',
+            favor:{
+                favor1 : '',
+                favor2 : '',
+                favor3 : '',
+                },
+
+            mail : '',
+            pet : '',
+            wanna : ''
+        };
+
+        function create_table(){
+            obj.name=document.getElementById('name').value;
+            obj.addr=document.getElementById('addr').value;
+            obj.favor.favor1=document.getElementById('favor1').value;
+            obj.favor.favor2=document.getElementById('favor2').value;
+            obj.favor.favor3=document.getElementById('favor3').value;
+            obj.mail=document.getElementById('mail').value;
+            obj.pet=document.getElementById('pet').value;
+            obj.wanna=document.getElementById('wanna').value;
+
+            
+            document.getElementById('name_val').innerText = obj.name;
+            document.getElementById('addr_val').innerText = obj.addr;
+            document.getElementById('favor1_val').innerText = obj.favor.favor1;
+            document.getElementById('favor2_val').innerText = obj.favor.favor2;
+            document.getElementById('favor3_val').innerText = obj.favor.favor3;
+            document.getElementById('mail_val').innerText = obj.mail;
+            document.getElementById('pet_val').innerText = obj.pet;
+            document.getElementById('wanna_val').innerText = obj.wanna;
+        }
+    </script>
+</body>
+</html>

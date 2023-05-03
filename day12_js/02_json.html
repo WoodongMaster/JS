@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+</head>
+<body>
+    <h1>
+        JSON(JavaScript Object Notation) : 자바스크립트 객체 표기법(XML 대체 사용)
+    </h1>
+    <ul>
+        <li>
+            데이터 요청 및 응답처리에 필요한 데이터의 표준 형식을 제공하는 타입
+        </li>
+        <li>
+            백엔드(서버) 언어의 종류에 상관없이 데이터 송수신 단일 형식으로 통일
+        </li>
+        <li>
+            데이터의 전송은 전부 String 타입으로 이루어짐
+        </li>
+        <li>
+            서버로 데이터를 보낼때 > json to string > JSON.stringify(jsObject);
+        </li>
+        <li>
+            서버한테 데이터를 받을때 > string to json > JSON.parse(stringData);
+        </li>
+    </ul>
+    <script>
+        const stringData = `{"id":"1234","type":"donut","name":"cake",`+
+          `"image":{"url":"img/0001.jpg", "width":"200","heigth":"200"},`+
+        `"thumbnail":{"url":"img/thumbnail/0001.jpg","width":"20", "heigth":"20"}}`;
+
+        let parseData = JSON.parse(stringData);
+        console.log(parseData);
+        
+        for(const a in parseData){
+            
+            if(a == 'image' || a == 'thumbnail'){
+                let obj = parseData[a];
+                for(const b in obj){
+                    console.log(`${b}: ${obj[b]}`);    
+                }
+            }
+            else{
+                console.log(`${a}: ${parseData[a]}`);
+            }
+        }
+
+        const myInfoData = {
+            "name" : "kim" ,
+            "age" : "30" ,
+            "email" : "kim123@naver.com" ,
+            "address" : "인천시" ,
+            "major" : {
+                "m1" : "java",
+                "m2" : "html",
+                "m3" : "css"
+            }
+        }
+
+        let parse_myInfoData = JSON.stringify(myInfoData);
+        console.log(parse_myInfoData);
+        console.log(typeof(parse_myInfoData));
+    </script>
+</body>
+</html>

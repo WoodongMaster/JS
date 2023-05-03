@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery</title>
+    <style>
+        @font-face{
+            font-family:Yeon_Sung;
+            src: url(/Font/Yeon_Sung/YeonSung-Regular.ttf);
+        }
+        body{
+            font-family: Yeon_Sung;
+            background-color: rgb(42,193,188);
+        }
+        div{
+            text-align: center;
+        }
+        .header{
+            margin-top:100px;
+        }
+        .header>h1{
+            
+            
+            font-size:100px;
+            
+            border-radius: 50px;
+            color: white;
+            
+            padding: 10px;
+            display: inline;
+        }
+
+        .header>h3{
+            font-size:30px
+        }
+        .menu{
+            width: 300px;
+            height: 400px;
+            margin: auto;
+            background-color: bisque;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        #sushi{
+            width:300px;
+            height: 200px;
+            background-image: url(https://t1.daumcdn.net/cfile/tistory/1908EE4C4FD97EA71C);
+            background-size: 300px 200px;
+            border-radius: 10px 10px 0 0;
+        }
+        .menu>div>:last-child{
+            padding: 10px;
+            color: blue;
+        }
+
+        #doshirak{
+            width:300px;
+            height: 200px;
+            background-image: url(https://cdn-pro-web-241-46.cdn-nhncommerce.com/dandorak_godomall_com/data/goods/18/05/20/1000000051/1000000051_detail_090.png);
+            background-size: 300px 200px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        #hamberger{
+            width:300px;
+            height: 200px;
+            background-image: url(https://cdn.straightnews.co.kr/news/photo/201912/61715_33324_441.jpg);
+            background-size: 300px 200px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        #noodle{
+            width:300px;
+            height: 200px;
+            background-image: url(https://recipe.gabia.io/pds/upfile/2020-08-20_620177542[4].jpg);
+            background-size: 300px 200px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- 큰 div
+        그림div
+        글div 
+            4개 div  (메뉴명 멘트 가격 바로결제)
+    -->
+    <div class="header"> 
+        <h1>배달의 민족</h1>
+        <h3>넌 배달할 때가 제일 멋있어</h3>
+    </div>
+
+    <div class="menu">
+        <div id="sushi"></div>
+        <div>
+            <h2>맛있는 초밥</h2>
+            <p>
+                주머니가 가벼운 당신의 마음까지 생각한 착한 가격!
+            </p>
+            <p><del>25,000원</del> 15,000원</p>
+            <p>바로결제</p>
+            
+        </div>
+    </div>
+
+    <div class="menu">
+        <div id="doshirak"></div>
+        <div>
+            <h2>호화스러운 도시락</h2>
+            <p>
+                임금님 안부러운 10첩반상!
+            </p>
+            <p><del>15,000원</del> 12,000원</p>
+            <p>바로결제</p>
+            
+        </div>
+    </div>
+
+    <div class="menu">
+        <div id="hamberger"></div>
+        <div>
+            <h2>미국의 맛, 햄버거</h2>
+            <p>
+                여행 못가는 당신을 위한 미국식 식사
+            </p>
+            <p><del>18,000원</del> 11,000원</p>
+            <p>바로결제</p>
+            
+        </div>
+    </div>
+
+    <div class="menu">
+        <div id="noodle"></div>
+        <div>
+            <h2>국수가 중요해</h2>
+            <p>
+                가벼운듯 가볍지 않은 끼니
+            </p>
+            <p>7,000원</p>
+            <p>바로결제</p>
+            
+        </div>
+    </div>
+</body>
+</html>

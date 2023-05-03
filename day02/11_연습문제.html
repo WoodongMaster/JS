@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" width="50%">
+        <tr>
+            <th style="text-align: left;" colspan="3">회원가입ㅣMember Private Information 약관동의 실명확인 회원가입 정보수정</th>
+            
+        </tr>
+        <tr>
+            <th style="text-align: left;" colspan="3">기본정보입력 || 표시는 필수항목이므로 반드시 입력해야 합니다.</th>
+        </tr>
+        <tr>
+            <th style="text-align: left;">아이디 </th>
+            <th colspan="3">
+                <input type="text"><input type="button" value="중복검색">영문
+            </th>
+        </tr>
+        <tr>
+            <th>비밀번호</th>
+            <th colspan="3">
+                <input type="text"> -> 재확인 <input type="text">
+            </th>
+        </tr>
+        <tr>
+            <th >비밀번호 힌트</th>
+            <th colspan="3">
+                <input type="text"> 비번분실-조회시 참고할 내용
+            </th>
+        </tr>
+        <tr>
+            <th>이름(본명)</th>
+            <th colspan="3">
+                <input type="text">-> 한글
+            </th>
+        </tr>
+        <tr>
+            <th>닉네임(별명)</th>
+            <th colspan="3">
+                <input type="text"><input type="button" value="중복검색">한글,영문
+            </th>
+        </tr>
+        <tr>
+            <th>전자메일주소</th>
+            <th>
+                <input type="email"> 
+            </th>
+            <th>
+                <input type="checkbox">비공개
+            </th>
+        </tr>
+            <th>생년월</th>
+            <th>
+                <select>
+                    <option>년</option>
+                    <option>1990</option><option>1991</option><option>1992</option><option>1993</option><option>1994</option><option>1995</option>
+                </select>
+                <select>
+                    <option>월</option>
+                    <option>1</option><option>2</option><option>3</option><option>4</option><option>5
+                </select>
+                <select>
+                    <option>일</option>
+                    <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                </select>
+                <input type="radio" name="birth" value="음" >음<input type="radio" name="birth" value="양">양
+            </th>
+            <th>
+                <input type="checkbox">비공개
+            </th>
+        <tr>
+            <th>성별</th>
+            <th>
+                <input type="radio" name="gender">남
+                <input type="radio" name="gender">여
+            </th>
+            <th>
+                <input type="checkbox">비공개
+            </th>
+        </tr>
+        <tr>
+            <th>우편번호</th>
+            <th colspan="3">
+                <input type="text">-<input type="text"> <input type="button" value="찾아보기">
+            </th>
+        </tr>
+        <tr>
+            <th>주소</th>
+            <th>
+                <input type="text"><br>
+                <input type="text">나머지주소
+            </th>
+            <th>
+                <input type="checkbox">비공개
+            </th>
+        </tr>
+        <tr>
+            <th>일반전화 번호</th>
+            <th>
+                <select>
+                    <option>국번</option>
+                    <option>111</option><option>222</option><option>333</option><option>444</option><option>555</option>
+                </select>
+                <input type="number">-<input type="number">
+            </th>
+            <th>
+                <input type="checkbox">비공개
+            </th>
+        </tr>
+        <tr>
+            <td>휴대전화 번호</td>
+        <th>
+        <select>
+            <option>국번</option>
+            <option>001</option><option>002</option><option>003</option><option>004</option><option>005</option>
+        </select>
+        <input type="number">-<input type="number">
+        </th>
+        <th><input type="checkbox">비공개</th>
+    </tr>
+    <tr>
+        <th>홈페이지</th>
+        <th><input type="text" placeholder="http://">
+        </th>
+        <th>
+            <input type="checkbox">비공개
+        </th>
+    </tr>
+    <tr>
+        <th>소개,인사말</th>
+        <th colspan="3">
+            <textarea name="text" id="" cols="30" rows="10" maxlength="20" placeholder="반갑습니다."></textarea>
+        </th>
+    </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>담화</title>
+  <link rel="stylesheet" href="product.css">
+  <script src="product.js" defer></script>
+  <script src="https://kit.fontawesome.com/55381cd0ef.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <nav id="nav">
+        <ul>
+            <a href="main.html" id="logo">술담화</a>
+            <a href="search.html">
+                <button id="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i> 무엇을 찾고 계신가요?
+                </button></a>
+        </ul>
+        <ul>
+            <a href="login.html" id="log-in" value="logout">로그인/회원가입</a>
+            <a href="" id="shoppingbasket">
+                <i class="fa-solid fa-basket-shopping"></i>
+            </a>
+        </ul>
+    </nav>
+</header>
+  <main>
+    <!-- 상단 왼쪽 -->
+    <section id="main-pic">
+        <img src="img/단상지교.jpg" alt="">
+    </section>
+
+    <!-- 상단 오른쪽 -->
+    
+    <section id="main-info">
+      <h1 id="titleName" >단상지교</h1>
+      <h3 id="originalPrice">20,000원</h3>
+      <hr>
+      <span>대전 유씨종가의 정갈한 맛과 디자인을 갖춘 약주</span><br>
+      <span>누룩의 구수함, 달짝지근</span>
+      <p>
+        주종 : 약주<br>
+        도수 : 16%<br>
+        용량 750ml
+      </p>
+      <p>
+        유통기한 : 병입일로부터 6개월<br>
+        보관방법 : 냉장 보관
+      </p>
+      <div class="amount">
+        <p>수량</p>
+        <hr>
+        <div class="amountBtn">
+          <input class="minus" id="minus" type="button" value="-">
+          <input class="inputText" id="inputText" type="text" value="1">
+          <input class="plus" id="plus" type="button" value="+">
+          <span id="totalPrice">총 구매 가격</span>
+          <span id="price">20,000원</span>
+        </div>
+      </div>
+      <div class="itemCart">
+        <a class="buy" id="buy" href="">구매하기</a>
+        <a class="cart" id="cart" href="">장바구니</a>
+      </div>
+    </section>
+
+    <section id="content">
+      <!-- 핵심포인트 시작 -->
+      <div id="contentKeyPoint">
+        <div class="point">핵심 포인트</div>
+        <div class="pointMainBox">
+          <div class="pointBox">
+            <div class="imgPoint">
+              <img class="contentPic" src="img/mainPointImg.png" alt="mainPointImg_png">
+            </div>
+            <div class="textPoint">
+              맛
+            </div>
+            <span></span>
+          </div>
+          <div class="explain"><span>묵직한 구수함과 진득하게 달콤한 맛</span></div>
+        </div>
+        <div class="pointMainBox">
+          <div class="pointBox">
+            <div class="imgPoint">
+              <img class="contentPic" src="img/point_anju.png" alt="point_anju_png">
+            </div>
+            <div class="textPoint">
+              안주
+            </div>
+            <span></span>
+          </div>
+          <div class="explain"><span>풍미가 강한 음식들과 즐겨 보세요</span></div>
+        </div>
+        <!-- 핵심 포인트 끝 -->
+
+        <!-- 안주 추천 시작 -->
+        <div class="contentMainFood">
+          <div class="anju">어울리는 안주</div>
+          <div class="foodBox">
+            <div class="foodStyle">
+              <div class="foodPic_1">
+                <img src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/origin/Omie-1622512012995-%EA%B5%B4%EB%B9%84.png" alt="">
+              </div>
+              <div class="foodText">굴비</div>
+
+            </div>
+            <div class="foodStyle">
+              <div class="foodPic_2">
+                <img src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/origin/LiWK-1622619909961-%EC%96%91%EB%85%90%EA%B0%88%EB%B9%84.png" alt="">
+              </div>
+              <div class="foodText">양념갈비</div>
+
+            </div>
+            <div class="foodStyle">
+              <div class="foodPic_3">
+                <img src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/origin/TxnG-1622512770264-%EB%B9%88%EB%8C%80%EB%96%A1.png" alt="">
+              </div>
+            
+              <div class="foodText">빈대떡</div>
+
+            </div>
+            <div class="foodStyle">
+            </div>
+          </div>
+        </div>
+        <!-- 안주 추천 끝 -->
+
+        <!-- 디테일 시작 -->
+        <div class="contentDetail">
+          <div class="detailBox">
+            <img src="img/단상지교2.jpg" alt="">
+            <strong>[단상지교],  어떤 맛을 갖고 있나요?</strong>
+            <p>기존 약주보다 누룩 함량이 높아</p>
+            <p><Strong>누룩향이 한층 더 깔끔하게 고소함</Strong>으로 다가옵니다.</p>
+            <p><strong>점성이 높은 단맛</strong>을 가지고 있는데</p>
+            <p>마치 조청의 단맛을 술로 표현한 느낌을 줍니다.</p>
+          </div>
+
+
+          <div class="detailBox">
+            <img src="img/단상지교3.jpg" alt="">
+            <strong>[단상지교],  알고 마시면 더 맛있어요!</strong>
+            <p>진득한 맛을 가지고 있는 단상지교는</p>
+            <p><strong>풍미가 강한 음식과 잘 어울려요.</strong></p>
+            <p>이름 그대로 한 두 잔 천천히 음미하면서 대화를 나누기 좋은 술인만큼</p>
+            <p><strong>스트레이트로 천천히</strong> 혹은 <strong>묵직한 안주류</strong>와 함께</p>
+            <p><strong>느긋하게 즐기기 좋은 술입니다.</strong></p>
+        </div>
+        <hr>
+        <div class="ai_slide">
+            <img src="img/icon_AI.png" alt="img/icon_AI_png">
+            <div>보고계신 상품과 비슷한 상품이에요</div>
+        </div>
+        
+        <div class="slide_wrapper">
+            <ul class="slides">
+                <li>
+                    <img class="rePic" src="img/고도리사과와인.jpg" alt="">
+                    <p>고도리 사과 와인</p>
+                    <p>23,000원</p>
+                </li>
+                <li>
+                    
+                    <img class="rePic" src="img/로제와인.jpg" alt="">
+                    <p>로제와인</p>
+                    <p>20,000원</p>
+                </li>
+                <li>
+                    
+                    <img class="rePic" src="img/부안해풍오디주.jpg" alt="">
+                    <p>부안 해풍 오디주</p>
+                    <p>10,800원</p>
+                </li>
+                <li>
+                    <img class="rePic" src="img/샤토미소웨딩자두와인.jpg" alt="">
+                    <p>샤토미소 웨딩 자두와인</p>
+                    <p>22,000원</p>
+                </li>
+                <li>
+                    <img class="rePic" src="img/세인트하우스모과와인.jpg" alt="">
+                    <p>세인트하우스 모과 와인</p>
+                    <p>23,000원</p>
+                </li>
+                <li>
+                <img class="rePic" src="img/시나브로켐벨스위트.jpg" alt="">
+                <p>시나브로 캠벨 스위트</p>
+                <p>30,000원</p>
+            </li>
+            <li>
+                <img class="rePic" src="img/오미로제투게더.jpg" alt="">
+                <p>오미로제 투게더 </p>
+                <p>14,400원</p>
+            </li>
+            <li>
+                <img class="rePic" src="img/허니비와인.jpg" alt="">
+                <p>허니비 와인</p>
+                <p>23,000원</p>
+            </li>
+        </ul>
+        <span class="prev"><img src="img/prev.png" alt=""></span>
+        <span class="next"><img src="img/next.png" alt=""></span>
+    </div>
+
+
+        </div>
+        <!-- 디테일 끝 -->
+
+      </div>
+      <!-- content 끝 -->
+    </section>
+</main>
+<hr>
+<footer>
+  <div class="footerMain">
+    <div class="footerName">
+      <div id="company">
+        담화컴퍼니 주식회사
+        <p>고객센터: 070-5014-1282</p>
+        <p>평일 10:00 - 18:00</p>
+      </div>
+      <div class="div1"></div>
+      <div id="social-link">
+        <ul>
+          <li>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-apple"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-vimeo"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <span>이용약관</span><span>개인정보처리방침</span><span>입점문의</span>
+    <p>
+      대표:이재욱 사업자등록번호:720-12-1234
+      통신판매 신고번호:2021-인천부평-1234
+    </p>
+    <p>
+      주소: 인천광역시 영영구 떙떙대로 123, 12층(엔타스빌딩, 이젠) <br>
+      정보보호책임자: 김이젠 대표전화: 032-000-1234 이메일: ezen@zene.com
+    </p>
+  </div>
+
+</footer>
+
+</body>
+
+</html>

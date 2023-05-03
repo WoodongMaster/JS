@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI추천 - 술 취향찾기</title>
+    <link rel="stylesheet" href="quiz2_5.css">
+    <style>
+        /* 진행속도 */
+        #step1{
+            height: 4px;
+            /* position: relative; */
+            background-color: rgb(237, 244, 254);
+            border-radius: 20px;
+            margin: 20px;
+        }
+        #step1>div{
+            position: absolute;
+            height: 4px;
+            width: 220px;
+            background-color: #394867;
+            border-radius: 20px;
+            animation: stepUp 1s linear;
+        }
+        /* 애니메이션 */
+        @keyframes stepUp {
+            0%{
+                width: 120px;
+            }
+            100%{
+                width: 220px
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <!-- 화면 상단(나가기 버튼 부분) -->
+        <div id="head">
+            <button type="button" id="backBtn">&#10094;</button>
+            추천 진행중<button type="button" id="outBtn">&#10006;</button>
+            <div id="popupX">
+                <div id="showX">
+                    <p>퀴즈를 나가시겠어요?</p>
+                    <p>퀴즈 도중에 중단할 경우 <b>내용이 저장되지 않습니다.</b></p>
+                    <button id="closeBtnX">취소</button>
+                    <button id="mainBtnX">확인</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 화면 중앙(테스트 진행 부분) -->
+        <div id="body">
+
+            <div id="step1">
+                <div></div>
+            </div>
+
+            <div id="text">
+                <div>2/4</div>
+                달콤한 술을 <br> 선호하시나요?
+            </div> 
+
+            <div class="list">
+              <button type="button" value="1">
+                <img src="quiz_img/좋아요.png" alt="웃는이미지"> 
+                <span>네! 저는 달콤한 술이 좋아요 </span></button>
+              <button type="button" value="2">
+                <img src="quiz_img/보통이에요.png" alt="무표정이미지"> 
+                <span>보통이에요. 중간 술이 좋아요
+                </span></button>
+              <button type="button" value="3">
+                <img src="quiz_img/싫어요.png" alt="화난이미지"> 
+                <span>아니요! 싫어요. 술은 쓴맛이죠</span></button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('backBtn').addEventListener('click',()=>{
+            history.back();
+        });
+
+         // x 버튼을 누르면 팝업 창 나타내기
+        document.getElementById("outBtn").addEventListener("click", function() {
+            document.getElementById("popupX").style.display = "block";
+        });
+
+        // x버튼 안의 취소 버튼 클릭 시 팝업 창 사라지기
+        document.getElementById("closeBtnX").addEventListener("click", function() {
+            document.getElementById("popupX").style.display = "none";
+        });
+
+        // x버튼 안의 확인 버튼 클릭 시 main화면으로 이동
+        // document.getElementById("mainBtn").addEventListener("click", function() {
+        //     // location.href=".main.html";
+        // });
+
+        document.querySelector('.list').addEventListener('click',function(e){
+            let choiceValue = e.target.value;
+            if (typeof e.target.value == 'undefined') {
+                choiceValue = e.target.parentNode.value;
+            }
+
+            //이전 페이지에서 받아온 변수
+            let getLink = window.location.search; //?choice=11
+            let getChoice = getLink.substring(getLink.indexOf('=')+1); //11 (변수 값만 추출)
+        
+             //이동
+            if(choiceValue == undefined){
+                //빈칸을 클릭하는 경우 안넘어가고
+                location.href="quiz_3.html?choice="+getChoice;
+
+            }else{
+                //고른 경우 넘어가도록 설정 = 변수명에 값을 넣어서
+                location.href="quiz_4.html?choice="+getChoice+choiceValue;
+            }
+            
+        })
+
+    </script>
+</body>
+</html>

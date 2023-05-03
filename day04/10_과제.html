@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 48
+        }
+
+        .pic {
+            position: absolute;
+            width: 80px;
+            height: 76px;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -25%);
+        }
+
+        .container {
+            width: 75%;
+            height: 768px;
+            position: relative;
+            z-index: 10;
+            left: 50%;
+            transform: translate(-50%);
+            background-image: url("https://www.ekn.kr/mnt/file/202203/2022030901000341600014471.jpg");
+            background-size: cover;
+
+        }
+
+        .inner {
+
+            z-index: 20;
+            position: absolute;
+            width: 80%;
+            height: 50%;
+            float: top;
+            top: 25%;
+            left: 10%;
+            text-align: center;
+            background-color: white;
+            padding-left: 0px;
+        }
+
+        .in_in{
+            width: 100%;
+            top:25%;
+            
+            position: absolute;
+        }
+
+        .bottom{
+            border-top: 2px solid rgb(250, 149, 54);
+            height: 100%;
+
+            
+        }
+    </style>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <!-- 800x768 -->
+    <div class="container">
+
+
+        <div class="inner">
+            <img src="https://www.ekn.kr/mnt/file/202203/2022030901000341600014471.jpg" class="pic">
+
+            <div class="in_in">
+                <h2>
+                    사용자 수가 많아 접속이 지연되고 있습니다. <br />
+                    잠시만 기다려주세요.
+                </h2>
+                <span class="material-symbols-outlined">
+                    hourglass_empty
+                    <p>
+                        접속이 어려운 경우 메인으로 자동 이동합니다.
+                    </p>
+                </span>
+
+                <div class="bottom">
+                    <p>
+                        관련 문의 사항은 고객센터에 문의해주시면 친절히 안내해드리겠습니다.
+                        <br />
+                        고객상담전화:080-123-1234
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

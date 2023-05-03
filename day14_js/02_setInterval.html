@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+    <style>
+        #h1{
+            background-color: brown;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">
+        setInterval(callback function, interval duration)
+        duration(millisecond)을 주기로 지속적으로 callback function 호출
+        <br>
+        clearInterval([객체명])로 중지
+        <a href="/day14_js/04_location.html">to 4</a>
+    </h1>
+    <button type="button" id="start">start</button>
+    <button type="button" id="finish">finish</button>
+
+    <script>
+        let intervalObj;
+        
+        document.getElementById('start').addEventListener('click', flashColor);
+        document.getElementById('finish').addEventListener('click', stop);
+        
+        function changeColor(){
+            let h1 = document.getElementById('h1');
+            h1.style.color = (h1.style.color == 'white' ? 'black' : 'white');
+            h1.style.backgroundColor = (h1.style.backgroundColor=='brown' ? 'yellow' : 'brown');
+        }
+
+        function flashColor(){
+            intervalObj = setInterval(changeColor, 500);
+        }
+
+        function stop(){
+            clearInterval(intervalObj);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경속성</title>
+    <style>
+        /* 
+            -배경색 : background-color
+            -배경이미지 : background-image
+            -배경색과 배경이미지 둘 다 지정될 경우 배경이미지 우선(배경 이미지가 덮히지 않은 부분은 배경색 적용)
+
+            -배경이미지 크기 : background-size
+                가로*세로 크기순으로 입력
+            -배경 이미지 반복 : background-repeat
+                - no-repeat : 반복x
+                - repeat-x : x축으로 반복
+                - repeat-y : y축으로 반복
+                - round : 양쪽 반복
+                - 기본값은 반복이 되는 형태
+            -배경 이미지 위치 : background-position
+                - center : 가운데
+                - x축, y축 값으로
+
+            background : color img (img)position (img)size repeat 순으로 입력
+
+            -그림자
+                box-shadow : 수평 수직 (번짐정도) (그림자크기) 색상 (방향)
+                insert;
+                text-shadow : 수평 수직 (번짐정도 색상)
+        */
+
+        .box{
+            background-color: aqua;
+            background-image: url(/img/d165967c-5881-485b-82a5-a53a55bec706.png);
+            background-size: 200px;
+            background-repeat: no-repeat;
+            background-position: 20px;
+            width: 300px;
+            height: 300px;
+
+            background: yellow url() center 100px 100px center/100px 100px no-repeat;
+        }
+
+        .box2{
+            background-image: url(/img/1일어나_코딩해야지_cropped.jpg);
+            background-size: 400px 500px;
+            background-color: black;
+            background-repeat: no-repeat;
+            width: 400px;
+            height: 500px;
+            box-shadow: 5px 5px 5px red;
+        }
+
+        div{
+            margin-top: 20px;
+            width: 200px;
+        }
+        p{
+            font-size: 30px;
+            font-weight: 700;
+            
+        }
+
+        .shadow1{
+            text-shadow: 5px 5px 5px red;
+        }
+
+        .shadow2{
+            text-shadow: 10px 10px 10px blue;
+        }
+
+        .shadow3{
+            text-shadow: 2px 2px 3px green;
+        }
+        .shadow4{
+            text-shadow: 10px 10px 2px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <p class="shadow1">그림자 효과1</p>
+    <p class="shadow2">그림자 효과2</p>
+    <p class="shadow3">그림자 효과3</p>
+    <p class="shadow4">그림자 효과4</p>
+</body>
+</html>

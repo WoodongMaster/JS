@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주문/결제</title>
+  <link rel="stylesheet" href="order.css">
+  <script src="order.js" defer></script>
+
+</head>
+
+<body>
+  <header>
+    <nav id="nav">
+        <a href="메인페이지" id="logo">술담화</a>
+  </header>
+
+
+  <div class="main">
+    <div class="mainText">
+      <p class="mainP">주문 / 결제</p>
+      <hr>
+      <div class="order">
+        <p class="orderP">주문 예정 상품</p>
+        <hr>
+        <div class="ordeItem">
+          <div class="orderImg">
+            <img src="img/술1.jpg" id='orderImg' alt="img/술1.jpg">
+          </div>
+          <div class="orderInfo">
+            <span id="name"></span><br>
+            <span id="type"></span><br>
+            <span id="price"></span>
+            <span id="count"></span>
+          </div>
+        </div>
+        <hr>
+
+        <div class="orderPrice">
+          <p>주문총액 <span id="orderPrice"></span></p>
+        </div>
+      </div>
+      <div class="payment">
+        <p>결제 방법</p>
+        <div class="paymentBtn">
+          <div>
+            <div class="pay1">
+              <span>신용카드</span>
+            </div>
+            <div class="pay2">
+              <span>무통장입금</span>
+            </div>
+          </div>
+          <div>
+            <div class="pay3">
+              <span><img class="img" src="img/icon-payment-method-kakao.png" alt=""></span>
+            </div>
+            <div class="pay4">
+              <span><img class="img" src="img/icon-payment-method-naver.png" alt=""></span>
+            </div>
+            <div class="pay5">
+              <span><img class="img" src="img/icon-payment-method-apple.png" alt=""></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="orderTotal">
+        <div class="bill">
+          <span>계산서</span>
+          <hr>
+        </div>
+        <div class="total">
+          <div class="paymentOption">
+            <div>결제방법</div>
+            <div class="paymentC"></div>
+          </div>
+          <div class="totalProductPrice">
+            <div>총 상품금액</div>
+            <div class="totalPrice" id="totalPrice">뭘까요</div>
+          </div>
+          <div class="shippingCharge">
+            <div>배송비</div>
+            <div class="charge">3,000원</div>
+          </div>
+          <hr>
+          <div class="totalAmountPayment">
+            <div>총 결제 금액</div>
+            <div class="totalPayment" id="totalPayment">뭘까요</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  
+</body>
+
+</html>

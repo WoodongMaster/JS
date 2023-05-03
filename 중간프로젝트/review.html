@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0;
+            text-align: center;
+        }
+
+        .review {
+            width: 80%;
+            height: 400px;
+            margin: 20px auto 30px auto;
+            background-color: white;
+            box-shadow: 0 14px 60px rgba(255, 222, 78, 0.5), 0 10px 10px rgba(255, 222, 78, 0.5);
+            position: relative;
+            border: 3px solid rgb(255, 231, 97);
+            border-radius: 20px;
+        }
+
+        .rev img {
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            width: 25%;
+            height: 70%;
+        }
+
+        .rev ul {
+            position: absolute;
+            display: inline-block;
+            text-align: left;
+        }
+
+        li {
+            text-align: center;
+            list-style: none;
+            margin-bottom: 30px;
+            padding-right: 20px;
+            font-size: 20px;
+            width: 320px;
+        }
+
+        ul p{
+            margin: 0 0 10px 0;
+            text-align: center;
+            font-weight: 700;
+            background-color: rgb(255, 187, 60);
+            color: honeydew;
+        }
+
+        .footer {
+            clear: both;
+            text-align: center;
+        }
+
+        .board {
+            position: absolute;
+            width: 100%;
+            height: 150px;
+            font-size: 40px;
+            font-weight: 700;
+            align-items: center;
+        }
+
+        .board p {
+            display: inline-block;
+            width: 250px;
+            color: rgb(196, 126, 22);
+        }
+
+        img {
+            border-radius: 20px;
+        }
+
+        .notice {
+            background-image: url(img/banner.jpg);
+            background-size: 100% 100%;
+            position: relative;
+            width: 100%;
+            height: 300px;
+            text-align: center;
+        }
+
+        .board2 {
+            position: absolute;
+            align-items: center;
+            background-color: white;
+            box-shadow: 0 14px 60px rgba(255, 222, 78, 0.5), 0 10px 10px rgba(255, 222, 78, 0.5);
+            width: 80%;
+            height: 200px;
+            left: 10%;
+            top: 50%;
+            font-size: 20px;
+            color: rgb(136, 136, 136);
+            font-weight: 600;
+        }
+
+        .board2 p {
+            margin-top: 50px;
+        }
+
+        #first {
+            width: 80%;
+            height: 400px;
+            margin: 70px auto 30px auto;
+            background-color: white;
+            position: relative;
+            border: 3px solid rgb(255, 231, 97);
+            border-radius: 20px;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 48;
+                color: gold;
+        }
+
+        .fill{
+            font-variation-settings:
+                'FILL' 1,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 48;
+                color: gold;
+        }
+    </style>
+</head>
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<body>
+    <div class="container">
+
+        <div class="notice">
+            <div class="board">
+                <p>REVIEW</p>
+            </div>
+            <div class="board2">
+                <p>모두가 볼 수 있는 리뷰게시판입니다</p>
+                <p>리뷰와 관계 없거나 혐오감, 불쾌감 조성글은 삭제 될 수 있습니다</p>
+            </div>
+        </div>
+        <div class="review" id="first">
+            <div class="rev">
+                <a href=""><img src="img/리뷰1.png" alt=""></a>
+                <ul>
+                    <li><p>작성자</p>Adob****</li>
+                    <li><p>상품명</p>종합세트A</li>
+                    <li><p>별점</p>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined fill">star</span>
+                    </li>
+                    <li><p>리뷰</p>다양하고 맛있습니다!</li>
+                </ul>
+            </div>
+        </div>
+        <div class="review">
+            <div class="rev">
+                <a href=""><img src="img/리뷰2.png" alt=""></a>
+                <ul>
+                    <li><p>작성자</p>CORI****</li>
+                    <li><p>상품명</p>머루와인</li>
+                    <li><p>별점</p>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                    </li>
+                    <li><p>리뷰</p>맛있습니다!</li>
+                </ul>
+            </div>
+        </div>
+        <div class="review">
+            <div class="rev">
+                <a href="product2.html"><img src="img/붉은원숭이4.jpg" alt=""></a>
+                <ul>
+                    <li><p>작성자</p>moon****</li>
+                    <li><p>상품명</p>붉은원숭이</li>
+                    <li><p>별점</p>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                    </li>
+                    <li><p>리뷰</p>상품설명에 비해 생각보다 쓰네요</li>
+                </ul>
+            </div>
+        </div>
+        <div class="review">
+            <div class="rev">
+                <a href=""><img src="img/리뷰4.png" alt=""></a>
+                <ul>
+                    <li><p>작성자</p>Nero****</li>
+                    <li><p>상품명</p>단상지교</li>
+                    <li><p>별점</p>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined fill">star</span>
+                    </li>
+                    <li><p>리뷰</p>맛있습니다!</li>
+                </ul>
+            </div>
+        </div>
+        <div class="review">
+            <div class="rev">
+                <a href=""><img src="/img/리뷰5.png" alt=""></a>
+                <ul>
+                    <li><p>작성자</p>Powe****</li>
+                    <li><p>상품명</p>연태주</li>
+                    <li><p>별점</p>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined fill">star</span>
+                        <span class="material-symbols-outlined fill">star</span>
+                    </li>
+                    <li><p>리뷰</p>맛있습니다!</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>

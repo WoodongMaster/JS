@@ -1,0 +1,59 @@
+
+  let url = window.location.href;
+  const urlobj = new URL(url);
+  const urlpara = new URLSearchParams(urlobj.search);
+
+  let user_name = urlpara.getAll('id');
+  let user_password = urlpara.getAll('password');
+
+// 로그인 했을때 메인화면에서 로그아웃으로 멘트 바꿈 (js)
+
+  if(user_name==`admin` && user_password==`admin`){
+    document.getElementById('log-in').innerHTML = `로그아웃`;
+    document.getElementById('log-in').value = `login`;
+  }
+ 
+
+// 로그아웃 누르면 value 변경 및 메인화면으로
+  document.getElementById('log-in').addEventListener('click', () => {
+    if(document.getElementById(`log-in`).value == "login"){
+      document.getElementById('log-in').value = `logout`;
+      document.getElementById(`log-in`).href = "main.html";
+    }
+  });
+
+
+// 장바구니 눌렀을때 (로그인 상태 / 로그아웃 상태)
+  document.getElementById('shoppingbasket').addEventListener('click', () => {
+
+    if(document.getElementById('log-in').value=='login'){
+      document.getElementById('shoppingbasket').href = 'shoppingbasket.html';
+    }
+    else{
+      alert('로그인이 필요합니다');
+      document.getElementById('shoppingbasket').href = 'login.html';
+    }
+  });
+
+// login.html
+        function match(){
+            let id = document.getElementById('id').value;
+            let pw = document.getElementById('password').value;
+
+            // shoppingbasket.html?product_name=apple&product_amount=3&product_price=15000&
+            // product_name=banana&product_amount=2&product_price=25000
+            // 이름, 구매수량, 값 보내야함
+
+            if(id=='admin' && pw=='admin'){
+                location.href=`main.html?id=admin&password=admin`;
+            }
+            else if(id=='admin' && pw!='admin'){
+                alert('비밀번호가 틀립니다');
+            }
+            else{
+                alert('입력된 아이디 혹은 비밀번호가 올바르지않습니다');
+            }
+        }
+
+// 세부 상품의 장바구니 링크마다 걸어두기 (상품이름, 상품수량, 상품가격)
+shoppingbasket.html?product_name=서울의밤&product_amount=3&product_price=7100

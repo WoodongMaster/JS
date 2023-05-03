@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제2</title>
+</head>
+
+<body>
+    <!-- 
+        input 파일에 파일명. 확장자 입력하여 전송버튼 누르면
+        이미지 파일인지 검사하여
+        이미지파일이면 '정상파일입니다'
+        이미지파일 아니면 '이미지 파일만 가능합니다'
+        라고 출력
+        이미지파일 : jpg, jpeg, png, gif, img
+     -->
+    <h1>확장자 검사</h1>
+    파일명 : <input type="text" id="fileName">
+    <button type="button" id="subBtn" onclick="img_check()">전송</button>
+    <h3 id="result">
+
+    </h3>
+    <script>
+        function img_check() {
+            let fileName = document.getElementById('fileName').value;
+            console.log(fileName);
+            let dot_index = fileName.lastIndexOf('.');
+            console.log(dot_index);
+            let sub_fileName = fileName.slice(dot_index + 1);
+            console.log(sub_fileName);
+            let a=0;
+
+            sub_fileName=sub_fileName.toLowerCase();
+
+            if(sub_fileName == 'jpg' || sub_fileName == 'img' || sub_fileName == 'jpeg' || sub_fileName == 'png' || sub_fileName == 'gif'){
+                a=1;
+            }
+
+            if(a==1){
+                document.getElementById('result').innerText = `이미지 파일 입니다!`;
+            }
+            else{
+                document.getElementById('result').innerText = `이미지 파일이 아닙니다!`;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

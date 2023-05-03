@@ -1,0 +1,199 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+div{
+    width:100%;
+}
+.header{
+    position: sticky;
+    top: 0;
+    height:60px;
+    background-color: rgb(32, 32, 32);
+    padding-left: 20px;
+    padding-top: 15px;
+}
+.header>p{
+    margin: 0;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+}
+.main-img{
+    height: 1200px;
+    background-image: url(/img/노트북.png);
+    background-size: 100% 100%;
+}
+
+.content{
+    width: 100%;
+    height: 600px;
+    margin: 0;
+    position: relative;
+    
+}
+
+.content2{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    
+}
+
+.content2>p{
+    
+    padding-left: 65px;
+    padding-right: 65px;
+
+}
+
+.content2>p:first-child{
+    color: #4a4a4a;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.content2>p:nth-child(2){
+    color: #1b1b1b;
+    margin-bottom: 30px;
+    font-size:20px;
+    font-weight: 700;
+}
+
+.content2>p:last-child{
+    
+    margin: 0;
+    margin-top: 20px;
+    color: #7a7a7a;
+    font-size:16px;
+}
+.sub{
+    height: 600px;
+    background-image: url(/img/모니터.png);
+    background-size: 100% 100%;
+}
+
+.sub2container{
+    width: 100%;
+    height: 600px;
+}
+
+.sub2{
+    width: 100;
+    height: 50%;
+    background-image: url(/img/키보드.png);
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.sub3{
+    width: 100%;
+    height: 50%;
+    background-image: url(/img/마우스.jpg);
+    background-size: 100% 100%;
+}
+
+.sub2>a{
+    position: absolute;
+    border: 4px solid white;
+    color: white;
+    padding : 9px 40px 9px 40px;
+    text-decoration-line: none;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    font-size: 16px;
+    
+}
+
+
+@media screen and (min-width:1000px){
+    .header{
+        height:60px;
+    }
+    .main-img{
+        height:800px;
+        width:100%;
+        float: left;
+    }
+
+    .content{
+        width: 100%;
+        height: 600px;
+        float:right;
+    }
+    .content2{
+        height: 600px;
+    }
+    .content2>p{
+    
+        padding-left: 30px;
+        padding-right: 30px;
+    
+    }
+    .sub{
+        width: 50%;
+        float:left;
+        height:600px;
+    }
+    .sub2container{
+        float:right;
+        width: 50%;
+        height:600px;
+    }
+    .sub2{
+        width:100%;
+        float:left;
+        height:50%;
+    }
+    .sub3{
+        width: 100%;
+        float:right;
+        height:50%;
+    }
+    /* .footer{
+        clear:both;
+        height: 60px;
+    } */
+    /* .sub>a{
+        margin-bottom: 160px;
+    } */
+}
+
+@media screen and (min-width:1600px){
+    .main-img{
+        width:50%;
+        float:left;
+        height: 1200px;
+    }
+    .content{
+        width: 50%;
+        float: right;
+        height: 600px
+    }
+    .sub{
+        float:left;
+        width: 25%;
+        height:600px;
+    }
+    .sub2container{
+        float:right;
+        width: 25%;
+        height:600px;
+    }
+    .sub2{
+        width: 100%;
+        float:left;
+        height:50%;
+    }
+    .sub3{
+        width: 100%;
+        float:right;
+        height:50%;
+    }
+    /* .footer{
+        clear:both;
+        height: 60px;
+    } */
+}

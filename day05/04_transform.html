@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        transform : 회전, 이동, 확대 등을 할 때 사용
+            -translate(x,y) : X축과 Y축 x,y만큼 이동
+            -translateX(x) : X축만 이동
+            -translateY(y) : Y축만 이동
+            -scale(w,h) : 가로로 w배, 세로로 h배만큼 크기조정(값을 0으로 주면 없어짐)
+            -scaleX(w) : 가로만 w배
+            -scaleY(h) : 세로만 h배
+            -rotate(a) : a도 만큼 시계방향 회전 (단위 : deg)
+            -skew(w, h) : x축으로 w만큼, y축으로 h만큼 기울림 (단위 : deg)
+            -skewX(a) : x축으로 a만큼 기울림
+            -skewY(a) : y축으로 a만큼 기울림
+
+        transition
+            -다른 속성값이 변화할때 서서히 변화하여 애니메이션 효과가 발생하는 것처럼 보이게 함.
+            -transition 속성명 전환시간;
+            -포커스 됐을때 살짝 줌(scale)되는거(사진을 div로 감싸고 넘어가는 부분 hidden)
+                -overflow : hidden
+     -->
+     <style>
+        .box{
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+            animation: transform_skew 2s 5;
+            
+        }
+
+        .font{
+            font-size: 20px;
+            transition: font-size 1s
+        }
+        
+        .font:hover{
+            font-size:50px;
+        }
+
+        @keyframes transform_scale{
+            0%{
+                transform: scale(1,1);
+            }
+
+            50%{
+                transform: scale(2,2);
+            }
+            100%{
+                transform: scale(1,1);
+            }
+        }
+
+        @keyframes transform_rotate {
+            0%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(180deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes transform_skew {
+            0%{
+                transform: skew(0deg);
+            }
+            50%{
+                transform: skew(30deg,30deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+        }
+
+     </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="font">hello</div>
+</body>
+</html>

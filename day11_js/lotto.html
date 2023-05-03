@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set 로또</title>
+</head>
+
+<body>
+    <h1>
+        1~45까지의 중복되지 않는 숫자 6개를 랜덤으로 추출 => 출력
+        set 객체를 이용하여 생성
+    </h1>
+    <button type="button" onclick="random_create()">랜덤 번호 6개 생성</button>
+    <h1 id="random_Board">
+        랜덤번호6개
+    </h1>
+    <button type="button" onclick="lotto_create()">당첨번호 7개 (마지막 번호는 보너스번호) 생성</button>
+    <h1 id="lotto_Board">
+        로또번호7개
+    </h1>
+    <button type="button" onclick="check()">결과 확인</button>
+    <h1 id="result">
+    </h1>
+    <button type="button" onclick="reset()">초기화</button>
+
+
+    <script>
+        const rNum = new Set();
+        const lNum = new Set();
+        let bonusNum = -1;
+        let hit = 0;
+        let bonusHit = false;
+        function random_create() {
+            let tmp = "";
+            while (rNum.size < 6) {
+                rNum.add(Math.floor((Math.random() * 45) + 1));
+            }
+            for (const i of rNum) {
+                tmp += `${i} `;
+            }
+            document.getElementById('random_Board').innerHTML = tmp;
+        }
+
+        function lotto_create() {
+            let tmp = "";
+            while (lNum.size < 6) {
+                lNum.add(Math.floor((Math.random() * 45) + 1));
+            }
+            if (bonusNum == -1) {
+                bonusNum = Math.floor((Math.random() * 45) + 1);
+                while(true){
+                    if(lNum.has(bonusNum)){
+                        bonusNum = Math.floor((Math.random() * 45) + 1);
+                    }
+                    else{
+                        break;
+                    }
+                }
+                
+                    bonusNum = Math.floor((Math.random() * 45) + 1);
+                }
+            
+
+
+            for (const i of lNum) {
+                tmp += `${i} `;
+
+            }
+            document.getElementById('lotto_Board').innerHTML = tmp + `보너스번호 : ${bonusNum}`;
+        }
+
+        function check() {
+            let tmp = "";
+            for (const i of lNum) {
+                if (rNum.has(i)) {
+                    hit++;
+                }
+            }
+
+            if (rNum.has(bonusNum)) {
+                bonusHit = true;
+            }
+
+            switch (hit) {
+                case 6:
+                    tmp = `1등! 축하합니다!`;
+                    break;
+                case 5:
+                    if (bonusHit) {
+                        tmp = `2등! 축하합니다!`;
+                        break;
+                    }
+                    else {
+                        tmp = `3등! 축하합니다!`;
+                        break;
+                    }
+                case 4:
+                    tmp = `4등! 축하합니다!`;
+                    break;
+                case 3:
+                    tmp = `5등! 축하합니다!`;
+                    break;
+                default:
+                    tmp = `꽝! 아쉽네요~`;
+                    break;
+            }
+
+            document.getElementById('result').innerHTML = `${hit}개 맞았습니다 ` + tmp;
+        }
+
+        function reset() {
+            rNum.clear();
+            lNum.clear();
+            bonusNum = -1;
+            hit = 0;
+            bonusHit = false;
+            tmp = "";
+            document.getElementById('random_Board').innerHTML = tmp;
+            document.getElementById('lotto_Board').innerHTML = tmp;
+            document.getElementById('result').innerHTML = tmp;
+        }
+    </script>
+</body>
+
+</html>

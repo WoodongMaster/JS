@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI추천 - 술 취향찾기</title>
+    <link rel="stylesheet" href="quiz_result.css">
+    
+    <style>
+        /* 진행속도 */
+        #step1{
+            height: 4px;
+            background-color: rgb(237, 244, 254);
+            border-radius: 20px;
+            margin: 20px;
+        }
+        #step1>div{
+            position: absolute;
+            height: 4px;
+            width: 320px;
+            background-color: lightgreen;
+            border-radius: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+         
+        <!-- 화면 상단(나가기 버튼 부분) -->
+        <div id="head">
+            추천 완료!<button type="button" id="outBtn">&#10006;</button>
+        </div>
+        
+        <!-- 화면 중앙(테스트 진행 부분) -->
+        <div id="body">
+            <div id="first">
+                <img src="quiz_img/result.png" alt="">
+                <div>여러분에게 추천하는 친구들이에요!</div>
+                <div>인생 술이 되었으면 해요:) </div>
+            </div>
+            <div id="second">
+                <div id="box1">
+                    <img src="" alt="술1이미지" id="box-img1">
+                    <div id="contents1"></div>
+                    <div id="detail1"><a href="">&#10095; 상세보기</a></div>
+                </div>
+                <div id="box2">
+                    <img src="" alt="술2이미지" id="box-img2">
+                    <div id="contents2"></div>
+                    <div id="detail2"><a href="">&#10095; 상세보기</a></div>
+                </div>
+
+            </div>
+            <div id="third">
+                <div id="line"></div>
+                <div id="notice">추천 유의 사항</div>
+                <ul>
+                    <li>추천되는 술은 구매하신 고객님들의 후기와 데이터들에 의해 분석되어 나오는 
+                        결과로 타 회사와는 관련이 없습니다.</li>
+                    <li>개개인의 취향에 맞는 술을 추천하는 알고리즘에 기반을 두고 제작되었으나 
+                        모든 취향에 맞지 않을 수도 있습니다.</li>
+                    <li>AI가 추천하는 술에 대한 더 많은 정보를 보고싶으시다면 게시판을 이용해주세요.</li>
+                    <li>구매하신 술에 대한 리뷰는 AI추천 서비스를 더욱 발전 시켜준답니다.
+                        많은 리뷰 부탁드립니다!</li>
+                </ul>
+
+            </div>
+
+            
+    </div>
+
+    <script src="data.js"></script>
+    <script>
+    
+        // //x버튼 = 메인으로 이동
+        // document.getElementById('outBtn').addEventListener('click',()=>{
+        //     location.href=".main.html";
+        // })
+
+        //화면이 켜지면 자동으로 실행
+        window.addEventListener('DOMContentLoaded', function(){
+
+            let getLink = window.location.search; //주소에서 변수 가져오기
+            let lastNum = (getLink.charAt(getLink.indexOf('=')+1)); //변수의 첫 문자 가져오기(선택한 술 종류)
+            
+            //첫번째 박스
+            const boxImg1 = document.getElementById('box-img1'); //이미지
+            const contents1 = document.getElementById('contents1'); //컨텐츠
+            const detail1 = document.getElementById('detail1'); //상세보기
+            
+            //두번째 박스
+            const boxImg2 = document.getElementById('box-img2'); 
+            const contents2 = document.getElementById('contents2'); 
+            const detail2 = document.getElementById('detail2'); 
+            
+            
+            //끝 문자에 따른 js변수 저장
+            let getData = ""; 
+            switch(lastNum){
+                case '1': getData = '탁주'; break;
+                case '2': getData = '약주'; break;
+                case '3': getData = '증류주'; break;
+                case '4': getData = '과실주'; break;
+            }
+            
+            //추천박스1 변경 = 페이지랑 이어질꺼라 픽스
+            boxImg1.setAttribute('src', data[getData][0].img); 
+            detail1.querySelector('a').setAttribute('href', data[getData][0].detail); 
+            let str1="";
+            str1 += `<p>"${data[getData][0].name}"</P>`;
+            str1 += `<p>${data[getData][0].price}원</P>`; 
+            str1 += `<p>${data[getData][0].type}</P>`;
+            str1 += `<p> ${data[getData][0].tag}</P>`;
+            contents1.innerHTML = str1;
+            console.log(data[getData][0].name);
+            
+            //추천박스2 변경 (랜덤)
+            let ranNum = Math.floor(Math.random()*4)+1;
+            boxImg2.setAttribute('src', data[getData][ranNum].img); 
+            detail2.querySelector('a').setAttribute('href', data[getData][ranNum].detail); 
+            let str2="";
+            str2 += `<p>"${data[getData][ranNum].name}"</P>`;
+            str2 += `<p>${data[getData][ranNum].price}원</P>`; 
+            str2 += `<p>${data[getData][ranNum].type}</P>`;
+            str2 += `<p> ${data[getData][ranNum].tag}</P>`;
+            contents2.innerHTML = str2;
+            console.log(data[getData][ranNum].name);
+            
+
+            })
+    </script>
+</body>
+</html>

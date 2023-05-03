@@ -1,0 +1,148 @@
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* 뒷배경 색상 */
+body{
+    background-color: #f1f6f9;;
+}
+
+
+/* 작성부분 전체 */
+#main{
+    width: 500px;
+    margin: 20px auto;
+
+    text-align: center;
+    background-color: white;
+    font-family: 'NanumSquareNeo-Variable';
+
+}
+
+/* 상단 */
+#head{
+    text-align: start;
+    margin-left: 210px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 15px;
+}
+#head button{
+    margin-left: 160px;
+    background-color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+
+
+/* 중간 */
+#body{
+    border-top: 1px solid lightslategray;
+}
+#first img{
+    margin: 20px 0px 40px 0px;
+}
+#first div{
+    margin:10px 0px;
+}
+
+/* 추천 술 박스 */
+#box1, #box2{
+    width: 420px;
+    height: 250px;
+    margin: 80px auto;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#box1{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+#box2{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 2s forwards;
+}
+#box1 img, #box2 img{
+    padding: 50px 15px;
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+#contents1, #contents2{
+    text-align: start;
+    padding-top: 50px;
+    color: grey;
+}
+#contents1>p, #contents2>p{
+    display: inline;
+    float: left;
+    width: 220px;
+    padding: 10px 0px 0px 10px;
+}
+#contents1>p:first-child, #contents2>p:first-child{
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+
+
+#detail1, #detail2{
+    display: inline;
+    padding: 15px 30px 0px 20px;
+    float: right;
+}
+#detail1>a, #detail2>a{
+    text-decoration: none;
+    color: #394867;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* 하단: 추천유의사항 */
+#line{
+    height: 1px;
+    background-color: gray;
+    margin: 15px;
+}
+#third{
+    color: gray;
+    font-weight: 500;
+    width: 390px;
+    margin-left: 60px;
+    padding-bottom: 50px;
+}
+#notice{
+   padding: 30px 0px;
+}
+#third li{
+    text-align: start;
+    padding: 5px;
+    font-size: 15px;
+}

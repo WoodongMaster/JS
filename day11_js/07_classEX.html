@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Account{
+            constructor(name,balance){
+                this.name=name;
+                this.balance=balance;
+            }
+
+            deposit(money){   // 입금
+                this.balance += money;
+                console.log(`${money}원 입금되었습니다.`);
+            }
+            withraw(money){   // 출금
+                if(this.balance-money < 0){
+                    console.log('잔액이 부족합니다.');
+                }
+                else{
+                    this.balance -= money;
+                    console.log(`${money}원 출금되었습니다.`);
+                }
+            }
+            transfer(money, to){  // 이체
+                if(this.balance-money < 0){
+                    console.log('잔액이 부족합니다.');
+                }
+                else{
+                    this.balance -= money;
+                    to.balance += money;
+                    console.log(`${b.name}에게 ${money}원 입금되었습니다.`);
+                }
+            }
+        }
+        let myAccount = {
+            name: 'hong', 
+            balance : 0,     //잔액
+            deposit : function(money){   // 입금
+                this.balance += money;
+            },
+
+            withraw : function(money){   // 출금
+                this.balance -= money;
+            },
+
+            transfer : function(money, to){  // 이체
+                this.balance -= money;
+                to.balance += money;
+            }
+        }
+        let otherAccount = {
+            name: 'kim', 
+            balance : 0,     //잔액
+            deposit : function(money){   // 입금
+                this.balance += money;
+            },
+
+            withraw : function(money){   // 출금
+                this.balance -= money;
+            },
+
+            transfer : function(money, to){  // 이체
+                this.balance -= money;
+                to.balance += money;
+            }
+        }
+        myAccount.deposit(10000);
+        console.log(myAccount.balance);
+
+        myAccount.withraw(1000);
+        console.log(myAccount.balance);
+
+        myAccount.withraw(1000);
+        console.log(myAccount.balance);
+
+        myAccount.transfer(1000,otherAccount);
+        console.log(myAccount.balance);
+        console.log(otherAccount.balance);
+
+        console.log('----------class--------------');
+        let a = new Account('Moon', 50000);
+        let b = new Account('Park', 50000);
+        console.log(`${a.name}의 잔액 : ${a.balance}`);
+        console.log(`${b.name}의 잔액 : ${b.balance}`);
+
+        a.deposit(10000);
+        b.withraw(10000);
+        console.log(`${a.name}의 잔액 : ${a.balance}`);
+        console.log(`${b.name}의 잔액 : ${b.balance}`);
+
+        a.transfer(5000,b);
+        console.log(`${a.name}의 잔액 : ${a.balance}`);
+        console.log(`${b.name}의 잔액 : ${b.balance}`);
+
+        a.withraw(60000);
+    </script>
+</body>
+</html>

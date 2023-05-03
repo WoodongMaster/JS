@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count만들기</title>
+</head>
+
+<body>
+    <!-- 
+        button 2개를 선언
+        +버튼 -> 
+    -->
+    <button type="button" id="plus" onclick="plus_btn()">+</button>
+    <button type="button" id="minus" onclick="minus_btn()">-</button>
+    <h3 id="result"></h3>
+    <script>
+        let count = 0;
+        let result = '';
+        document.getElementById('result').innerText = `Number : ${count}`;
+        function plus_btn() {
+            if (count != 50) {
+                count++;
+                document.getElementById('result').innerText = `Number : ${count}`;
+            }
+
+        }
+        function minus_btn() {
+            if (count != 0) {
+                count--;
+                document.getElementById('result').innerText = `Number : ${count}`;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 파라미터</title>
+</head>
+<body>
+    <h1>
+        함수의 파라미터(매개변수)는 변수명을 지정해서 함수 영역 내부에 전달하는 역할을 한다.
+    </h1>
+    <ul>
+        <li>
+            파라미터의 개수는 제한이 없으나 많으면 관리가 힘듬
+        </li>
+        <li>
+            파라미터 타입은 제한이 없지만 전달된 타입을 그대로 받아서 사용
+        </li>
+        <li>
+            파라미터는 전달되는 값의 순서, 개수, 유무를 잘 확인해야함
+        </li>
+        <li>
+            파라미터의 변수명을 지정할 때 외부의 변수명과 중복되어도 영향은 없음<br>
+            but 가독성을 위해 중복된 변수명 사용을 지양해야함
+        </li>
+        <li>
+            함수 내부에서 선언된 변수는 함수 내부에서만 사용 가능, 외부에선 사용 불가
+        </li>
+        <li>
+            함수는 리턴 유무에 따라 값을 돌려 받을 수 있고, 함수 실행의 종료시점을 정할 수 있음.
+        </li>
+    </ul>
+
+    <script>
+        let name = '홍길순';
+        function callName(herName){
+            let hisName='홍길동';
+            console.log(`남자친구 이름은 : ${hisName}`)
+            console.log(`여자친구 이름(매개변수)은 : ${herName}`)
+            console.log(`그냥 name : ${name}`)
+        }
+        callName('김영이');
+        callName(name);
+
+        // console.log(hisName);
+
+        function NameHobby(name, hobby){
+            console.log(`이름은 ${name}입니다 취미는 ${hobby}입니다. `)
+        }
+
+        NameHobby('김덕민','농사짓기');
+
+        function iKnowHer(herName, hobby){
+            callName(name)
+            NameHobby(name,hobby)
+        }
+
+        iKnowHer(name,'정원가꾸기');
+ 
+    </script>
+
+        <h1>
+            함수는 리턴 유무에 따라 값을 돌려 받을 수 있고, 함수 실행의 종료시점을 정할 수 있음.
+        </h1>
+        <script>
+            function returnFunc(num1, num2){
+                let result = num1+num2;
+                return result;
+            }
+            let result = returnFunc(10,20);
+            console.log(result);
+            console.log(`result의 값은 : ${returnFunc(10,20)}`);
+
+            
+
+            const myFun = function (myName){
+                console.log(`나를 불렀니?`);
+                return `hello~!!` + myName;
+            }
+
+            myFun('김김김'); // 문자열 출력
+            
+            console.log(myFun('박박박'));
+        </script>
+
+        <h1>
+            화살표 함수(Arrow Function) : ES6부터 사용가능한 함수정의법
+        </h1>
+        <h3>
+            가독성은 낮으나 코드량을 줄일 수 있음. 표현식 함수처럼 변수화를 사용할 수 있음.
+        </h3>
+
+        <script>
+            const arrowFunc = (param1, param2) => {
+                let result = param1 + param2;
+                return result;
+            }
+
+            const arrowFunc2 = (p1,p2) => p1+p2;
+
+            const arrowFunc3 = (a,b) =>{
+                console.log('result3의 값 : 리턴 없음', a+b);
+            }
+            let result1= arrowFunc(10,20);
+            console.log('result1의 값'+result1);
+            console.log('result2의 값'+arrowFunc2(5,3));
+            arrowFunc3(2,4);
+            
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input tag</title>
+</head>
+<body>
+    <!-- input tag는 단일 태그로 여러가지 다양한 기능에 활용할 수 있음.
+        type 속성에 따라 여러가지 기능으로 사용됨
+    <input type = "속성명">
+    <form> </form> 태그와 같이 사용됨
+
+    <input type="text"> : 가장 많이 사용, 영문,한글,특수문자 등의 문자를 입력받을 때 사용
+    <input type="text" placeholder="흐리게 표시할 내용"> : input 상자에 흐리게 표시 -->
+    <p>아이디 : <input type="text"> </p>
+    <p>패스워드 :  <input type="text" placeholder="password"> </p>
+    <br>
+
+    <!--<input type="button"> : 일반버튼
+        <input type="submit"> : 전송버튼, 서버로 전송(로그인, 회원가입)
+        <input type="reset"> : 취소버튼
+        <form action="">
+            인풋 타입 내용들
+        </form>
+    --> 
+    
+    <form action="">
+        <input type="text" name="data">
+        <input type="text" name="password">
+        <input type="button" value="button">
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    </form>
+
+    <input type="password">  <!--비밀번호에 사용 (입력값이 *로 표시)-->
+    <input type="checkbox"> <!-- 체크박스 : 다중선택 -->
+    <input type="radio"> <!-- 라디오박스 : 단일선택-->
+    <hr>
+
+    <form action="">
+        <p>좋아하는 과일은? (복수선택 가능)</p> 
+        <input type="checkbox" name="fruit" value="apple">사과   <!-- name=변수, value=값, > 화면에 표현될 단어-->
+        <input type="checkbox" name="fruit" value="banana">바나나
+        <input type="checkbox" name="fruit" value="orange">오렌지
+        <input type="submit" value="전송">
+    </form>
+
+    <hr>
+    <form action="">
+        <p>좋아하는 과일은? (복수선택 가능)</p>
+        <label for="apple">사과</label> <!--<label for="단어"> </label> : 단어의 아이디를 가지는 값은 라벨과 같은 기능을 가짐(동기화)-->
+        <input type="checkbox" name="fruit" value="apple" id="apple"> <!---->
+        <label for="orange">오렌지</label>
+        <input type="checkbox" name="fruit" value="orange" id="orange">
+        <label for="banana">바나나</label>
+        <input type="checkbox" name="fruit" value="banana" id="banana">
+        <input type="submit" value="전송">
+    </form>
+    <br>
+    <hr>
+
+    <form action="">
+        <input type="color" name="color"> <!--color : 색을 선택할 때 사용, 색상정보를 16진수로 표현-->
+        <input type="submit" name="전송">
+    </form>
+    <br>
+    <hr>
+
+    <!-- 
+        type="month" : 년 월
+        type="week" : 년 주
+        type="date" : 년 월 일
+        type="datetime" 년 월 일 입력
+        type="datetime_local" : 년 월 일 시 분 초
+        type="time" : 시 분 초
+        실무에서는 jquery에서 제공하는 datepicker / 부트스트랩에서 제공하는 datepicker를 사용
+     -->
+     <input type="month">
+     <input type="week">
+     <input type="date">
+     <input type="datetime-local">
+     <input type="datetime">
+     <input type="time">
+     <br>
+     <hr>
+
+     <!-- type="email"  : 이메일 형식인지 아닌지 체크-->
+     <!-- type="url"  : 이메일 형식인지 아닌지 체크-->
+    <form action="">
+    <input type="email" name="이메일">
+    <input type="url" name="url">
+    <input type="submit" name="submit">
+    </form>
+
+    <!-- type="file"  : 첨부파일 선택-->
+    <input type="file" name="" id="">
+    <br><br><br><br><br>
+    <hr>
+
+    <!-- 숨김속성, 값을 안보이게 숨김 -->
+    <input type="hidden" name="" id="" value="숨김속성">
+
+    <!-- img태그와 같음, 이미지를 추가하는 역할,  alt : 사진을 불러오지 못했을때 나올 문장-->
+    <input type="image" src="https://s33.ap-northeast-2.amazonaws.com/univ-careet/FileData/Article/243/d165967c-5881-485b-82a5-a53a55bec706.PNG" alt="폭발함">
+    <input type="image" src="/img/일어나_코딩해야지_cropped.jpg" alt="폭발함">
+    
+    <!-- 수량 체크할때 사용 -->
+    <input type="number" name="" id="">
+
+    <!-- 범위 사이의 상태바를 보여줌 -->
+    1<input type="range">10
+    <br><br><br>
+    <hr>
+    <br><br><br>
+    
+
+    <!-- type="radio"를 이용하여 on/off 스위치를 만들기 -->
+    <form action="">
+        <p> ON / OFF 스위치 라벨x </p>
+        <input type="radio" name="SWITCH" value="on"> on
+        <input type="radio" name="SWITCH" value="off"> off
+        <input type="submit">
+    </form>
+    <br>
+    <form action="">
+        <p> ON / OFF 스위치 2 라벨 </p>
+        <label FOR="ON" > ON
+            <input type="radio" name="SWITCH" value="ON" id="ON">
+        </label>
+        <label FOR="OFF" > OFF
+            <input type="radio" name="SWITCH" value="OFF" id="OFF">
+        </label>
+
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>history 객체</title>
+</head>
+
+<body>
+    <h1>
+        브라우저가 저장하고 있는 방문페이지의 기록을 관리하는 객체
+    </h1>
+    <ul>
+        <li>
+            history.back(); : 이전 방문 페이지로 이동
+        </li>
+        <li>
+            history.forword(); : 다음 방문한 페이지로 이동
+        </li>
+        <li>
+            history.go(n); : n번째 페이지로 이동 (-2 : 이전페이지 2단계 전으로)
+        </li>
+        <li>
+            브라우저의 저장소를 기반으로 하기 때문에 보안 이슈로 접근제한을 해놓기도함
+        </li>
+    </ul>
+    <!-- a 태그를 이용하여 01_setTimeout.html로 이동 -->
+    <a href="/day14_js/01_setTimeout.html">to 1</a>
+    <button type="button" onclick="back()">back</button>
+    <button type="button" onclick="forward()">forward</button><br>
+    몇번째 페이지로?<input type="number">
+    <button type="button" id="num"onclick="go()">go</button>
+    <script>
+        function back() {
+            history.backward();
+        }
+        function forward() {
+            history.forward();
+        }
+        function go() {
+            n = document.getElementById('num').value
+            history.go(n);
+        }
+    </script>
+</body>
+
+</html>

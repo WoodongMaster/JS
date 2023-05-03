@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI추천 - 술 취향찾기</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <div id="main">
+
+        <!-- 화면 상단 : AI가 추천드려요 -->
+        <div id="head">
+
+            AI가 추천드려요!<button type="button" id="outBtn">&#10006;</button>
+
+            <div id="popupX">
+                <div id="showX">
+                    <p>퀴즈를 나가시겠어요?</p>
+                    <p>퀴즈 도중에 중단할 경우 <b>내용이 저장되지 않습니다.</b></p>
+                    <button id="closeBtnX">취소</button>
+                    <button id="mainBtnX">확인</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 화면 중앙 -->
+        <div id="body">
+
+            <div id="text">
+                1분안에<br> 찾아드려요
+            </div> 
+
+            <div id="text-quiz">
+                무슨 술을 마실지 고민되시나요?</span> 
+            </div>
+
+            <div><img src="quiz_img/mainImg.png" alt=""></div>
+    
+            <button id="popupBtn">＠ AI 추천이란? </button>
+
+                <div id="popup">
+                    <div id="show">
+                        <p>AI 추천?</p>
+                        <p>지금 경험하시는 추천 퀴즈는 <b>소믈리에가 직접 교차 시음하며 제작한 데이터와
+                            고객님들이 직접 남겨주신 리뷰 데이터</b>를 바탕으로 답변에 따라 개개인의
+                            취향에 맞는 술을 추천해 줄 수 있는 추천 알고리즘에 기반을 두어 제작되었습니다.
+                        </p>
+                        <p> 1분 만에 내 취향에 맞는 술을 <br> 추천받아보세요! </p>
+                        <button id="closeBtn">닫기</button>
+                        <button id="startBtn">퀴즈 시작하기</button>
+                    </div>
+                </div>
+
+        </div>
+        
+        <!-- 화면 하단 : 시작하기 -->
+        <div id="foot">
+            <div><a href="quiz_1.html"><button type="button">시작하기</button></a> </div>
+        </div>
+
+
+    </div>
+
+    <script>
+
+        // x 버튼을 누르면 팝업 창 나타내기
+        document.getElementById("outBtn").addEventListener("click", function() {
+            document.getElementById("popupX").style.display = "block";
+        });
+
+        // 취소 버튼 클릭 시 팝업 창 사라지기
+        document.getElementById("closeBtnX").addEventListener("click", function() {
+            document.getElementById("popupX").style.display = "none";
+        });
+
+        // 확인 버튼 클릭 시 main화면으로 이동
+        // document.getElementById("mainBtn").addEventListener("click", function() {
+        //     // location.href=".main.html";
+        // });
+
+
+
+        // == AI추천이란? ==
+
+
+        // 버튼 클릭 시 팝업 창 나타내기
+        document.getElementById("popupBtn").addEventListener("click", function() {
+            document.getElementById("popup").style.display = "block";
+        });
+
+        // 팝업 창 닫기 버튼 클릭 시 팝업 창 사라지기
+        document.getElementById("closeBtn").addEventListener("click", function() {
+            document.getElementById("popup").style.display = "none";
+        });
+
+        // 팝업 창 시작 버튼 클릭 시 문제1로 이동
+        document.getElementById("startBtn").addEventListener("click", function() {
+            location.href="quiz_1.html";
+        });
+
+
+    </script>
+</body>
+</html>

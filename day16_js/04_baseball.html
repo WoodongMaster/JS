@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaseBall</title>
+</head>
+
+<body>
+    <h1>
+        야구게임 1~9의 숫자 중 3개와 그 위치까지 맞춰야합니다.
+    </h1>
+    <button type="button" onclick="random_create()">게임시작</button><br>
+    숫자 : <input type="text" maxlength="3" id="box">
+    <button type="button" onclick="check()">판정</button>
+
+
+    <script>
+        const rnum = new Set([]);
+        const pnum = new Set([]);
+        let strike = 0;
+        let ball = 0;
+        let out = 0;
+        let count = 0;
+
+        function random_create() {
+            reset();
+
+            while (rnum.size < 3) {
+                let num = Math.floor((Math.random() * 9) + 1);
+                rnum.add(num);
+                console.log(rnum);
+            }
+        }
+
+        function check(){
+            let box = document.getElementById('box').value;
+
+            for(let i = 0; i<box.length; i++){
+                pnum.add(parseInt(box.charAt(i)));
+            }
+
+            for(let i = 0; i<rnum.length; i++){
+
+                    for(let j = 0; j<rnum.length; j++){
+                        if(rnum[i]==pnum[j] && i==j){
+                            strike++;
+                        }
+                        else if(rnum[i]==pnum[j]){
+                            ball++;
+                        }
+                        else{
+                            out++;
+                        }
+                    }
+                }
+
+            
+            console.log(pnum);
+            console.log(strike);
+            console.log(ball);
+            console.log(out);
+
+            pnum.clear();
+
+        }
+
+        function reset() {
+            rnum.clear();
+            pnum.clear();
+            strike = 0;
+            ball = 0;
+            out = 0;
+            count = 0;
+        }
+
+        
+    </script>
+</body>
+
+</html>

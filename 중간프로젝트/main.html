@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>술파는 사이트</title>
+    <script
+      src="https://kit.fontawesome.com/55381cd0ef.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js" defer></script>
+    <script src="default.js" defer></script>
+  </head>
+  <body>
+    <!-- 헤더부분입니다. -->
+    <header>
+      <nav>
+        <ul>
+          <a href="main.html" id="logo">술담화</a>
+          <a href="search.html"
+            ><button id="search-bar">
+              <i class="fa-solid fa-magnifying-glass"></i> 무엇을 찾고 계신가요?
+            </button></a
+          >
+        </ul>
+        <ul>
+          <a href="login.html" id="log-in">로그인/회원가입></a>
+          <a href="shoppingbasket.html"><i class="fa-solid fa-basket-shopping"></i></a>
+        </ul>
+      </nav>
+      <!-- 메뉴바 들어갈 수 있음 -->
+      <!-- 상단 리스트 컨테이너 -->
+      <div class="list-container">
+        <ul class="list">
+          <li><img src="img/containerImg1.jpg" alt="" /></li>
+          <li><img src="img/containerImg2.jpg" alt="" /></li>
+          <li><img src="img/containerImg3.jpg" alt="" /></li>
+          <li><img src="img/containerImg4.jpg" alt="" /></li>
+          <li><img src="img/containerImg5.jpg" alt="" /></li>
+        </ul>
+        <button id="next-button">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+      <!-- AI 링크 -->
+      <a href="recommend.html">
+        <div id="ai-link">
+          <p><strong>AI 소믈리에</strong> 무슨 술을 마실지 고민되시나요? ></p>
+        </div>
+      </a>
+    </header>
+    <!-- 헤더 끝 -->
+    <!-- 메인 시작 -->
+    <main>
+      <!-- 더보기란 -->
+      <div class="more">
+        <div>
+          <img src="img/oldman.png" alt="" class="more-img" />
+          <div>
+            <p class="more-first-para">술담화 PICK 선물세트</p>
+            <p class="more-second-para">감사한 마음을 전하기 좋아요!</p>
+          </div>
+        </div>
+        <a href="product_1.html">더보기 ></a>
+      </div>
+      <!-- 제품 -->
+      <div class="main-list-container">
+        <ul class="main-list" id="ul1" ;>
+          <!-- 1 -->
+          <li>
+            <a href="product_1.html">
+              <img src="img/mainImg1.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 2 -->
+          <li>
+            <a href="product_2.html">
+              <img src="img/mainImg2.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 3 -->
+          <li>
+            <a href="product_3.html">
+              <img src="img/mainImg3.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 4 -->
+          <li>
+            <a href="product_4.html">
+              <img src="img/mainImg4.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 5 -->
+          <li class="hide">
+            <a href="product_1.html">
+              <img src="img/mainImg5.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 6 -->
+          <li class="hide">
+            <a href="product_2.html">
+              <img src="img/mainImg6.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 7 -->
+          <li class="hide">
+            <a href="product_3.html">
+              <img src="img/mainImg7.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 8 -->
+          <li class="hide">
+            <a href="product_4.html">
+              <img src="img/mainImg8.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 9 -->
+          <li class="hide">
+            <a href="product_1.html">
+              <img src="img/mainImg9.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 10 -->
+          <li class="hide">
+            <a href="product_2.html">
+              <img src="img/mainImg10.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 11 -->
+          <li class="hide">
+            <a href="product_3.html">
+              <img src="img/mainImg11.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 12 -->
+          <li class="hide">
+            <a href="product_4.html">
+              <img src="img/mainImg12.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+        </ul>
+        <!-- button -->
+        <button class="main-next-button" onclick="nextButton(1)">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+      <!-- 릴레이 특가 -->
+      <div id="sale-price">
+        <div id="remain-times-div">
+          <div id="remain-times-div1">
+            <i class="fa-solid fa-clock"></i>
+            <span id="first-remain-span">릴레이 특가</span
+            ><span id="remain-time"></span
+            ><span id="second-remain-span">남았어욧!</span>
+          </div>
+          <div id="remain-times-div2">
+            <p>시간이 지나면 가격이 올라가요</p>
+          </div>
+        </div>
+        <a href="타임특가 링크">
+          <div id="sale-item">
+            <img src="img/saleItemImg.jpg" alt="" id="sale-item-img" />
+            <div id="sale-item-info">
+              <p>특가</p>
+              <p>미슐랭 1스타 레스토랑 에빗의 조셉 셰프와 송도향의 만남</p>
+              <h3>
+                [30세트 한정] 오마이갓 탁주 2병 특가 &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; >
+              </h3>
+              <div id="sale-item-info-review">
+                <div>
+                  <i class="fa-solid fa-star" id="star-icon"></i>
+                  <p>5</p>
+                  <p>리뷰 6</p>
+                </div>
+                <div>
+                  <del>58,000원</del>
+                  <p>35,000원</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- 더보기란 -->
+      <div class="more">
+        <div>
+          <img src="/img/gift.png" alt="" class="more-img" />
+          <div>
+            <p class="more-first-para">가정의달 N+1 이벤트</p>
+            <p class="more-second-para">많이 살수록 추가로 증정돼요!</p>
+          </div>
+        </div>
+        <a href="가정의달.html">더보기 ></a>
+      </div>
+      <!-- 제품2 -->
+      <div class="main-list-container">
+        <ul class="main-list" id="ul2" ;>
+          <!-- 1 -->
+          <li>
+            <a href="product_1.html">
+              <img src="img/mayfestivalImg1.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 2 -->
+          <li>
+            <a href="product_2.html">
+              <img src="img/mayfestivalImg2.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 3 -->
+          <li>
+            <a href="product_3.html">
+              <img src="img/mayfestivalImg3.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 4 -->
+          <li>
+            <a href="product_4.html">
+              <img src="img/mayfestivalImg4.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 5 -->
+          <li class="hide">
+            <a href="product_1.html">
+              <img src="img/mayfestivalImg5.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 6 -->
+          <li class="hide">
+            <a href="product_2.html">
+              <img src="img/mayfestivalImg6.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 7 -->
+          <li class="hide">
+            <a href="product_3.html">
+              <img src="img/mayfestivalImg7.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 8 -->
+          <li class="hide">
+            <a href="product_4.html">
+              <img src="img/mayfestivalImg8.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 9 -->
+          <li class="hide">
+            <a href="product_1.html">
+              <img src="img/mayfestivalImg9.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 10 -->
+          <li class="hide">
+            <a href="product_2.html">
+              <img src="img/mayfestivalImg10.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 11 -->
+          <li class="hide">
+            <a href="product_3.html">
+              <img src="img/mayfestivalImg11.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 12 -->
+          <li class="hide">
+            <a href="product_4.html">
+              <img src="img/mayfestivalImg12.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+        </ul>
+        <!-- button -->
+        <button class="main-next-button" onclick="nextButton(2)">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+      <!-- 더보기란 -->
+      <div class="more">
+        <div>
+          <img src="img/flower.png" alt="" class="more-img" />
+          <div>
+            <p class="more-first-para">간편한 나들이 필수템</p>
+            <p class="more-second-para">애플사이더+칠링백 구성이에요!</p>
+          </div>
+        </div>
+        <a href="product_2.html">더보기 ></a>
+      </div>
+      <!-- 제품3 -->
+      <div class="main-list-container">
+        <ul class="main-list" id="ul3" ;>
+          <!-- 1 -->
+          <li>
+            <a href="product_1.html">
+              <img src="img/picnicItem1.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 2 -->
+          <li>
+            <a href="product_2.html">
+              <img src="img/picnicItem2.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 3 -->
+          <li class="sold-out">
+            <a href="product_3.html">
+              <img src="img/picnicItem3.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 4 -->
+          <li class="sold-out">
+            <a href="product_4.html">
+              <img src="img/picnicItem4.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <div id="footer-info">
+        <h3>담화컴퍼니 주식회사</h3>
+        <p>고객센터: 070-5014-1282</p>
+        <p>평일 10:00 - 18:00</p>
+        <span>이용약관</span><span>개인정보처리방침</span><span>입점문의</span>
+        <p>
+          대표:이재욱 사업자등록번호:720-12-1234 통신판매 신고번호:
+          2021-인천부평-1234
+        </p>
+        <p>
+          주소: 인천광역시 영영구 떙떙대로 123, 12층(엔타스빌딩, 이젠) 정보보호
+          책임자: 김이젠 대표전화: 032-000-1234 이메일: ezen@zene.com
+        </p>
+      </div>
+      <div id="social-link">
+        <ul>
+          <li>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-apple"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-vimeo"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

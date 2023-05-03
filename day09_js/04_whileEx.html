@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a의 b제곱 구하기</title>
+</head>
+<body>
+    <h1>
+        a의 b제곱을 구하려면 : Math.pow(a,b);
+    </h1>
+    a : <input type="text" id="a"> <br>
+    b : <input type="text" id="b"> <br>
+    <button type="button" id="calcBtn" onclick="sqare()">제곱계산</button>
+    <h3 id="result">
+        <!-- a의 b제곱은 얼마입니다. -->
+    </h3>
+    
+    <script>
+        function sqare(){
+            let a = parseInt(document.getElementById('a').value);
+            let b = parseInt(document.getElementById('b').value);
+            
+            // let num = Math.pow(a,b);
+            // document.getElementById('result').innerText = `${a}의 ${b}제곱의 값 : ${num}`;
+            let count=1;
+            let result=a;
+
+            if(b==0){
+                result=1;
+            }
+            else{
+                while(count<b){
+                    result *= a;
+                    count++;
+             }
+            }
+
+            document.getElementById('result').innerText = `${a}의 ${b}제곱의 값 : ${result}`;  
+         }
+    </script>
+</body>
+</html>

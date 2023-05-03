@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 60%;
+            height: 70px;
+            border: 2px solid green;
+            border-radius: 5px;
+        }
+
+        .text {
+            position: absolute;
+            width: 90%;
+            height: 100%;
+            border: none;
+            padding: 0px;
+            float: left;
+            outline: none;
+            font-size: 50px;
+            text-overflow: ellipsis;
+            padding-left: 10px;
+        }
+
+        .button {
+            position: absolute;
+            width: 10%;
+            height: 100%;
+            float: right;
+            left: 100%;
+            transform: translate(-97%);
+            border: 3px solid green;
+            border-radius: 5px;
+            background-color: green;
+        }
+
+        .keyboard {
+            position: absolute;
+            background-color: white;
+            border: none;
+            right: 10%;
+            height: 100%;
+
+        }
+    </style>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+    <div class="box">
+        <form for="search">
+            <input type="text" name="search" class="text">
+
+            <button type="submit" class="button">
+                <span class="material-symbols-outlined" style="font-size: 50px; color: white;">
+                    search
+                </span>
+            </button>
+        </form>
+
+        <form for="keyset">
+            <button type="submit" class="keyboard" name="keyset" value="keyboardMode">
+                <span class="material-symbols-outlined" style="font-size:30px">
+                    keyboard
+                </span>
+            </button>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자 함수</title>
+</head>
+
+<body>
+    <h1>
+        클래스, 리터럴 객체, 생성자 함수를 통해 객체 생성
+    </h1>
+    <!-- 
+        class MyClass{
+            constructor(){
+                ...
+            }
+
+            method01(){...}
+            method02(){...}
+            method03(){...}
+            
+            get name(){
+                return this.name;
+            }
+
+            set name(value){
+                this.name = value;
+            }
+            
+        }
+
+        let user = New MyClass(parameter) // 파라미터 안넣으면 undefined로 생성
+     -->
+
+    <!-- 
+        생성자 함수는 클래스의 함수화
+        일반 함수와 생성자 함수는 기술적인 차이 없음
+        1.생성자 함수는 반드시 new를 통해 실행
+        2.함수 첫글자는 대문자
+
+        function User(name){
+            this.name = name;
+            this.age = 0;
+        }
+
+        let user = new User('홍길동');
+        let user2 = new User('고길동');
+
+      -->
+    <script>
+        class User_C {
+
+            constructor(firstName, lastName, age, address) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+                this.address = address;
+            }
+            
+            print(){
+                return `성 : ${this.firstName}, 이름 : ${this.lastName},나이 : ${this.age}, 주소 : ${this.address}`;
+            }
+        }
+
+        function User_F(firstName, lastName, age, address) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.address = address;
+            this.getUser_FInfo = function (){
+                return `성 : ${this.firstName}, 이름 : ${this.lastName},나이 : ${this.age}, 주소 : ${this.address}`;
+            }
+        }
+
+        let a1 = new User_C('홍', '길동', 40, '서울시');
+        let a2 = new User_F('둘', '리', 400, '서울시');
+
+        console.log(a1);
+        console.log(a1.print());
+        console.log(a2);
+        console.log(a2.getUser_FInfo());
+
+        const person = {
+            firstName:'',
+            lastName:'',
+            age:'',
+            address:'',
+            setInfo : function(first,last,age,addr){
+                this.firstName=first;
+                this.lastName=last;
+                this.age=age;
+                this.addr=addr;
+            },
+            get personInfo(){
+                return `성 : ${this.firstName}, 이름 : ${this.lastName},나이 : ${this.age}, 주소 : ${this.address}`;
+            },
+            set setFirName(first){
+                this.firstName=first;
+            }
+        }
+        
+        person.setInfo('도','우너','15','서울시');
+        console.log(person);
+        console.log(person.personInfo);
+    </script>
+</body>
+
+</html>

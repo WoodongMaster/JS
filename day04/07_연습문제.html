@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .big{
+            width: 500px;
+            height: 1000px;
+            border: 1px solid black;
+        }
+        .box{
+            width:95%;
+            height:200px;
+            border: 3px solid black;
+            float: top;
+            font-size: 50px;
+            font-weight: 700;
+            text-align: center;
+            
+            margin-top: 50px;
+            margin-left:10px;
+
+            line-height:200px;
+            
+        }
+
+        .box2{
+            position:relative;
+            height: 400px;
+        }
+        .little{
+            position:absolute;
+            width: 150px;
+            height: 150px;
+            
+            left:60px;
+            top:10px;
+            box-shadow: 10px 5px 10px 1px black;
+        }
+        
+        .l1{
+          z-index: 30;  
+          background-color: red;
+
+        }
+        .l2{
+            top:110px;
+            left:160px;
+            z-index: 20;
+            background-color: yellow;
+        }
+        .l3{
+            top:210px;
+            left:260px;
+            z-index: 10;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="big">
+        <div class="box box1">텍스트</div>
+        <div class="box box2">
+            <div class="little l1"></div>
+            <div class="little l2"></div>
+            <div class="little l3"></div>
+        </div>
+        <div class="box box3">텍스트</div>
+    </div>
+
+</body>
+</html>

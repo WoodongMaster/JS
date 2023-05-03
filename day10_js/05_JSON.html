@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        많은 량의 데이터가 실시간으로 전달되어야 할 때 가장 효율적인 방식 => 구조화된 텍스트
+    </h1>
+    <ul>
+        <li>
+            구조화된 텍스트를 만들기 위해 json 포맷 형태의 데이터를 많이 사용
+        </li>
+        <li>
+            자바 스크립트의 객체형태를 하고있어, 구조파악과 제작이 쉬움
+        </li>
+        <li>
+            데이터 수집, 데이터 출력으로 거의 모든 플랫폼에서 사용됨
+        </li>
+    </ul>
+    <script>
+        const top = {
+            "거래상위": [
+                {
+                    name: '이화전기',
+                    price: 1168,
+                    updown: 259,
+                    ratio: 28.49
+                },
+                {
+                    name: 'KODEX 200선물인버스2X',
+                    price: 2620,
+                    updown: 5,
+                    ratio: 0.19
+                },
+                {
+                    name: '우리기술',
+                    price: 1806,
+                    updown: 322,
+                    ratio: 21.70
+                },
+                {
+                    name: '엠피대산',
+                    price: 627,
+                    updown: 16,
+                    ratio: 2.62
+                },
+
+                {
+                    name: '대한전선',
+                    price: 1706,
+                    updown: 46,
+                    ratio: 2.77
+                }
+            ],
+        }
+
+        const exs = {
+            "환전 고시 환율": [{
+                name: '미국USD',
+                price: 1313.1,
+                updown: 6.1
+            },
+            {
+                name: '일본JPY(100엔)',
+                price: 980.11,
+                updown: 2.8
+            },
+            {
+                name: '유럽연합EUR',
+                price: 1441.52,
+                updown: 4.34
+            },
+            {
+                name: '중국CNY',
+                price: 190.93,
+                updown: 0.71
+            }
+            ],
+
+            "금시세": [{
+                name: '국제금(04.14)',
+                price: 2015.8,
+                updown: -39.5
+            },
+            {
+                name: '국내금(04.17)',
+                price: 84638.11,
+                updown: -432.61
+            }]
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI추천 - 술 취향찾기</title>
+    <link rel="stylesheet" href="quiz_1.css">
+</head>
+<body>
+
+    <div id="main">
+        <!-- 화면 상단(나가기 버튼 부분) -->
+        <div id="head">
+
+            <button type="button" id="backBtn">&#10094;</button>
+
+            추천 진행중<button type="button" id="outBtn">&#10006;</button>
+            <div id="popupX">
+                <div id="showX">
+                    <p>퀴즈를 나가시겠어요?</p>
+                    <p>퀴즈 도중에 중단할 경우 <b>내용이 저장되지 않습니다.</b></p>
+                    <button id="closeBtnX">취소</button>
+                    <button id="mainBtnX">확인</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 화면 중앙(테스트 진행 부분) -->
+        <div id="body">
+            <div id="text">
+                어떤 주종을 <br> 원하시나요?
+            </div> 
+            <div class="list">
+              <button type="submit" value="1">
+                <img src="quiz_img/탁주.png" alt="탁주이미지">
+                <span>탁주</span></button>
+              <button type="button" value="2">
+                <img src="quiz_img/약.청주.png" alt="청주이미지"> 
+                <span>약.청주</span></button>
+              <button type="button" value="3">
+                <img src="quiz_img/증류주.png" alt="증류주이미지"> 
+                <span>증류주</span></button>
+              <button type="button" value="4">
+                <img src="quiz_img/과실주.png" alt="과실주이미지"> 
+                <span>과실주</span></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //뒤로가기
+        document.getElementById('backBtn').addEventListener('click',()=>{
+            history.back();
+        });
+
+        // x 버튼을 누르면 팝업 창 나타내기
+        document.getElementById("outBtn").addEventListener("click", function() {
+            document.getElementById("popupX").style.display = "block";
+        });
+
+        // x버튼 안의 취소 버튼 클릭 시 팝업 창 사라지기
+        document.getElementById("closeBtnX").addEventListener("click", function() {
+            document.getElementById("popupX").style.display = "none";
+        });
+
+        // //x버튼 안의 확인 버튼 클릭 시 main화면으로 이동
+        // document.getElementById("mainBtn").addEventListener("click", function() {
+        //     location.href=".main.html";
+        // });
+
+
+        document.querySelector('.list').addEventListener('click',function(e){
+            //클릭한 값
+            let choiceValue = e.target.value;
+
+            //그림이나 이름을 선택한 경우 = 부모의 value로 값가져오기
+            if (typeof e.target.value == 'undefined') {
+                choiceValue = e.target.parentNode.value;
+            }
+
+            //이동
+            if(choiceValue == undefined){
+                //빈칸을 클릭하는 경우 안넘어가고
+                location.href="quiz_1.html?choice="+choiceValue;
+            }else{
+                //고른 경우 넘어가도록 설정 = 변수명에 값을 넣어서
+                location.href="quiz_2.html?choice="+choiceValue;
+            }
+
+
+            
+        })
+
+    </script>
+</body>
+</html>

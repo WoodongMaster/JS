@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>검색하는 곳</title>
+    <link rel="stylesheet" href="search.css" />
+    <script
+      src="https://kit.fontawesome.com/55381cd0ef.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="search.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <!-- search bar -->
+      <div id="search-form">
+        <div>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="무엇을 찾고 계신가요?" />
+        </div>
+        <button type="reset">취소</button>
+      </div>
+      <!-- recommend bar -->
+      <h3>이럴 때 이런 술은 어때요?</h3>
+      <ul id="recommend-list">
+        <li>
+          <a href="product_3.html">
+            <div id="first-rec" class="recommend">
+              <img src="img/oldman-removebg-preview.png" alt="" />
+              <p>술담화 PICK 선물세트</p>
+              <p>감사한 마음을 전하기 좋아요!</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="product_4.html">
+            <div id="second-rec" class="recommend">
+              <img src="img/pic-removebg-preview.png" alt="" />
+              <p>술담화 PICK 선물세트</p>
+              <p>감사한 마음을 전하기 좋아요!</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="product_1.html">
+            <div id="third-rec" class="recommend">
+              <img src="img/gift-removebg-preview.png" alt="" />
+              <p>술담화 PICK 선물세트</p>
+              <p>감사한 마음을 전하기 좋아요!</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </header>
+    <!-- header 끝! -->
+    <!-- main 시작! -->
+    <main>
+      <!-- **************************** -->
+      <!-- 검색 결과 나오는 Div -->
+      <p id="tmp-para"></p>
+      <div id="search-value">
+        <a href="product_1.html" class="product product1">
+            <div>
+                <img src="img/서울의밤.jpg" alt="">
+                <p>서울의밤 상세페이지 바로가기</p>
+            </div>
+        </a>
+        <a href="product_2.html" class="product product2">
+            <div>
+                <img src="img/붉은원숭이.jpg" alt="">
+                <p>붉은원숭이 상세페이지 바로가기</p>
+            </div>
+        </a>
+        <a href="product_3.html" class="product product3">
+            <div>
+                <img src="img/단상지교.jpg" alt="">
+                <p>단상지교 상세페이지 바로가기</p>
+            </div>
+        </a>
+        <a href="product_4.html" class="product product4">
+            <div>
+                <img src="img/고도리샤인머스캣와인.jpg" alt="">
+                <p>고도리 샤인머스캣 와인 상세페이지 바로가기</p>
+            </div>
+        </a>
+      </div>
+      <!-- **************************** -->
+      <!-- temporary -->
+      <h3 id="h3-for-margin">저희가 밀고 있는 상품이예요!</h3>
+      <div class="main-list-container">
+        <ul class="main-list" id="ul3" ;>
+          <!-- 1 -->
+          <li>
+            <a href="product_1.html">
+              <img src="img/picnicItem1.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 2 -->
+          <li>
+            <a href="product_2.html">
+              <img src="img/picnicItem2.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 3 -->
+          <li class="sold-out">
+            <a href="product_1.html">
+              <img src="img/picnicItem3.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+          <!-- 4 -->
+          <li class="sold-out">
+            <a href="product_1.html">
+              <img src="img/picnicItem4.jpg" alt="" />
+              <p>마주 2병 선물세트</p>
+              <p><del>42,000</del></p>
+              <p>37,800원</p>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span>리뷰 3</span>
+              </div>
+              <p>#마주 앉아서 마시기 좋은 맥주</p>
+              <p>#모싯잎이 들어간 소곡주</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <!-- footer 시작! -->
+    <footer>
+      <div id="footer-info">
+        <h3>담화컴퍼니 주식회사</h3>
+        <p>고객센터: 070-5014-1282</p>
+        <p>평일 10:00 - 18:00</p>
+        <span>이용약관</span><span>개인정보처리방침</span><span>입점문의</span>
+        <p>
+          대표:이재욱 사업자등록번호:720-12-1234 통신판매 신고번호:
+          2021-인천부평-1234
+        </p>
+        <p>
+          주소: 인천광역시 영영구 떙떙대로 123, 12층(엔타스빌딩, 이젠) 정보보호
+          책임자: 김이젠 대표전화: 032-000-1234 이메일: ezen@zene.com
+        </p>
+      </div>
+      <div id="social-link">
+        <ul>
+          <li>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-apple"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-vimeo"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

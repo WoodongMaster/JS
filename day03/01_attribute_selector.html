@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 선택자</title>
+    <style>
+        input[type=text]{
+            background-color: aqua;
+        }
+        input[type=password]:focus{
+            background-color: red;
+        }
+        button[type=submit]{
+            width:100px;
+        }
+
+        button[type=reset]:hover{
+            background-color: chartreuse;
+        }
+        input[class=login]{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 태그가 가지고 있는 속성을 이용하여 선택하는 선택자 -->
+    <form action="">
+        <div>
+            <label for="id">User ID
+                <input type="text" name="id" id="id" class="login" placeholder="8자이상" required>
+            </label>
+        </div>
+
+        <div>
+            <label for="pw">User Password
+                <input type="password" name="password" id="password" class="login" placeholder="8자이상" required>
+            </label>
+        </div>
+
+        <div>
+            <label for="pin">User PIN
+                <input type="password" name="pin" id="pin" class="login" placeholder="숫자만" required>
+            </label>
+        </div>
+
+        <button type="button">일반버튼</button>
+        <button type="submit">로그인</button>
+        <button type="reset">초기화</button>
+    </form>
+</body>
+</html>

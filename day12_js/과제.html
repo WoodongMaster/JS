@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <br><br><br>
+
+    <div style="text-align: center;">
+        <h1>TRAVEL</h1>
+    </div>
+
+    <br><br><br>
+
+    <ul id="container">
+        <li><a id="home" onclick="city(this)">Home</a></li>
+        <li><a id="seoul" onclick="city(this)">Seoul</a></li>
+        <li><a id="tokyo" onclick="city(this)">Tokyo</a></li>
+        <li><a id="paris" onclick="city(this)">Paris</a></li>
+    </ul>
+
+    <br><br><br>
+    <div style="text-align: center;" id="result">
+
+    </div>
+
+    <script>
+
+        function city(c) {
+            select_img(c.id);
+        }
+        function select_img(i) {
+            switch (i) {
+                case 'home':
+                    document.getElementById('result').innerHTML = `<img src="https://thumb.mt.co.kr/06/2020/09/2020091008161540664_3.jpg/dims/optimize/">`;
+                    break;
+                case 'seoul':
+                    document.getElementById('result').innerHTML = `<img src="https://cdn.traveltimes.co.kr/news/photo/202206/401695_22311_5255.jpg">`;
+                    break;
+                case 'tokyo':
+                    document.getElementById('result').innerHTML = `<img src="https://www.flyairjapan.com/_next/static/media/top-video-poster.7e76ef27.jpg">`;
+                    break;
+                case 'paris':
+                    document.getElementById('result').innerHTML = `<img src="https://blog.kakaocdn.net/dn/yGWeQ/btqy5Ddp7Ao/Cuv63mvwcHxGyKRYPRq6l0/img.jpg">`;
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
